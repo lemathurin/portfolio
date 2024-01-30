@@ -26,42 +26,56 @@ import "../components/Navbar.css";
 //   );
 // }
 
+// for the dropdown
+// https://www.youtube.com/watch?v=VQWu4e6agPc
+
 export default function NavBar() {
   const t = useTranslations("NavBar");
   return (
-    <div className="">
-      <div className="">
-        <ol className="menu-button-container">
-          <Link href="/">
-            <li className="menu-button">
-              <span className="menu-text" href="/">
-                {t("language")}
-              </span>
-            </li>
-          </Link>
-          <Link href="/">
-            <li className="menu-button">
-              <span className="menu-text" href="/">
-                {t("projects")}
-              </span>
-            </li>
-          </Link>{" "}
-          <Link href="/">
-            <li className="menu-button">
-              <span className="menu-text" href="/">
-                {t("notes")}
-              </span>
-            </li>
-          </Link>{" "}
-          <Link href="/">
-            <li className="menu-button">
-              <span className="menu-text" href="/">
-                {t("contact")}
-              </span>
-            </li>
-          </Link>
-        </ol>
+    <div className="entire-navbar">
+      <div className="project-dropdown">
+        <div className="project-left">
+          <h3 className="dropdown-text">{t("presenter-app")}</h3>
+        </div>
+        <div className="project-right-section">
+          <div className="project-right-small">
+            <h3 className="dropdown-text">{t("pico-8")}</h3>
+          </div>
+          <div className="project-right-small">
+            <h3 className="dropdown-text">{t("more-projects")}</h3>
+          </div>
+        </div>
       </div>
+      <ol className="menu-button-container">
+        <Link href="/">
+          <li className="menu-button cursor-cell">
+            <span className="menu-text" href="/">
+              {t("language")}
+            </span>
+          </li>
+        </Link>
+        <Link href="/">
+          <li className="menu-button">
+            <span className="menu-text" href="/">
+              {t("projects")}
+            </span>
+          </li>
+        </Link>{" "}
+        <Link href="/">
+          <li className="menu-button">
+            <span className="menu-text" href="/">
+              {t("notes")}
+            </span>
+          </li>
+        </Link>{" "}
+        <Link href="/">
+          <li className="menu-button">
+            <span className="menu-text" href="/">
+              {t("contact")}
+            </span>
+          </li>
+        </Link>
+      </ol>
     </div>
   );
 }
