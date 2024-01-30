@@ -61,14 +61,14 @@ export default function NavBar() {
                 src="/images/pico-8_menu.png"
                 width={83}
                 height={83}
-                alt="Screenshot of game loading screen"
+                alt="Screenshot of game menu screen"
               />
               <Image
                 className="shadow"
                 src="/images/pico-8_game.png"
                 width={83}
                 height={83}
-                alt="Screenshot of game loading screen"
+                alt="Screenshot of game"
               />
             </div>
           </div>
@@ -77,23 +77,23 @@ export default function NavBar() {
             <div className="project-right-small-images">
               <Image
                 className="shadow"
-                src="/images/pico-8_loading.png"
+                src="/images/eym.png"
                 width={83}
                 height={210}
                 alt="Screenshot of game loading screen"
               />
               <Image
                 className="shadow"
-                src="/images/pico-8_menu.png"
+                src="/images/portfolio_exploration.png"
                 width={83}
                 height={210}
                 alt="Screenshot of game loading screen"
               />
               <Image
                 className="shadow"
-                src="/images/pico-8_game.png"
-                width={83}
-                height={210}
+                src="/images/dataviz.png"
+                width={110}
+                height={83}
                 alt="Screenshot of game loading screen"
               />
             </div>
