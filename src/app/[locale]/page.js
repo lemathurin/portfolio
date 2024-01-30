@@ -4,7 +4,7 @@ import NavBar from "./components/Navbar";
 export default function Home() {
   const t = useTranslations("Home");
   return (
-    <div className="w-screen bg-lightMode-background flex-col justify-start items-center py-20 gap-40 inline-flex">
+    <div className="w-screen bg-lightMode-background flex-col justify-start items-center py-80 gap-40 inline-flex">
       <NavBar />
       <h1 className="text-lightMode-text text-9xl">{t("greeting")}</h1>
       <div className="max-w-[700px] flex-col justify-start items-start inline-flex">
