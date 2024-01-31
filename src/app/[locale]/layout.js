@@ -14,7 +14,7 @@ export const metadata = {
 };
 
 // const EditorialNew = localFont({
-//   src: "./EditorialNew-Regular.otf",
+//   src: "../../public/fonts/EditorialNew-Regular.otf",
 //   weight: "400",
 // });
 
