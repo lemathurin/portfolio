@@ -35,7 +35,7 @@ export default function NavBar() {
   return (
     <div className="entire-navbar">
       <div className="project-dropdown">
-        <div className="project-left">
+        <div className="project-left dropdown-boxes">
           <h3 className="dropdown-text">{t("presenter-app")}</h3>
           <Image
             className="shadow"
@@ -46,7 +46,7 @@ export default function NavBar() {
           />
         </div>
         <div className="project-right-section">
-          <div className="project-right-small">
+          <div className="project-right-small dropdown-boxes">
             <h3 className="dropdown-text">{t("pico-8")}</h3>
             <div className="project-right-small-images">
               <Image
@@ -72,7 +72,7 @@ export default function NavBar() {
               />
             </div>
           </div>
-          <div className="project-right-small">
+          <div className="project-right-small dropdown-boxes">
             <h3 className="dropdown-text">{t("more-projects")}</h3>
             <div className="project-right-small-images">
               <Image
