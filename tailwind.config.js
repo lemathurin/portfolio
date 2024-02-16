@@ -18,7 +18,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        EditorialNew: ["var(--font-EditorialNew)"],
+        inter: ["var(--font-inter)"],
+        instrument: ["var(--font-instrument)"],
+        editorialNew: ["var(--font-editorialnew)"],
       },
     },
   },
