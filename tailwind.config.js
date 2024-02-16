@@ -20,7 +20,6 @@ module.exports = {
       fontFamily: {
         inter: ["var(--font-inter)"],
         instrument: ["var(--font-instrument)"],
-        editorialNew: ["var(--font-editorialnew)"],
       },
     },
   },
