@@ -13,5 +13,10 @@
       "presenter-app": "Untitled Presentation App",
       "pico-8": "PICO-8 game",
       "more-projects": "More projects"
+    },
+    "TEST": {
+      "test": "This is a test sentence",
+      "description": "This is a description",
+      "text": "Excepteur labore minim eu mollit officia magna elit velit officia ex in ex. Irure reprehenderit commodo minim officia nulla aliquip deserunt voluptate occaecat sint qui aute id. Sunt aute ut ea qui enim eiusmod consequat ad dolor. Deserunt elit tempor ex occaecat eiusmod incididunt dolore. Sunt labore officia minim ut. Incididunt non quis cupidatat aliquip magna sint cupidatat anim laboris eu. Enim do sint esse id ad."
     }
   }

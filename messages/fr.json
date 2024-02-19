@@ -13,5 +13,8 @@
       "presenter-app": "Appli de Présentation sans Titre",
       "pico-8": "Jeu PICO-8",
       "more-projects": "Plus de projets"
+    },
+    "TEST": {
+      "test": "test"
     }
   }
