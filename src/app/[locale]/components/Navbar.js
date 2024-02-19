@@ -1,18 +1,16 @@
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import "../components/Navbar.css";
 import Image from "next/image";
 
 // for the dropdown
 // https://www.youtube.com/watch?v=VQWu4e6agPc
 
-export default function NavBar() {
-  const t = useTranslations("NavBar");
+export default function NavBar(props) {
   return (
     <div className="entire-navbar">
       <div className="project-dropdown">
         <div className="project-left dropdown-boxes">
-          <h3 className="dropdown-text">{t("presenter-app")}</h3>
+          <h3 className="dropdown-text">{props.presenterApp}</h3>
           <Image
             className="shadow"
             src="/images/presenter_app.png"
@@ -23,7 +21,7 @@ export default function NavBar() {
         </div>
         <div className="project-right-section">
           <div className="project-right-small dropdown-boxes">
-            <h3 className="dropdown-text">{t("pico-8")}</h3>
+            <h3 className="dropdown-text">{props.pico8}</h3>
             <div className="project-right-small-images">
               <Image
                 className="shadow"
@@ -49,7 +47,7 @@ export default function NavBar() {
             </div>
           </div>
           <div className="project-right-small dropdown-boxes">
-            <h3 className="dropdown-text">{t("more-projects")}</h3>
+            <h3 className="dropdown-text">{props.moreProjects}</h3>
             <div className="project-right-small-images">
               <Image
                 className="shadow"
@@ -80,28 +78,28 @@ export default function NavBar() {
         <Link href="/">
           <li className="menu-button cursor-cell">
             <span className="menu-text" href="/">
-              {t("language")}
+              {props.language}
             </span>
           </li>
         </Link>
         <Link href="/">
           <li className="menu-button">
             <span className="menu-text" href="/">
-              {t("projects")}
+              {props.projects}
             </span>
           </li>
         </Link>{" "}
         <Link href="/">
           <li className="menu-button">
             <span className="menu-text" href="/">
-              {t("notes")}
+              {props.notes}
             </span>
           </li>
         </Link>{" "}
         <Link href="/">
           <li className="menu-button">
             <span className="menu-text" href="/">
-              {t("contact")}
+              {props.contact}
             </span>
           </li>
         </Link>
