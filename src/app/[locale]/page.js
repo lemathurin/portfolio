@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import NavBar from "./components/Navbar";
-import Test from "./components/Test";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -17,12 +16,6 @@ export default function Home() {
         pico8={n("pico8")}
         moreProjects={n("moreProjects")}
       />
-      <Test
-        test={test("test")}
-        description={test("description")}
-        text={test("text")}
-      />
-
       <h1 className="font-instrument text-lightMode-text text-9xl">
         {t("greeting")}
       </h1>
