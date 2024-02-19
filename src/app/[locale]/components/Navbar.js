@@ -1,107 +1,139 @@
+"use client";
+
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import "../components/Navbar.css";
 import Image from "next/image";
+import { useState, useRef, useEffect } from "react";
 
-// for the dropdown
-// https://www.youtube.com/watch?v=VQWu4e6agPc
+export default function NavBar(props) {
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
+  const timeoutRef = useRef(null);
 
-export default function NavBar() {
-  const t = useTranslations("NavBar");
+  // Function to handle mouse enter event
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current); // Clear any existing timeout
+    setIsButtonHovered(true);
+  };
+
+  // Function to handle mouse leave event
+  const handleMouseLeave = () => {
+    // Set timeout to close dropdown after 3 seconds
+    timeoutRef.current = setTimeout(() => {
+      setIsButtonHovered(false);
+    }, 1000);
+  };
+
+  // Clear timeout on component unmount
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
   return (
     <div className="entire-navbar">
-      <div className="project-dropdown">
-        <div className="project-left dropdown-boxes">
-          <h3 className="dropdown-text">{t("presenter-app")}</h3>
-          <Image
-            className="shadow"
-            src="/images/presenter_app.png"
-            width={400}
-            height={210}
-            alt="Screenshot of the unfinished project"
-          />
-        </div>
-        <div className="project-right-section">
-          <div className="project-right-small dropdown-boxes">
-            <h3 className="dropdown-text">{t("pico-8")}</h3>
-            <div className="project-right-small-images">
-              <Image
-                className="shadow"
-                src="/images/pico-8_loading.png"
-                width={83}
-                height={83}
-                alt="Screenshot of game loading screen"
-              />
-              <Image
-                className="shadow"
-                src="/images/pico-8_menu.png"
-                width={83}
-                height={83}
-                alt="Screenshot of game menu screen"
-              />
-              <Image
-                className="shadow"
-                src="/images/pico-8_game.png"
-                width={83}
-                height={83}
-                alt="Screenshot of game"
-              />
+      {isButtonHovered && (
+        <div
+          className="project-dropdown"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="project-left dropdown-boxes">
+            <h3 className="dropdown-text">{props.presenterApp}</h3>
+            <Image
+              className="shadow"
+              src="/images/presenter_app.png"
+              width={400}
+              height={210}
+              alt="Screenshot of the unfinished project"
+            />
+          </div>
+          <div className="project-right-section">
+            <div className="project-right-small dropdown-boxes">
+              <h3 className="dropdown-text">{props.pico8}</h3>
+              <div className="project-right-small-images">
+                <Image
+                  className="shadow"
+                  src="/images/pico-8_loading.png"
+                  width={83}
+                  height={83}
+                  alt="Screenshot of game loading screen"
+                />
+                <Image
+                  className="shadow"
+                  src="/images/pico-8_menu.png"
+                  width={83}
+                  height={83}
+                  alt="Screenshot of game menu screen"
+                />
+                <Image
+                  className="shadow"
+                  src="/images/pico-8_game.png"
+                  width={83}
+                  height={83}
+                  alt="Screenshot of game"
+                />
+              </div>
+            </div>
+            <div className="project-right-small dropdown-boxes">
+              <h3 className="dropdown-text">{props.moreProjects}</h3>
+              <div className="project-right-small-images">
+                <Image
+                  className="shadow"
+                  src="/images/eym.png"
+                  width={83}
+                  height={210}
+                  alt="Screenshot of game loading screen"
+                />
+                <Image
+                  className="shadow"
+                  src="/images/portfolio_exploration.png"
+                  width={83}
+                  height={210}
+                  alt="Screenshot of game loading screen"
+                />
+                <Image
+                  className="shadow"
+                  src="/images/dataviz.png"
+                  width={110}
+                  height={83}
+                  alt="Screenshot of game loading screen"
+                />
+              </div>
             </div>
           </div>
-          <div className="project-right-small dropdown-boxes">
-            <h3 className="dropdown-text">{t("more-projects")}</h3>
-            <div className="project-right-small-images">
-              <Image
-                className="shadow"
-                src="/images/eym.png"
-                width={83}
-                height={210}
-                alt="Screenshot of game loading screen"
-              />
-              <Image
-                className="shadow"
-                src="/images/portfolio_exploration.png"
-                width={83}
-                height={210}
-                alt="Screenshot of game loading screen"
-              />
-              <Image
-                className="shadow"
-                src="/images/dataviz.png"
-                width={110}
-                height={83}
-                alt="Screenshot of game loading screen"
-              />
-            </div>
-          </div>
         </div>
-      </div>
+      )}
       <ol className="menu-button-container">
         <Link href="/">
           <li className="menu-button cursor-cell">
             <span className="menu-text" href="/">
-              {t("language")}
+              {props.language}
             </span>
           </li>
         </Link>
         <Link href="/">
-          <li className="menu-button">
+          <li
+            className="menu-button"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <span className="menu-text" href="/">
-              {t("projects")}
+              {props.projects}
             </span>
           </li>
         </Link>{" "}
         <Link href="/">
           <li className="menu-button">
             <span className="menu-text" href="/">
-              {t("notes")}
+              {props.notes}
             </span>
           </li>
         </Link>{" "}
         <Link href="/">
           <li className="menu-button">
             <span className="menu-text" href="/">
-              {t("contact")}
+              {props.contact}
             </span>
           </li>
         </Link>
