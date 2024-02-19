@@ -3,15 +3,41 @@
 import Link from "next/link";
 import "../components/Navbar.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function NavBar(props) {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
+  const timeoutRef = useRef(null);
+
+  // Function to handle mouse enter event
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current); // Clear any existing timeout
+    setIsButtonHovered(true);
+  };
+
+  // Function to handle mouse leave event
+  const handleMouseLeave = () => {
+    // Set timeout to close dropdown after 3 seconds
+    timeoutRef.current = setTimeout(() => {
+      setIsButtonHovered(false);
+    }, 1000);
+  };
+
+  // Clear timeout on component unmount
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
     <div className="entire-navbar">
       {isButtonHovered && (
-        <div className="project-dropdown">
+        <div
+          className="project-dropdown"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <div className="project-left dropdown-boxes">
             <h3 className="dropdown-text">{props.presenterApp}</h3>
             <Image
@@ -89,8 +115,8 @@ export default function NavBar(props) {
         <Link href="/">
           <li
             className="menu-button"
-            onMouseEnter={() => setIsButtonHovered(true)}
-            onMouseLeave={() => setIsButtonHovered(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <span className="menu-text" href="/">
               {props.projects}
