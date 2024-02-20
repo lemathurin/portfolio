@@ -18,7 +18,6 @@ export default function NavBar(props) {
 
   // Function to handle mouse leave event
   const handleMouseLeave = () => {
-    // Set timeout to close dropdown after 3 seconds
     timeoutRef.current = setTimeout(() => {
       setIsButtonHovered(false);
     }, 200);
@@ -130,11 +129,7 @@ export default function NavBar(props) {
           onMouseLeave={handleMouseLeave}
         >
           <Link href="/">
-            <li
-              className="menu-button"
-              // onMouseEnter={handleMouseEnter}
-              // onMouseLeave={handleMouseLeave}
-            >
+            <li className="menu-button">
               <span className="menu-text" href="/">
                 {props.projects}
               </span>

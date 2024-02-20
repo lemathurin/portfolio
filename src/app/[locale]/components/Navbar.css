@@ -43,7 +43,7 @@
 
 .menu-button:hover {
     background: rgba(239, 241, 239, 0.35);
-    backdrop-filter: blur(7.5px);
+    /* backdrop-filter: blur(7.5px); */
 }
 
 .menu-text {
