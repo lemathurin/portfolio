@@ -26,6 +26,7 @@ export const metadata = {
 export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
+      {/* Move the NavBar here to show on every page */}
       <body className={instrument.className}>{children}</body>
     </html>
   );
