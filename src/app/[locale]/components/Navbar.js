@@ -117,7 +117,7 @@ export default function NavBar(props) {
       </AnimatePresence>
       <ol className="menu-button-container">
         <Link href="/">
-          <li className="menu-button cursor-cell">
+          <li className="menu-button">
             <span className="menu-text" href="/">
               {props.language}
             </span>
