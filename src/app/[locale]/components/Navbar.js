@@ -7,6 +7,8 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function NavBar(props) {
+  // Projects dropup
+
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const timeoutRef = useRef(null);
 
@@ -29,6 +31,33 @@ export default function NavBar(props) {
       clearTimeout(timeoutRef.current);
     };
   }, []);
+
+  // Cursor
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  console.log(mousePosition);
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x,
+      y: mousePosition.y,
+    },
+  };
 
   return (
     <div className="entire-navbar">
@@ -117,7 +146,7 @@ export default function NavBar(props) {
       </AnimatePresence>
       <ol className="menu-button-container">
         <Link href="/">
-          <li className="menu-button">
+          <li className="menu-button" id="language-button">
             <span className="menu-text" href="/">
               {props.language}
             </span>
@@ -151,6 +180,11 @@ export default function NavBar(props) {
           </li>
         </Link>
       </ol>
+      <motion.div
+        className="language-cursor"
+        variants={variants}
+        animate="default"
+      ></motion.div>
     </div>
   );
 }
