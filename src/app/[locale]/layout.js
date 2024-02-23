@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "./components/Navbar";
 import { useTranslations } from "next-intl";
+import Home from "./page";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,11 +28,17 @@ export const metadata = {
 
 export default function RootLayout({ children, params: { locale } }) {
   const n = useTranslations("NavBar");
+  const t = useTranslations("Home");
   return (
     <html lang={locale}>
-      {/* Move the NavBar here to show on every page */}
       <body className={instrument.className}>
         {children}
+        <Home
+          greeting={t("greeting")}
+          p1={t("p-1")}
+          p2={t("p-2")}
+          p3={t("p-3")}
+        />
         <NavBar
           language={n("language")}
           projects={n("projects")}
