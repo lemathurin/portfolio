@@ -143,7 +143,7 @@ export default function NavBar(props) {
             </span>
           </li>
         </Link>{" "}
-        <Link href="/">
+        <Link href="/contact">
           <li className="menu-button">
             <span className="menu-text" href="/">
               {props.contact}
