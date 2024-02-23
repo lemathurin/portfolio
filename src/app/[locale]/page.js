@@ -1,21 +1,57 @@
+// import { useState, useEffect } from "react";
+// import { motion } from "framer-motion";
+// import "../[locale]/globals.css";
+
 import { useTranslations } from "next-intl";
-import NavBar from "./components/Navbar";
 
 export default function Home() {
   const t = useTranslations("Home");
-  const n = useTranslations("NavBar");
+
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // console.log(mousePosition);
+
+  // const [cursorVariant, setCursorVariant] = useState("default");
+
+  // useEffect(() => {
+  //   const mouseMove = (e) => {
+  //     setMousePosition({
+  //       x: e.clientX,
+  //       y: e.clientY,
+  //     });
+  //   };
+
+  //   window.addEventListener("mousemove", mouseMove);
+
+  //   return () => {
+  //     window.removeEventListener("mousemove", mouseMove);
+  //   };
+  // }, []);
+
+  // const variants = {
+  //   default: {
+  //     x: mousePosition.x - 16,
+  //     y: mousePosition.y - 16,
+  //   },
+  //   greeting: {
+  //     x: mousePosition.x - 75,
+  //     y: mousePosition.y - 75,
+  //     height: 150,
+  //     width: 150,
+  //     backgroundColor: "yellow",
+  //     mixBlendMode: "difference",
+  //   },
+  // };
+
+  // const textEnter = () => setCursorVariant("greeting");
+  // const textLeave = () => setCursorVariant("default");
+
   return (
     <div className="w-screen bg-lightMode-background flex-col justify-start items-center py-80 gap-40 inline-flex">
-      <NavBar
-        language={n("language")}
-        projects={n("projects")}
-        notes={n("notes")}
-        contact={n("contact")}
-        presenterApp={n("presenter-app")}
-        pico8={n("pico-8")}
-        moreProjects={n("more-projects")}
-      />
-      <h1 className="font-instrument text-lightMode-text text-9xl">
+      <h1
+        className="font-instrument text-lightMode-text text-9xl greeting"
+        // onMouseEnter={textEnter}
+        // onMouseLeave={textLeave}
+      >
         {t("greeting")}
       </h1>
       <div className="max-w-[700px] flex-col justify-start items-start inline-flex">
@@ -33,6 +69,11 @@ export default function Home() {
           {t("p-3")}
         </p>
       </div>
+      {/* <motion.div
+        className="language-cursor"
+        variants={variants}
+        animate={cursorVariant}
+      ></motion.div> */}
     </div>
   );
 }
