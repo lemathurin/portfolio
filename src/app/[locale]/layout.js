@@ -28,17 +28,10 @@ export const metadata = {
 
 export default function RootLayout({ children, params: { locale } }) {
   const n = useTranslations("NavBar");
-  const t = useTranslations("Home");
   return (
     <html lang={locale}>
       <body className={instrument.className}>
         {children}
-        <Home
-          greeting={t("greeting")}
-          p1={t("p-1")}
-          p2={t("p-2")}
-          p3={t("p-3")}
-        />
         <NavBar
           language={n("language")}
           projects={n("projects")}
