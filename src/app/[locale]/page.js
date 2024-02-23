@@ -12,6 +12,8 @@ export default function Home(props) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   console.log(mousePosition);
 
+  const [cursorVariant, setCursorVariant] = useState("default");
+
   useEffect(() => {
     const mouseMove = (e) => {
       setMousePosition({
@@ -32,11 +34,26 @@ export default function Home(props) {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
     },
+    greeting: {
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      height: 150,
+      width: 150,
+      backgroundColor: "yellow",
+      mixBlendMode: "difference",
+    },
   };
+
+  const textEnter = () => setCursorVariant("greeting");
+  const textLeave = () => setCursorVariant("default");
 
   return (
     <div className="w-screen bg-lightMode-background flex-col justify-start items-center gap-40 inline-flex">
-      <h1 className="font-instrument text-lightMode-text text-9xl">
+      <h1
+        className="font-instrument text-lightMode-text text-9xl greeting"
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
+      >
         {props.greeting}
       </h1>
       <div className="max-w-[700px] flex-col justify-start items-start inline-flex">
@@ -57,7 +74,7 @@ export default function Home(props) {
       <motion.div
         className="language-cursor"
         variants={variants}
-        animate="default"
+        animate={cursorVariant}
       ></motion.div>
     </div>
   );
