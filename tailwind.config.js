@@ -22,6 +22,13 @@ module.exports = {
         instrument: ["var(--font-instrument)"],
       },
     },
+    screens: {
+      md: "640px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+    },
   },
   plugins: [],
 };

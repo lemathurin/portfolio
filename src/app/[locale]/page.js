@@ -3,6 +3,7 @@
 // import "../[locale]/globals.css";
 
 import { useTranslations } from "next-intl";
+import Cursor from "./components/Cursors";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -46,26 +47,26 @@ export default function Home() {
   // const textLeave = () => setCursorVariant("default");
 
   return (
-    <div className="w-screen bg-lightMode-background flex-col justify-start items-center py-80 gap-40 inline-flex">
+    <div className="w-screen bg-lightMode-background flex-col justify-start items-center py-80 gap-12 md:gap-20 lg:gap-40 inline-flex">
       <h1
-        className="font-instrument text-lightMode-text text-9xl greeting"
+        className="font-instrument text-lightMode-text text-7xl md:text-8xl lg:text-9xl greeting"
         // onMouseEnter={textEnter}
         // onMouseLeave={textLeave}
       >
         {t("greeting")}
       </h1>
-      <div className="max-w-[700px] flex-col justify-start items-start inline-flex">
-        <p className="leading-tight text-justify text-lightMode-text text-5xl">
+      <div className="max-w-[70%] md:max-w-[500px] lg:max-w-[700px] flex-col justify-start items-start inline-flex">
+        <p className="leading-tight text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {t("p-1")}
         </p>
       </div>
-      <div className="max-w-[700px] flex-col justify-start items-start inline-flex">
-        <p className="leading-tight text-justify text-lightMode-text text-5xl">
+      <div className="max-w-[70%] md:max-w-[500px] lg:max-w-[700px] flex-col justify-start items-start inline-flex">
+        <p className="leading-tight text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {t("p-2")}
         </p>
       </div>
-      <div className="max-w-[700px] flex-col justify-start items-start inline-flex">
-        <p className="leading-tight text-justify text-lightMode-text text-5xl">
+      <div className="max-w-[70%] md:max-w-[500px] lg:max-w-[700px] flex-col justify-start items-start inline-flex">
+        <p className="leading-tight text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {t("p-3")}
         </p>
       </div>
@@ -74,6 +75,8 @@ export default function Home() {
         variants={variants}
         animate={cursorVariant}
       ></motion.div> */}
+
+      <Cursor />
     </div>
   );
 }
