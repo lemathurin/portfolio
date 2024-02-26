@@ -1,13 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* .language-cursor {
+.language-cursor {
     background-color: #111;
+    /* height: 32px;
+    width: 32px; */
     border-radius: 50%;
     position: fixed;
     top: 0;
     left: 0;
     pointer-events: none;
     z-index: 100;
-} */
+}
