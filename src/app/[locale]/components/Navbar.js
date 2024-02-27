@@ -31,7 +31,7 @@ export default function NavBar(props) {
   }, []);
 
   return (
-    <div className="entire-navbar">
+    <div className="entire-navbar fixed bottom-[20px] flex p-[1.25rem] flex-col justify-end items-center max-w-min">
       <AnimatePresence>
         {isButtonHovered && (
           <motion.div
@@ -115,7 +115,7 @@ export default function NavBar(props) {
           </motion.div>
         )}
       </AnimatePresence>
-      <ol className="menu-button-container">
+      <ol className="menu-button-container flex px-[0.625rem] items-center gap-[0.625rem] rounded-[1.25rem]">
         <Link href="/">
           <li className="menu-button">
             <span className="menu-text" href="/">
@@ -124,7 +124,7 @@ export default function NavBar(props) {
           </li>
         </Link>
         <div
-          className="menu-button-accessibility"
+          className="menu-button-accessibility py-[0.625rem]"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
