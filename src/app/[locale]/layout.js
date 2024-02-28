@@ -2,6 +2,7 @@ import { Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/Navbar";
 import { useTranslations } from "next-intl";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,6 +34,7 @@ export default function RootLayout({ children, params: { locale } }) {
           pico8={n("pico-8")}
           moreProjects={n("more-projects")}
         />
+        <Analytics />
       </body>
     </html>
   );
