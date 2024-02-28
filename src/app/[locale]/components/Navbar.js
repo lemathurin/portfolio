@@ -117,8 +117,8 @@ export default function NavBar(props) {
       </AnimatePresence>
       <ol className="menu-button-container flex px-[0.625rem] items-center gap-[0.625rem] rounded-[1.25rem]">
         <Link href="/">
-          <li className="menu-button">
-            <span className="menu-text" href="/">
+          <li className="menu-button flex py-[0.9375rem] px-[0.625rem] items-start rounded-[0.625rem] w-max">
+            <span className="menu-text text-[1.3rem]" href="/">
               {props.language}
             </span>
           </li>
@@ -129,23 +129,23 @@ export default function NavBar(props) {
           onMouseLeave={handleMouseLeave}
         >
           <Link href="/">
-            <li className="menu-button">
-              <span className="menu-text" href="/">
+            <li className="menu-button flex py-[0.9375rem] px-[0.625rem] items-start rounded-[0.625rem] w-max">
+              <span className="menu-text text-[1.3rem]" href="/">
                 {props.projects}
               </span>
             </li>
           </Link>{" "}
         </div>
         <Link href="/">
-          <li className="menu-button">
-            <span className="menu-text" href="/">
+          <li className="menu-button flex py-[0.9375rem] px-[0.625rem] items-start rounded-[0.625rem] w-max">
+            <span className="menu-text text-[1.3rem]" href="/">
               {props.notes}
             </span>
           </li>
         </Link>{" "}
         <Link href="/contact">
-          <li className="menu-button">
-            <span className="menu-text" href="/">
+          <li className="menu-button flex py-[0.9375rem] px-[0.625rem] items-start rounded-[0.625rem] w-max">
+            <span className="menu-text text-[1.3rem]" href="/">
               {props.contact}
             </span>
           </li>
