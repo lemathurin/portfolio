@@ -48,7 +48,7 @@ export default function NavBar(props) {
           >
             <div className="project-dropdown h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
               <div className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
-                <h3 className="dropdown-text text-[1.7rem] md:text-[2.1875rem]">
+                <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
                   {props.presenterApp}
                 </h3>
                 <Image
@@ -61,7 +61,7 @@ export default function NavBar(props) {
               </div>
               <div className="project-right-section gap-[0.3125rem] md:gap-[0.625rem]">
                 <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
-                  <h3 className="dropdown-text text-[1.7rem] md:text-[2.1875rem]">
+                  <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
                     {props.pico8}
                   </h3>
                   <div className="project-right-small-images">
@@ -89,7 +89,7 @@ export default function NavBar(props) {
                   </div>
                 </div>
                 <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
-                  <h3 className="dropdown-text text-[1.7rem] md:text-[2.1875rem]">
+                  <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
                     {props.moreProjects}
                   </h3>
                   <div className="project-right-small-images">
@@ -124,7 +124,10 @@ export default function NavBar(props) {
       <ol className="menu-button-container flex px-[0.3125rem] md:px-[0.625rem] items-center gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
         <Link href="/">
           <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-            <span className="menu-text text-[1rem] md:text-[1.3rem]" href="/">
+            <span
+              className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
+              href="/"
+            >
               {props.language}
             </span>
           </li>
@@ -136,7 +139,10 @@ export default function NavBar(props) {
         >
           <Link href="/">
             <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-              <span className="menu-text text-[1rem] md:text-[1.3rem]" href="/">
+              <span
+                className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
+                href="/"
+              >
                 {props.projects}
               </span>
             </li>
@@ -144,14 +150,20 @@ export default function NavBar(props) {
         </div>
         <Link href="/">
           <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-            <span className="menu-text text-[1rem] md:text-[1.3rem]" href="/">
+            <span
+              className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
+              href="/"
+            >
               {props.notes}
             </span>
           </li>
         </Link>{" "}
         <Link href="/contact">
           <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-            <span className="menu-text text-[1rem] md:text-[1.3rem]" href="/">
+            <span
+              className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
+              href="/"
+            >
               {props.contact}
             </span>
           </li>
