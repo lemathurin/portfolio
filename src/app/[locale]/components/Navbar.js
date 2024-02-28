@@ -6,13 +6,13 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "../../../navigation";
-import { useLocale } from "next-intl";
+// import { useLocale } from "next-intl";
 
 export default function NavBar(props) {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const timeoutRef = useRef(null);
 
-  const currentLocale = useLocale();
+  // const currentLocale = useLocale();
 
   // Function to handle mouse enter event
   const handleMouseEnter = () => {
@@ -141,16 +141,16 @@ export default function NavBar(props) {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Link href="/">
-            <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-              <span
-                className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
-                // href="/"
-              >
-                {props.projects}
-              </span>
-            </li>
-          </Link>{" "}
+          {/* <Link href="/"> */}
+          <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+            <span
+              className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
+              // href="/"
+            >
+              {props.projects}
+            </span>
+          </li>
+          {/* </Link>{" "} */}
         </div>
         <Link href="/">
           <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
