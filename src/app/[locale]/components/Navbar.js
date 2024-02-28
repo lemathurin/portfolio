@@ -46,8 +46,8 @@ export default function NavBar(props) {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="project-dropdown h-[13rem] md:h-[17.125rem] rounded-[0.625rem] md:rounded-[1.25rem]">
-              <div className="project-left dropdown-boxes rounded-[0.3125rem] md:rounded-[0.625rem]">
+            <div className="project-dropdown h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
+              <div className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
                 <h3 className="dropdown-text text-[1.7rem] md:text-[2.1875rem]">
                   {props.presenterApp}
                 </h3>
@@ -59,8 +59,8 @@ export default function NavBar(props) {
                   alt="Screenshot of the unfinished project"
                 />
               </div>
-              <div className="project-right-section">
-                <div className="project-right-small dropdown-boxes rounded-[0.3125rem] md:rounded-[0.625rem]">
+              <div className="project-right-section gap-[0.3125rem] md:gap-[0.625rem]">
+                <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
                   <h3 className="dropdown-text text-[1.7rem] md:text-[2.1875rem]">
                     {props.pico8}
                   </h3>
@@ -88,7 +88,7 @@ export default function NavBar(props) {
                     />
                   </div>
                 </div>
-                <div className="project-right-small dropdown-boxes rounded-[0.3125rem] md:rounded-[0.625rem]">
+                <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
                   <h3 className="dropdown-text text-[1.7rem] md:text-[2.1875rem]">
                     {props.moreProjects}
                   </h3>
