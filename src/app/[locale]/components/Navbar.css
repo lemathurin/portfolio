@@ -54,23 +54,21 @@
 }
 
 .project-dropdown-container {
-    padding-bottom: 0.625rem;
+    /* padding-bottom: 0.625rem; */
     /* background: pink; */
 }
 
 .project-dropdown {
     display: flex;
     width: 100%;
-    height: 17.125rem;
+    /* height: 17.125rem; */
     padding: 0.625rem;
     align-items: center;
     gap: 0.625rem;
-    border-radius: 1.25rem;
+    /* border-radius: 1.25rem; */
     border: 3px solid #D7DAD7;
-    /* background: rgba(137, 142, 135, 0.70); */
     background: #ABAFAA;
     box-shadow: 0px 4px 10px 0px rgba(32, 32, 32, 0.25);
-    /* backdrop-filter: blur(25px); */
 }
 
 .project-left {
@@ -81,11 +79,8 @@
     gap: 0.625rem;
     flex-basis: 50%;
     align-self: stretch;
-    border-radius: 0.625rem;
-    /* background: rgba(239, 241, 239, 0.10);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); */
+    /* border-radius: 0.625rem; */
     overflow: hidden;
-    /* backdrop-filter: blur(25px); */
 }
 
 .project-right-section {
@@ -106,10 +101,7 @@
     gap: 0.625rem;
     flex-basis: 50%;
     align-self: stretch;
-    border-radius: 0.625rem;
-    /* background: rgba(239, 241, 239, 0.10);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); */
-    /* backdrop-filter: blur(25px); */
+    /* border-radius: 0.625rem; */
     overflow: hidden;
 }
 
@@ -139,7 +131,7 @@
 .dropdown-text {
     align-self: stretch;
     color: #FCFDFC;
-    font-size: 2.1875rem;
+    /* font-size: 2.1875rem; */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
