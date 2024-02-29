@@ -135,7 +135,7 @@ export default function NavBar(props) {
               onMouseEnter={() => handleMouseEnter("notes")}
               onMouseLeave={handleMouseLeave}
             >
-              <div className="project-dropdown h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
+              <div className="project-dropdown cursor-wait h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
                 <div className="dropdown-boxes flex flex-col overflow-hidden w-full h-full p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
                   <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem] mb-[0.625rem]">
                     {props.notesComingSoon}
