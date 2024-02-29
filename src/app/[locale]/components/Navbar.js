@@ -9,25 +9,23 @@ import { Link } from "../../../navigation";
 // import { useLocale } from "next-intl";
 
 export default function NavBar(props) {
-  const [isButtonHovered, setIsButtonHovered] = useState(false);
-  const timeoutRef = useRef(null);
-
   // const currentLocale = useLocale();
 
-  // Function to handle mouse enter event
-  const handleMouseEnter = () => {
-    clearTimeout(timeoutRef.current); // Clear any existing timeout
-    setIsButtonHovered(true);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const handleMouseEnter = (dropdown) => {
+    clearTimeout(timeoutRef.current);
+    setActiveDropdown(dropdown); // Set active dropdown on mouse enter
   };
 
-  // Function to handle mouse leave event
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
-      setIsButtonHovered(false);
+      setActiveDropdown(null); // Clear active dropdown on mouse leave
     }, 200);
   };
 
-  // Clear timeout on component unmount
+  const timeoutRef = useRef(null);
+
   useEffect(() => {
     return () => {
       clearTimeout(timeoutRef.current);
@@ -37,17 +35,14 @@ export default function NavBar(props) {
   return (
     <div className="entire-navbar fixed bottom-[0px] md:bottom-[20px] flex p-[1.25rem] flex-col justify-end items-center max-w-min">
       <AnimatePresence>
-        {isButtonHovered && (
+        {activeDropdown === "projects" && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }} // Set initial opacity to 0 and move up by 10px
-            animate={{
-              opacity: isButtonHovered ? 1 : 0,
-              y: isButtonHovered ? 0 : -10,
-            }} // Animate opacity and y position based on isButtonHovered state
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.2 }} // Set transition duration
+            transition={{ duration: 0.2 }}
             className="project-dropdown-container pb-[0.3125rem] md:pb-[0.625rem]"
-            onMouseEnter={handleMouseEnter}
+            onMouseEnter={() => handleMouseEnter("projects")}
             onMouseLeave={handleMouseLeave}
           >
             <div className="project-dropdown h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
@@ -125,6 +120,27 @@ export default function NavBar(props) {
           </motion.div>
         )}
       </AnimatePresence>
+      <AnimatePresence>
+        {activeDropdown === "notes" && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.2 }}
+            className="project-dropdown-container pb-[0.3125rem] md:pb-[0.625rem]"
+            onMouseEnter={() => handleMouseEnter("notes")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="project-dropdown h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
+              <div className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
+                <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
+                  {props.presenterApp}
+                </h3>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <ol className="menu-button-container flex px-[0.3125rem] md:px-[0.625rem] items-center gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
         <Link href="/">
           <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
@@ -137,8 +153,8 @@ export default function NavBar(props) {
           </li>
         </Link>
         <div
-          className="menu-button-accessibility py-[0.3125rem] md:py-[0.625rem]"
-          onMouseEnter={handleMouseEnter}
+          className="menu-button-accessibility cursor-default py-[0.3125rem] md:py-[0.625rem]"
+          onMouseEnter={() => handleMouseEnter("projects")}
           onMouseLeave={handleMouseLeave}
         >
           {/* <Link href="/"> */}
@@ -156,6 +172,8 @@ export default function NavBar(props) {
           <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
             <span
               className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
+              onMouseEnter={() => handleMouseEnter("notes")}
+              onMouseLeave={handleMouseLeave}
               // href="/"
             >
               {props.notes}

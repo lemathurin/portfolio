@@ -80,7 +80,7 @@ export default function Home() {
         animate={cursorVariant}
       ></motion.div> */}
 
-      <Cursor />
+      {/* <Cursor /> */}
     </div>
   );
 }
