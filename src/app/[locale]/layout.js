@@ -33,6 +33,10 @@ export default function RootLayout({ children, params: { locale } }) {
           presenterApp={n("presenter-app")}
           pico8={n("pico-8")}
           moreProjects={n("more-projects")}
+          notesComingSoon={n("notes-comingsoon")}
+          article1={n("article1")}
+          article2={n("article2")}
+          article3={n("article3")}
         />
         <Analytics />
       </body>
