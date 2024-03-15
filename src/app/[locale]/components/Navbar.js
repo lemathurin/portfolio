@@ -254,7 +254,7 @@ export default function NavBar(props) {
               className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
               // href="/"
             >
-              {props.more}
+              {props.contact}
             </span>
           </li>
         </Link>
