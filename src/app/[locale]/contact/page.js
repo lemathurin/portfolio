@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function contact() {
-  const c = useTranslations("contact");
+  const c = useTranslations("Contact");
   return (
     <div className="w-screen h-screen flex items-start md:items-center justify-center bg-lightMode-background">
       <div className="flex flex-col p-10 pb-20 md:grid md:grid-cols-3 md:gap-5">
