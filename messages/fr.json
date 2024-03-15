@@ -17,5 +17,14 @@
       "article1": "Mon premier portfolio",
       "article2": "Apprendre à coder",
       "article3": "Mon prochain projet"
+    },
+    "contact": {
+      "email": "je répondrai dès que possible",
+      "linkedin": "bientôt disponible",
+      "github": "mes projets de dév",
+      "twitter": "actuellement pas très actif",
+      "dribbble": "projets de design",
+      "layers": "plus de projets de design",
+      "readcv": "mon cv"
     }
   }

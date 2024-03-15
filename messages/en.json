@@ -17,5 +17,14 @@
       "article1": "My first portfolio",
       "article2": "Learning to code",
       "article3": "My next project"
+    },
+    "contact": {
+      "email": "I’ll answer as soon as possible",
+      "linkedin": "coming soon",
+      "github": "dev projects",
+      "twitter": "currently not very active",
+      "dribbble": "design projects",
+      "layers": "more design projects",
+      "readcv": "my resume"
     }
   }
