@@ -34,7 +34,7 @@ export default function NavBar(props) {
   }, []);
 
   return (
-    <div className="entire-navbar fixed bottom-[0px] md:bottom-[20px] flex p-[1.25rem] flex-col justify-end items-center max-w-min">
+    <div className="entire-navbar fixed bottom-[2svh] flex flex-col justify-end items-center max-w-min">
       <div className="dropdown-container">
         <AnimatePresence>
           {activeDropdown === "projects" && (
@@ -69,21 +69,21 @@ export default function NavBar(props) {
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/pico-8_loading.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/pico-8_menu.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game menu screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/pico-8_game.png"
                         width={83}
                         height={83}
@@ -97,21 +97,21 @@ export default function NavBar(props) {
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/eym.png"
                         width={83}
                         height={210}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/portfolio_exploration.png"
                         width={83}
                         height={210}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/dataviz.png"
                         width={110}
                         height={83}
@@ -208,7 +208,7 @@ export default function NavBar(props) {
       </div>
       <ol className="menu-button-container flex px-[0.3125rem] md:px-[0.625rem] items-center gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
         <Link href="/">
-          <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+          <li className="menu-button flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
             <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
               {props.language}
             </span>
@@ -220,7 +220,7 @@ export default function NavBar(props) {
           onMouseLeave={handleMouseLeave}
         >
           {/* <Link href="/"> */}
-          <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+          <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
             <span
               className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
               // href="/"
@@ -235,19 +235,14 @@ export default function NavBar(props) {
           onMouseEnter={() => handleMouseEnter("notes")}
           onMouseLeave={handleMouseLeave}
         >
-          {/* <Link href="/"> */}
-          <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-            <span
-              className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
-              // href="/"
-            >
+          <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+            <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
               {props.notes}
             </span>
           </li>
-          {/* </Link>{" "} */}
         </div>
         <Link href="/contact">
-          <li className="menu-button flex py-[0.46875rem] md:py-[0.9375rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+          <li className="menu-button flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
             <span
               className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
               // href="/"
