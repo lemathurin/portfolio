@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="font-inter font-extralight italic text-xl flex items-end col-span-2 pb-8 md:pb-0">
           {c("email")}
         </div>
-        <div className="font-instrument md:text-right text-3xl hover:text-lightMode-hoveredtext cursor-not-allowed">
+        <div className="font-instrument md:text-right text-3xl hover:text-[#5C271F] hover:line-through transition cursor-not-allowed">
           LinkedIn
         </div>
         <div className="font-inter font-extralight italic text-xl flex items-end col-span-2 pb-8 md:pb-0">

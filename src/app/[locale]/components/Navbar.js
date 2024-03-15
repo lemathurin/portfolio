@@ -54,7 +54,7 @@ export default function NavBar(props) {
                     {props.presenterApp}
                   </h3>
                   <Image
-                    className="shadow hover:-rotate-2 hover:origin-bottom-left transition-all"
+                    className="shadow hover:-translate-y-5 transition-all"
                     src="/images/presenter_app.png"
                     width={400}
                     height={210}
@@ -69,21 +69,21 @@ export default function NavBar(props) {
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow"
+                        className="shadow hover:-translate-y-5 transition-all"
                         src="/images/pico-8_loading.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow"
+                        className="shadow hover:-translate-y-5 transition-all"
                         src="/images/pico-8_menu.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game menu screen"
                       />
                       <Image
-                        className="shadow"
+                        className="shadow hover:-translate-y-5 transition-all"
                         src="/images/pico-8_game.png"
                         width={83}
                         height={83}
@@ -97,21 +97,21 @@ export default function NavBar(props) {
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow"
+                        className="shadow hover:-translate-y-5 transition-all"
                         src="/images/eym.png"
                         width={83}
                         height={210}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow"
+                        className="shadow hover:-translate-y-5 transition-all"
                         src="/images/portfolio_exploration.png"
                         width={83}
                         height={210}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow"
+                        className="shadow hover:-translate-y-5 transition-all"
                         src="/images/dataviz.png"
                         width={110}
                         height={83}
