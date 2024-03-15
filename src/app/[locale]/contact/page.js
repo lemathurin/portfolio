@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 export default function Contact() {
   const c = useTranslations("Contact");
   return (
-    <div className="w-screen h-screen flex items-start md:items-center justify-center bg-lightMode-background">
-      <div className="flex flex-col p-10 pb-20 md:grid md:grid-cols-3 md:gap-5">
+    <div className="w-screen h-screen flex items-start justify-center bg-lightMode-background">
+      <div className="flex flex-col px-10 pt-16 pb-32 md:pt-[25vh] md:grid md:grid-cols-3 md:gap-5">
         <div className="font-instrument md:text-right text-3xl hover:underline hover:-rotate-3 md:hover:rotate-3 origin-bottom-left md:origin-bottom-right hover:text-lightMode-hoveredtext transition">
           <Link href="/">Email</Link>
         </div>
