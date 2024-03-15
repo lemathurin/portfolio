@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-export default function contact() {
+export default function Contact() {
   const c = useTranslations("Contact");
   return (
     <div className="w-screen h-screen flex items-start md:items-center justify-center bg-lightMode-background">
