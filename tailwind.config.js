@@ -11,6 +11,7 @@ module.exports = {
         lightMode: {
           background: "#FDFDFC",
           text: "#1D211C",
+          hoveredtext: "#63635E",
           navbarText: "#FCFDFC",
         },
         darkMode: {
