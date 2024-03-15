@@ -34,7 +34,7 @@ export default function NavBar(props) {
   }, []);
 
   return (
-    <div className="entire-navbar fixed bottom-[0px] md:bottom-[20px] flex p-[1.25rem] flex-col justify-end items-center max-w-min">
+    <div className="entire-navbar fixed bottom-[2svh] flex flex-col justify-end items-center max-w-min">
       <div className="dropdown-container">
         <AnimatePresence>
           {activeDropdown === "projects" && (
@@ -69,21 +69,21 @@ export default function NavBar(props) {
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/pico-8_loading.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/pico-8_menu.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game menu screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/pico-8_game.png"
                         width={83}
                         height={83}
@@ -97,21 +97,21 @@ export default function NavBar(props) {
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/eym.png"
                         width={83}
                         height={210}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/portfolio_exploration.png"
                         width={83}
                         height={210}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-5 transition-all"
+                        className="shadow hover:-translate-y-2 transition-all"
                         src="/images/dataviz.png"
                         width={110}
                         height={83}
