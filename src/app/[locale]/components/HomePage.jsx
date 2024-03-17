@@ -37,13 +37,26 @@ export default function Home(props) {
       y: mousePosition.y - 75,
       height: 150,
       width: 150,
+      borderRadius: "100%",
       backgroundColor: "yellow",
       mixBlendMode: "difference",
+    },
+    test: {
+      x: mousePosition.x - 100,
+      y: mousePosition.y - 100,
+      borderRadius: "0%",
+      height: 200,
+      width: 200,
+      backgroundImage: "url(/images/eym.png)",
+      backgroundSize: "cover",
     },
   };
 
   const textEnter = () => setCursorVariant("greeting");
   const textLeave = () => setCursorVariant("default");
+
+  const testEnter = () => setCursorVariant("test");
+  const testLeave = () => setCursorVariant("default");
 
   return (
     <div className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]">
@@ -60,6 +73,11 @@ export default function Home(props) {
         <div>
           <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
             {props.p1}
+            <span onMouseEnter={testEnter} onMouseLeave={testLeave}>
+              {" "}
+              Mathurin Sekine{" "}
+            </span>
+            {props.p2}
           </p>
         </div>
         <div>
@@ -74,7 +92,7 @@ export default function Home(props) {
         </div>
       </div>
       <motion.div
-        className="language-cursor"
+        className="homepage-cursor"
         variants={variants}
         animate={cursorVariant}
       ></motion.div>
