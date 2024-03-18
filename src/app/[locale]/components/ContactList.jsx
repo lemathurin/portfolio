@@ -71,7 +71,7 @@ export default function ContactList(props) {
         <div className="font-instrument text-lightMode-text md:text-right text-3xl pb-2">
           <h3>More about me</h3>
         </div>
-        <div className="font-inter md:mt-[0.53rem] text-lightMode-text font-extralight text-xl flex items-end col-span-2 pb-8 md:pb-0 w-[20rem] text-justify">
+        <div className="font-inter md:mt-[0.53rem] text-lightMode-text font-extralight text-xl flex items-end col-span-2 pb-8 md:pb-0 md:w-[20rem] text-justify">
           Elit cupidatat dolore nisi. Elit labore reprehenderit velit officia
           irure ullamco do. Incididunt officia reprehenderit ipsum officia non
           occaecat aliquip velit ipsum ipsum minim. Voluptate irure anim
