@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../globals.css";
 
-import Cursor from "../components/Cursors";
+// import Cursor from "../components/Cursors";
 
 export default function Home(props) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -73,8 +73,11 @@ export default function Home(props) {
         <div>
           <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
             {props.p1}
-            <span onMouseEnter={testEnter} onMouseLeave={testLeave}>
-              {" "}
+            <span
+              className="cursor-none underline decoration-wavy decoration-[1.3px] underline-offset-3 transition"
+              onMouseEnter={testEnter}
+              onMouseLeave={testLeave}
+            >
               Mathurin Sekine{" "}
             </span>
             {props.p2}
@@ -97,7 +100,7 @@ export default function Home(props) {
         animate={cursorVariant}
       ></motion.div>
 
-      <Cursor />
+      {/* <Cursor /> */}
     </div>
   );
 }
