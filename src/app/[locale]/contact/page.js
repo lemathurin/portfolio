@@ -14,6 +14,7 @@ export default function Contact() {
         dribbble={c("dribbble")}
         layers={c("layers")}
         readcv={c("readcv")}
+        clipboard={c("clipboard")}
       />
     </div>
   );
