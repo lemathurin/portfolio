@@ -23,7 +23,9 @@ export default function RootLayout({ children, params: { locale } }) {
   const n = useTranslations("NavBar");
   return (
     <html lang={locale}>
-      <body className={`${inter.variable}, ${instrument.variable}`}>
+      <body
+        className={`${inter.variable}, ${instrument.variable} bg-lightMode-background`}
+      >
         {children}
         <NavBar
           language={n("language")}

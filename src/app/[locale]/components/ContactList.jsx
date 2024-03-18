@@ -22,12 +22,12 @@ export default function ContactList(props) {
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
     setShowCopyMessage(true);
-    setTimeout(() => setShowCopyMessage(false), 2000);
+    setTimeout(() => setShowCopyMessage(false), 4000);
   };
 
   return (
     <div className="flex flex-col gap-10 pt-10 pb-36 w-full max-w-[700px]">
-      <div className="flex flex-col px-10 md:grid md:grid-cols-2 gap-y-5">
+      <div className="flex flex-col px-10 md:grid md:grid-cols-2 md:gap-y-5">
         <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min cursor-pointer">
           <a onClick={handleEmailClick}>Email</a>
         </div>
@@ -51,6 +51,7 @@ export default function ContactList(props) {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.1 }}
                   onClick={handleCopyEmail}
+                  className="hover:underline hover:text-lightMode-hoveredtext"
                   style={{
                     cursor: "pointer",
                     position: "absolute",
@@ -118,37 +119,37 @@ export default function ContactList(props) {
             )}
           </AnimatePresence>
         </div>
-        <div className="font-instrument text-lightMode-text text-3xl hover:text-[#5C271F] hover:line-through transition cursor-not-allowed w-min">
+        <div className="font-instrument text-lightMode-text text-3xl hover:text-[#5C271F] hover:line-through transition cursor-not-allowed w-min pt-8 md:pt-0">
           LinkedIn
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.linkedin}
         </div>
-        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min">
+        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
           <Link href="https://github.com/lemathurin">GitHub</Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.github}
         </div>
-        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min">
+        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
           <Link href="https://twitter.com/mathurin_sekine">Twitter</Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.twitter}
         </div>
-        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min">
+        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
           <Link href="https://dribbble.com/mathurin">Dribbble</Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.dribbble}
         </div>
-        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min">
+        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
           <Link href="https://layers.to/mathurin">Layers</Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.layers}
         </div>
-        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition">
+        <div className="font-instrument text-lightMode-text text-3xl hover:underline hover:-rotate-3 origin-bottom-left hover:text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
           <Link href="https://read.cv/mathurin">read.cv</Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
