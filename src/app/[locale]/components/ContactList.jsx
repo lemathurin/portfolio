@@ -98,12 +98,12 @@ export default function ContactList(props) {
                 style={{
                   cursor: "default",
                   position: "absolute",
-                  top: -20,
+                  top: -16,
                   [window.innerWidth > 640 ? "right" : "left"]:
                     window.innerWidth > 640 ? -30 : 60,
                   padding: "0rem 0.625rem 0.3125rem 0.625rem",
                   backgroundColor: "#5BB98B",
-                  rotate: "8deg",
+                  rotate: "5deg",
                   borderRadius: "2rem",
                   border: "2px solid #46A758",
                   boxShadow:
@@ -113,7 +113,7 @@ export default function ContactList(props) {
                 }}
               >
                 <span className="text-white text-sm font-normal">
-                  saved to clipboard
+                  {props.clipboard}
                 </span>
               </motion.div>
             )}
