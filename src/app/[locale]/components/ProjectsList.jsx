@@ -1,6 +1,12 @@
 "use client";
 
-import { ReactLabel, TailwindLabel } from "../components/Labels";
+import {
+  ReactLabel,
+  TailwindLabel,
+  NextjsLabel,
+  JavascriptLabel,
+  FramerMotionLabel,
+} from "../components/Labels";
 
 export default function ProjectsList(props) {
   return (
@@ -63,8 +69,11 @@ export default function ProjectsList(props) {
           </p>
         </div>
       </div>
-      <ReactLabel />
       <TailwindLabel />
+      <ReactLabel />
+      <NextjsLabel />
+      <JavascriptLabel />
+      <FramerMotionLabel />
     </div>
   );
 }
