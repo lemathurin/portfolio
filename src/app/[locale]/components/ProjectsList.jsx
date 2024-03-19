@@ -280,7 +280,31 @@ export default function ProjectsList(props) {
           </p>
         </div>
         <div>
-          <h2 className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition">
+          <AnimatePresence>
+            {isHovered === "pico8" && (
+              <motion.div className="absolute top-0 left-0">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-10px] left-[-15px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <LuaLabel />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <h2
+            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            onMouseEnter={() => setHovered("pico8")}
+            onMouseLeave={() => setHovered(false)}
+          >
             {props.pico8game}
           </h2>
           <p className="font-inter text-xl text-lightMode-text font-extralight">
@@ -288,7 +312,59 @@ export default function ProjectsList(props) {
           </p>
         </div>
         <div>
-          <h2 className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition">
+          <AnimatePresence>
+            {isHovered === "presenterapp" && (
+              <motion.div className="absolute top-0 left-0">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 20 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 20 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[16px] left-[-15px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <TailwindLabel />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: -13 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: -13 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-10px] left-[50px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <FigmaLabel />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 13 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 13 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[20px] left-[90px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <ReactLabel />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <h2
+            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            onMouseEnter={() => setHovered("presenterapp")}
+            onMouseLeave={() => setHovered(false)}
+          >
             {props.presenterapp}
           </h2>
           <p className="font-inter text-xl text-lightMode-text font-extralight">
@@ -296,7 +372,45 @@ export default function ProjectsList(props) {
           </p>
         </div>
         <div>
-          <h2 className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition">
+          <AnimatePresence>
+            {isHovered === "php" && (
+              <motion.div className="absolute top-0 left-0">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-15px] left-[40px] z-10 -rotate-12 pointer-events-none"
+                >
+                  <PhpLabel />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 18 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 18 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[20px] left-[90px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <FigmaLabel />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <h2
+            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            onMouseEnter={() => setHovered("php")}
+            onMouseLeave={() => setHovered(false)}
+          >
             {props.phpsocialnetwork}
           </h2>
           <p className="font-inter text-xl text-lightMode-text font-extralight">
