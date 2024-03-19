@@ -11,6 +11,7 @@ import {
   MySqlLabel,
   SupabaseLabel,
   ExpressLabel,
+  FigmaLabel,
 } from "../components/Labels";
 import { motion, AnimatePresence, stagger } from "framer-motion";
 import { useState } from "react";
@@ -68,6 +69,20 @@ export default function ProjectsList(props) {
                   className="absolute top-[23px] left-[5px] z-20 rotate-[7deg] pointer-events-none"
                 >
                   <TailwindLabel />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-19px] left-[80px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <FigmaLabel />
                 </motion.div>
               </motion.div>
             )}
@@ -144,6 +159,20 @@ export default function ProjectsList(props) {
                 >
                   <TailwindLabel />
                 </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-10px] left-[150px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <FigmaLabel />
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -159,7 +188,45 @@ export default function ProjectsList(props) {
           </p>
         </div>
         <div>
-          <h2 className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition">
+          <AnimatePresence>
+            {isHovered === "dataviz" && (
+              <motion.div className="absolute top-0 left-0">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: -18 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: -18 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-10px] left-[-30px] z-10 -rotate-12 pointer-events-none"
+                >
+                  <FigmaLabel />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-10px] left-[110px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <JavascriptLabel />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <h2
+            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            onMouseEnter={() => setHovered("dataviz")}
+            onMouseLeave={() => setHovered(false)}
+          >
             {props.dataviz}
           </h2>
           <p className="font-inter text-xl text-lightMode-text font-extralight">
@@ -167,7 +234,45 @@ export default function ProjectsList(props) {
           </p>
         </div>
         <div>
-          <h2 className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition">
+          <AnimatePresence>
+            {isHovered === "chromeextension" && (
+              <motion.div className="absolute top-0 left-0">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[10px] left-[40px] z-10 -rotate-12 pointer-events-none"
+                >
+                  <JavascriptLabel />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 18 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 18 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-10px] left-[90px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <FigmaLabel />
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <h2
+            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            onMouseEnter={() => setHovered("chromeextension")}
+            onMouseLeave={() => setHovered(false)}
+          >
             {props.chromeextension}
           </h2>
           <p className="font-inter text-xl text-lightMode-text font-extralight">

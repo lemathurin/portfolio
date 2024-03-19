@@ -79,3 +79,11 @@ export function ExpressLabel() {
     </div>
   );
 }
+
+export function FigmaLabel() {
+  return (
+    <div className="bg-[#A259FF] pt-[3px] px-[10px] pb-[5px] rounded-[30px] border-[1.5px] border-[#801FFF] shadow-[0px_-2.5px_0px_0px_#801FFF_inset]">
+      <p className="font-inter text-xs text-white">Figma</p>
+    </div>
+  );
+}
