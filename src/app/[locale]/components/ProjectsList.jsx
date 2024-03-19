@@ -6,6 +6,11 @@ import {
   NextjsLabel,
   JavascriptLabel,
   FramerMotionLabel,
+  PhpLabel,
+  LuaLabel,
+  MySqlLabel,
+  SupabaseLabel,
+  ExpressLabel,
 } from "../components/Labels";
 
 export default function ProjectsList(props) {
@@ -69,11 +74,16 @@ export default function ProjectsList(props) {
           </p>
         </div>
       </div>
-      <TailwindLabel />
+      {/* <TailwindLabel />
       <ReactLabel />
       <NextjsLabel />
       <JavascriptLabel />
       <FramerMotionLabel />
+      <PhpLabel />
+      <LuaLabel />
+      <MySqlLabel />
+      <SupabaseLabel />
+      <ExpressLabel /> */}
     </div>
   );
 }
