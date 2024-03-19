@@ -1,5 +1,7 @@
 "use client";
 
+import { ReactLabel, TailwindLabel } from "../components/Labels";
+
 export default function ProjectsList(props) {
   return (
     <div className="w-screen flex md:items-start md:justify-center">
@@ -61,6 +63,8 @@ export default function ProjectsList(props) {
           </p>
         </div>
       </div>
+      <ReactLabel />
+      <TailwindLabel />
     </div>
   );
 }
