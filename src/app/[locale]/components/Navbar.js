@@ -219,16 +219,13 @@ export default function NavBar(props) {
           onMouseEnter={() => handleMouseEnter("projects")}
           onMouseLeave={handleMouseLeave}
         >
-          {/* <Link href="/"> */}
-          <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-            <span
-              className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
-              // href="/"
-            >
-              {props.projects}
-            </span>
-          </li>
-          {/* </Link>{" "} */}
+          <Link href="/projects">
+            <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+              <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
+                {props.projects}
+              </span>
+            </li>
+          </Link>{" "}
         </div>
         <div
           className="menu-button-accessibility cursor-default py-[0.3125rem] md:py-[0.625rem]"
@@ -243,10 +240,7 @@ export default function NavBar(props) {
         </div>
         <Link href="/contact">
           <li className="menu-button flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-            <span
-              className="menu-text font-inter text-[1rem] md:text-[1.3rem]"
-              // href="/"
-            >
+            <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
               {props.contact}
             </span>
           </li>
