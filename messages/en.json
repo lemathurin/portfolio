@@ -18,6 +18,17 @@
       "article2": "Learning to code",
       "article3": "My next project"
     },
+    "Projects" : {
+      "portfolio": "Portfolio",
+      "ecommerce": "E-commerce store",
+      "dataviz": "Dataviz website",
+      "chromeextension": "Chrome extension",
+      "pico8game": "Pico-8 game",
+      "presenterapp": "Untitled Presentation App",
+      "phpsocialnetwork": "PHP Social Network",
+      "schoolproject": "school project",
+      "personalproject": "personal project"
+    },
     "Contact": {
       "email": "I’ll answer as soon as possible",
       "linkedin": "coming soon",

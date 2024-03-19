@@ -18,6 +18,17 @@
       "article2": "Apprendre à coder",
       "article3": "Mon prochain projet"
     },
+    "Projects" : {
+      "portfolio": "Portfolio",
+      "ecommerce": "Plateforme de vente",
+      "dataviz": "Site web dataviz",
+      "chromeextension": "Extension Chrome",
+      "pico8game": "Jeu Pico-8",
+      "presenterapp": "Appli de Présentation sans Titre",
+      "phpsocialnetwork": "Réseau Social PHP",
+      "schoolproject": "projet d'école",
+      "personalproject": "projet personnel"
+    },
     "Contact": {
       "email": "je répondrai dès que possible",
       "linkedin": "bientôt disponible",
