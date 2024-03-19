@@ -403,6 +403,20 @@ export default function ProjectsList(props) {
                 >
                   <FigmaLabel />
                 </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5, rotate: 18 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5, rotate: 18 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 600,
+                    damping: 30,
+                    duration: 0.5,
+                  }}
+                  className="absolute top-[-10px] left-[140px] z-10 rotate-[7deg] pointer-events-none"
+                >
+                  <MySqlLabel />
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -418,16 +432,6 @@ export default function ProjectsList(props) {
           </p>
         </div>
       </div>
-      {/* <TailwindLabel />
-      <ReactLabel />
-      <NextjsLabel />
-      <JavascriptLabel />
-      <FramerMotionLabel />
-      <PhpLabel />
-      <LuaLabel />
-      <MySqlLabel />
-      <SupabaseLabel />
-      <ExpressLabel /> */}
     </div>
   );
 }
