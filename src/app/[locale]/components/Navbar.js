@@ -227,6 +227,7 @@ export default function NavBar(props) {
           href={newPath}
           className="absolute -top-3 -left-2 md:hidden"
           whileTap={{ scale: 1.2 }}
+          whileHover={{ scale: 1.1 }}
           initial={{ rotate: -12 }}
           animate={{ rotate: -12 }}
           exit={{ rotate: -12 }}
