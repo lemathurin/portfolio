@@ -61,6 +61,10 @@ export default function Home(props) {
 
   const [isOpened, setIsOpened] = useState(false);
 
+  const toggleHireWindow = () => {
+    setIsOpened(!isOpened);
+  };
+
   return (
     <div className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]">
       <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh]">
@@ -104,7 +108,7 @@ export default function Home(props) {
         animate={cursorVariant}
       ></motion.div>
       <AnimatePresence>
-        {isOpened === "hireWindow" && <HireWindow />}
+        {isOpened === "hireWindow" && <HireWindow onClose={toggleHireWindow} />}
       </AnimatePresence>
 
       {/* <Cursor /> */}
