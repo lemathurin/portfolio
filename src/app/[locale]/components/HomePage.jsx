@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
+import HireWindow from "./HireWindow";
 
 // import Cursor from "../components/Cursors";
 
@@ -58,6 +59,8 @@ export default function Home(props) {
   const testEnter = () => setCursorVariant("test");
   const testLeave = () => setCursorVariant("default");
 
+  const [isOpened, setIsOpened] = useState(false);
+
   return (
     <div className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]">
       <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh]">
@@ -73,6 +76,7 @@ export default function Home(props) {
         <div>
           <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
             {props.p1}
+            <span onClick={() => setIsOpened("hireWindow")}> test </span>
             <span
               className="cursor-none underline decoration-wavy decoration-[1.3px] underline-offset-3 transition"
               onMouseEnter={testEnter}
@@ -99,6 +103,9 @@ export default function Home(props) {
         variants={variants}
         animate={cursorVariant}
       ></motion.div>
+      <AnimatePresence>
+        {isOpened === "hireWindow" && <HireWindow />}
+      </AnimatePresence>
 
       {/* <Cursor /> */}
     </div>
