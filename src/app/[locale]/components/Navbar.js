@@ -6,10 +6,20 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "../../../navigation";
-// import { useLocale } from "next-intl";
+import { useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function NavBar(props) {
-  // const currentLocale = useLocale();
+  const locale = useLocale();
+  console.log("Active Locale:", locale);
+
+  const currentPath = usePathname();
+  console.log("Active Path:", currentPath);
+
+  const inactiveLocale = locale === "en" ? "fr" : "en";
+
+  const newPath = currentPath.replace(`/${locale}`, `/${inactiveLocale}`);
+  console.log("New Path:", newPath);
 
   const [activeDropdown, setActiveDropdown] = useState(null);
   // const [activeDropdown, setActiveDropdown] = useState("notes");
@@ -207,13 +217,13 @@ export default function NavBar(props) {
         </AnimatePresence>
       </div>
       <ol className="menu-button-container flex px-[0.3125rem] md:px-[0.625rem] items-center gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
-        <Link href="/">
+        <a href={newPath}>
           <li className="menu-button flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
             <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
               {props.language}
             </span>
           </li>
-        </Link>
+        </a>
         <div
           className="menu-button-accessibility cursor-default py-[0.3125rem] md:py-[0.625rem]"
           onMouseEnter={() => handleMouseEnter("projects")}
