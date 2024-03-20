@@ -29,6 +29,7 @@ export default function RootLayout({ children, params: { locale } }) {
         {children}
         <NavBar
           language={n("language")}
+          home={n("home")}
           projects={n("projects")}
           notes={n("notes")}
           contact={n("contact")}

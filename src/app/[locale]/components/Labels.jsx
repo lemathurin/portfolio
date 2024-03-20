@@ -87,3 +87,11 @@ export function FigmaLabel() {
     </div>
   );
 }
+
+export function LanguageLabel(props) {
+  return (
+    <div className="bg-[#FF801F] w-max pt-[3px] px-[10px] pb-[5px] rounded-[30px] border-[1.5px] border-[#A35829] shadow-[0px_-2.5px_0px_0px_#A35829_inset]">
+      <p className="font-inter text-xs text-white">{props.language}</p>
+    </div>
+  );
+}
