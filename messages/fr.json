@@ -7,6 +7,7 @@
     },
     "NavBar": {
       "language": "in english",
+      "home": "accueil",
       "projects": "mes projets",
       "notes": "mes notes",
       "contact": "contact",

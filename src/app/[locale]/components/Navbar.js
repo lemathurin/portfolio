@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "../../../navigation";
 import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
+import { LanguageLabel } from "./Labels";
 
 export default function NavBar(props) {
   const locale = useLocale();
@@ -222,13 +223,32 @@ export default function NavBar(props) {
         </AnimatePresence>
       </div>
       <ol className="menu-button-container flex px-[0.3125rem] md:px-[0.625rem] items-center gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
+        <motion.a
+          href={newPath}
+          className="absolute -top-3 -left-2 md:hidden"
+          whileTap={{ scale: 1.2 }}
+          initial={{ rotate: -12 }}
+          animate={{ rotate: -12 }}
+          exit={{ rotate: -12 }}
+        >
+          <LanguageLabel language={props.language} />
+        </motion.a>
         <a href={newPath}>
-          <li className="menu-button flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+          <li className="menu-button hidden md:flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
             <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
               {props.language}
             </span>
           </li>
         </a>
+        <div className="menu-button-accessibility cursor-default py-[0.3125rem] md:py-[0.625rem]">
+          <Link href="/">
+            <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+              <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
+                {props.home}
+              </span>
+            </li>
+          </Link>
+        </div>
         <div
           className="menu-button-accessibility cursor-default py-[0.3125rem] md:py-[0.625rem]"
           onMouseEnter={() => handleMouseEnter("projects")}
