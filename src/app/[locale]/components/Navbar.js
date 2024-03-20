@@ -102,32 +102,37 @@ export default function NavBar(props) {
                     </div>
                   </div>
                   <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
-                    <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
-                      {props.moreProjects}
-                    </h3>
-                    <div className="project-right-small-images">
-                      <Image
-                        className="shadow hover:-translate-y-2 transition-all"
-                        src="/images/eym.png"
-                        width={83}
-                        height={210}
-                        alt="Screenshot of game loading screen"
-                      />
-                      <Image
-                        className="shadow hover:-translate-y-2 transition-all"
-                        src="/images/portfolio_exploration.png"
-                        width={83}
-                        height={210}
-                        alt="Screenshot of game loading screen"
-                      />
-                      <Image
-                        className="shadow hover:-translate-y-2 transition-all"
-                        src="/images/dataviz.png"
-                        width={110}
-                        height={83}
-                        alt="Screenshot of game loading screen"
-                      />
-                    </div>
+                    <Link
+                      href="/projects"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
+                        {props.moreProjects}
+                      </h3>
+                      <div className="project-right-small-images">
+                        <Image
+                          className="shadow hover:-translate-y-2 transition-all"
+                          src="/images/eym.png"
+                          width={83}
+                          height={210}
+                          alt="Screenshot of game loading screen"
+                        />
+                        <Image
+                          className="shadow hover:-translate-y-2 transition-all"
+                          src="/images/portfolio_exploration.png"
+                          width={83}
+                          height={210}
+                          alt="Screenshot of game loading screen"
+                        />
+                        <Image
+                          className="shadow hover:-translate-y-2 transition-all"
+                          src="/images/dataviz.png"
+                          width={110}
+                          height={83}
+                          alt="Screenshot of game loading screen"
+                        />
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -229,13 +234,13 @@ export default function NavBar(props) {
           onMouseEnter={() => handleMouseEnter("projects")}
           onMouseLeave={handleMouseLeave}
         >
-          <Link href="/projects">
-            <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
-              <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
-                {props.projects}
-              </span>
-            </li>
-          </Link>{" "}
+          {/* <Link href="/projects"> */}
+          <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+            <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
+              {props.projects}
+            </span>
+          </li>
+          {/* </Link>{" "} */}
         </div>
         <div
           className="menu-button-accessibility cursor-default py-[0.3125rem] md:py-[0.625rem]"
