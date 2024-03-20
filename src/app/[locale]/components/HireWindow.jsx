@@ -10,7 +10,7 @@ export default function HireWindow({ onClose }) {
       onClick={onClose}
     >
       <div
-        className="w-full h-[97%] md:w-[700px] flex flex-col p-5 md:h-[500px] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
+        className="w-full h-[97svh] md:w-[700px] flex flex-col p-5 md:h-[500px] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
         onClick={handleWindowClick}
       >
         <div className="flex gap-1.5 items-center">
