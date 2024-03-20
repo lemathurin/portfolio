@@ -234,13 +234,13 @@ export default function NavBar(props) {
         >
           <LanguageLabel language={props.language} />
         </motion.a>
-        <a href={newPath}>
-          <li className="menu-button hidden md:flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+        <li className="menu-button hidden md:flex py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">
+          <a href={newPath}>
             <span className="menu-text font-inter text-[1rem] md:text-[1.3rem]">
               {props.language}
             </span>
-          </li>
-        </a>
+          </a>
+        </li>
         <div className="menu-button-accessibility cursor-default py-[0.3125rem] md:py-[0.625rem]">
           <Link href="/">
             <li className="menu-button flex py-[0.46875rem] md:py-[0.46875rem] px-[0.3125rem] md:px-[0.625rem] items-start rounded-[0.3125rem] md:rounded-[0.625rem] w-max">

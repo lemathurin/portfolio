@@ -24,7 +24,7 @@ export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <body
-        className={`${inter.variable}, ${instrument.variable} bg-lightMode-background`}
+        className={`${inter.variable}, ${instrument.variable} bg-lightMode-background overflow-x-hidden`}
       >
         {children}
         <NavBar
