@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
+import { NotificationAlert } from "./Labels";
 
 // import Cursor from "../components/Cursors";
 
@@ -77,7 +78,7 @@ export default function Home(props) {
         </h1>
       </div>
       <div className="max-w-[80%] md:max-w-[500px] lg:max-w-[700px] flex-col justify-start items-start inline-flex gap-12 md:gap-20 lg:gap-40">
-        <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
+        <div className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {props.l1}
           <span
             onMouseEnter={testEnter}
@@ -87,18 +88,20 @@ export default function Home(props) {
             Mathurin Sekine
           </span>
           {props.l2}
-          <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
+          <span className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition">
             Ada Tech School
           </span>
           {props.l3}
-          <span
-            onClick={() => setIsOpened("hireWindow")}
-            className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
-          >
-            {props.dev}
-          </span>
+          <div className="w-max inline relative">
+            <span
+              onClick={() => setIsOpened("hireWindow")}
+              className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+            >
+              {props.dev}
+            </span>
+          </div>
           {props.dot}
-        </p>
+        </div>
         <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {props.l4}
           <span>{props.projects}</span>
