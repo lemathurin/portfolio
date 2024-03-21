@@ -43,7 +43,7 @@ export default function Home(props) {
       backgroundColor: "yellow",
       mixBlendMode: "difference",
     },
-    test: {
+    profile: {
       x: mousePosition.x - 100,
       y: mousePosition.y - 100,
       borderRadius: "50%",
@@ -57,8 +57,8 @@ export default function Home(props) {
   const textEnter = () => setCursorVariant("greeting");
   const textLeave = () => setCursorVariant("default");
 
-  const testEnter = () => setCursorVariant("test");
-  const testLeave = () => setCursorVariant("default");
+  const profileEnter = () => setCursorVariant("profile");
+  const profileLeave = () => setCursorVariant("default");
 
   const [isOpened, setIsOpened] = useState(false);
 
@@ -81,8 +81,8 @@ export default function Home(props) {
         <div className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {props.l1}
           <span
-            onMouseEnter={testEnter}
-            onMouseLeave={testLeave}
+            onMouseEnter={profileEnter}
+            onMouseLeave={profileLeave}
             className="cursor-none hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
           >
             Mathurin Sekine
