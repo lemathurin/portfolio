@@ -7,12 +7,24 @@ export default function Home() {
   return (
     <HomePage
       greeting={t("greeting")}
+      l1={t("l1")}
+      l2={t("l2")}
+      l3={t("l3")}
+      dev={t("dev")}
+      l4={t("l4")}
+      projects={t("projects")}
+      l5={t("l5")}
+      ecommerce={t("ecommerce")}
+      l6={t("l6")}
+      thisPortfolio={t("thisPortfolio")}
+      l7={t("l7")}
+      l8={t("l8")}
+      l9={t("l9")}
+      l10={t("l10")}
+      dot={t("dot")}
       presenterApp={t("presenter-app")}
       pico8={t("pico-8")}
       moreProjects={t("more-projects")}
-      p1={t("p-1")}
-      p2={t("p-2")}
-      p3={t("p-3")}
       to={h("to")}
       futureEmployer={h("futureEmployer")}
       hello={h("hello")}

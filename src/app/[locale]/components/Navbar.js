@@ -12,15 +12,15 @@ import { LanguageLabel } from "./Labels";
 
 export default function NavBar(props) {
   const locale = useLocale();
-  console.log("Active Locale:", locale);
+  // console.log("Active Locale:", locale);
 
   const currentPath = usePathname();
-  console.log("Active Path:", currentPath);
+  // console.log("Active Path:", currentPath);
 
   const inactiveLocale = locale === "en" ? "fr" : "en";
 
   const newPath = currentPath.replace(`/${locale}`, `/${inactiveLocale}`);
-  console.log("New Path:", newPath);
+  // console.log("New Path:", newPath);
 
   const [activeDropdown, setActiveDropdown] = useState(null);
   // const [activeDropdown, setActiveDropdown] = useState("notes");

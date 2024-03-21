@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
+import { NotificationAlert } from "./Labels";
 
 // import Cursor from "../components/Cursors";
 
@@ -42,13 +43,13 @@ export default function Home(props) {
       backgroundColor: "yellow",
       mixBlendMode: "difference",
     },
-    test: {
+    profile: {
       x: mousePosition.x - 100,
       y: mousePosition.y - 100,
-      borderRadius: "0%",
+      borderRadius: "50%",
       height: 200,
       width: 200,
-      backgroundImage: "url(/images/eym.png)",
+      backgroundImage: "url(/images/profile_picture.png)",
       backgroundSize: "cover",
     },
   };
@@ -56,8 +57,8 @@ export default function Home(props) {
   const textEnter = () => setCursorVariant("greeting");
   const textLeave = () => setCursorVariant("default");
 
-  const testEnter = () => setCursorVariant("test");
-  const testLeave = () => setCursorVariant("default");
+  const profileEnter = () => setCursorVariant("profile");
+  const profileLeave = () => setCursorVariant("default");
 
   const [isOpened, setIsOpened] = useState(false);
 
@@ -77,31 +78,51 @@ export default function Home(props) {
         </h1>
       </div>
       <div className="max-w-[80%] md:max-w-[500px] lg:max-w-[700px] flex-col justify-start items-start inline-flex gap-12 md:gap-20 lg:gap-40">
-        <div>
-          <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
-            {props.p1}
-            <span onClick={() => setIsOpened("hireWindow")}> test </span>
+        <div className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
+          {props.l1}
+          <span
+            onMouseEnter={profileEnter}
+            onMouseLeave={profileLeave}
+            className="cursor-none hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+          >
+            Mathurin Sekine
+          </span>
+          {props.l2}
+          <span className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition">
+            Ada Tech School
+          </span>
+          {props.l3}
+          <div className="w-max inline relative">
             <span
-              className="cursor-none underline decoration-wavy decoration-[1.3px] underline-offset-3 transition"
-              onMouseEnter={testEnter}
-              onMouseLeave={testLeave}
+              onClick={() => setIsOpened("hireWindow")}
+              className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
             >
-              Mathurin Sekine{" "}
+              {props.dev}
             </span>
-            {props.p2}
-          </p>
+          </div>
+          {props.dot}
         </div>
-        <div>
-          <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
-            {props.p2}
-          </p>
-        </div>
-        <div>
-          <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
-            {props.p3}
-          </p>
-        </div>
+        <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
+          {props.l4}
+          <span>{props.projects}</span>
+          {props.l5}
+          <span>{props.ecommerce}</span>
+          {props.l6}
+          <span>{props.thisPortfolio}</span>
+          {props.dot}
+        </p>
+        <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
+          {props.l7}
+          <span>Dribbble</span>
+          {props.l8}
+          <span>Layers</span>
+          {props.dot}
+          {props.l9}
+          <span>{props.l10}</span>
+          {props.dot}
+        </p>
       </div>
+
       <motion.div
         className="homepage-cursor"
         variants={variants}
