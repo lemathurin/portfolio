@@ -29,7 +29,7 @@ export default function HireWindow(props) {
       onClick={props.onClose}
     >
       <div
-        className="w-full h-[94svh] md:w-[700px] flex flex-col p-5 md:h-min rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
+        className="w-full h-[94svh] md:w-[700px] flex flex-col p-5 md:h-[30rem] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
         onClick={handleWindowClick}
       >
         <div className="flex gap-1.5 items-center justify-between">
@@ -92,9 +92,17 @@ export default function HireWindow(props) {
               <br />
               <br />
               <span>{props.line3part1}</span>
-              <span>{props.here}</span>
+              <Link href="/projects">
+                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
+                  {props.here}
+                </span>
+              </Link>
               <span>{props.line3part2}</span>
-              <span>{props.here}</span>
+              <Link href="/contact">
+                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
+                  {props.here}
+                </span>
+              </Link>
               <span>{props.line3part3}</span>
               <br />
               <br />
