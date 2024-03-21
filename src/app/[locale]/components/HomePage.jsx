@@ -96,26 +96,33 @@ export default function Home(props) {
             Ada Tech School
           </a>
           <span className="font-instrument">{props.l3}</span>
-          <span
-            onClick={() => setIsOpened("hireWindow")}
-            className="font-instrument cursor-pointer hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
-          >
-            {props.dev1}
-          </span>
-          <div className="w-max inline-flex relative">
+          <span className="underline decoration-[#63635D]">
             <span
               onClick={() => setIsOpened("hireWindow")}
-              className="font-instrument cursor-pointer hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+              className="font-instrument cursor-pointer"
             >
-              {props.dev2}
+              {props.dev1}
             </span>
-            <div
-              onClick={() => setIsOpened("hireWindow")}
-              className="cursor-pointer absolute top-[-6px] right-[-19px] lg:top-[0px] lg:right-[-20px]"
-            >
-              <NotificationAlert />
+            <div className="w-max inline-flex relative underline decoration-[#63635D]">
+              <span
+                onClick={() => setIsOpened("hireWindow")}
+                className="font-instrument cursor-pointer"
+              >
+                {props.dev2}
+              </span>
+              <motion.div
+                whileTap={{ scale: 1.2 }}
+                whileHover={{ scale: 1.4, rotate: 12 }}
+                initial={{ scale: 1 }}
+                animate={{ rotate: 0 }}
+                exit={{ scale: 1 }}
+                onClick={() => setIsOpened("hireWindow")}
+                className="cursor-pointer absolute top-[-6px] right-[-19px] lg:top-[0px] lg:right-[-20px]"
+              >
+                <NotificationAlert />
+              </motion.div>
             </div>
-          </div>
+          </span>
           <span className="font-instrument">{props.dot}</span>
         </div>
         <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
