@@ -90,7 +90,7 @@ export function FigmaLabel() {
 
 export function LanguageLabel(props) {
   return (
-    <div className="bg-[#FF801F] w-max pt-[3px] px-[10px] pb-[5px] rounded-[30px] border-[1.5px] border-[#A35829] shadow-[0px_-2.5px_0px_0px_#A35829_inset]">
+    <div className="bg-[#CEA37E] hover:bg-[#FF801F] w-max pt-[3px] px-[10px] pb-[5px] rounded-[30px] border-[1.5px] border-[#A07553] hover:border-[#A35829] shadow-[0px_-2.5px_0px_0px_#A07553_inset] hover:shadow-[0px_-2.5px_0px_0px_#A35829_inset]">
       <p className="font-inter text-xs text-white">{props.language}</p>
     </div>
   );

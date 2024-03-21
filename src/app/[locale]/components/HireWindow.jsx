@@ -77,10 +77,6 @@ export default function HireWindow(props) {
         <div className=" h-full">
           <div className="bg-[#E6E6E6] w-full h-[1.5px]"></div>
           <div className="h-full w-full pt-2 flex flex-col gap-5">
-            {/* <p>{props.hello}</p>
-            <p>{props.line1}</p>
-            <p>{props.line2}</p>
-            <p>{props.line3part1}</p> */}
             <div className="leading-normal">
               <span>{props.hello}</span>
               <br />
