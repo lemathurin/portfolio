@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
 import { NotificationAlert } from "./Labels";
+import { Link } from "../../../navigation";
 
 // import Cursor from "../components/Cursors";
 
@@ -44,11 +45,11 @@ export default function Home(props) {
       mixBlendMode: "difference",
     },
     profile: {
-      x: mousePosition.x - 100,
-      y: mousePosition.y - 100,
+      x: mousePosition.x - 50,
+      y: mousePosition.y - 50,
       borderRadius: "50%",
-      height: 200,
-      width: 200,
+      height: 100,
+      width: 100,
       backgroundImage: "url(/images/profile_picture.png)",
       backgroundSize: "cover",
     },
@@ -111,7 +112,7 @@ export default function Home(props) {
                 {props.dev2}
               </span>
               <motion.div
-                whileTap={{ scale: 1.2 }}
+                whileTap={{ scale: 1.2, rotate: -20 }}
                 whileHover={{ scale: 1.4, rotate: 12 }}
                 initial={{ scale: 1 }}
                 animate={{ rotate: 0 }}
@@ -127,7 +128,11 @@ export default function Home(props) {
         </div>
         <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {props.l4}
-          <span>{props.projects}</span>
+          <Link href="/projects">
+            <span className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition">
+              {props.projects}
+            </span>
+          </Link>
           {props.l5}
           <span>{props.ecommerce}</span>
           {props.l6}
@@ -136,12 +141,28 @@ export default function Home(props) {
         </p>
         <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {props.l7}
-          <span>Dribbble</span>
+          <a
+            href="https://dribbble.com/mathurin"
+            target="_blank"
+            className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+          >
+            Dribbble
+          </a>
           {props.l8}
-          <span>Layers</span>
+          <a
+            href="https://layers.to/mathurin"
+            target="_blank"
+            className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+          >
+            Layers
+          </a>
           {props.dot}
           {props.l9}
-          <span>{props.l10}</span>
+          <Link href="/contact">
+            <span className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition">
+              {props.l10}
+            </span>
+          </Link>
           {props.dot}
         </p>
       </div>
