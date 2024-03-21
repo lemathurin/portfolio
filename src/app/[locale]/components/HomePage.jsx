@@ -115,7 +115,7 @@ export default function Home(props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
-              duration: 0.5,
+              duration: 0.8,
             }}
           >
             <motion.div
@@ -123,7 +123,7 @@ export default function Home(props) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 80 }}
               transition={{
-                duration: 0.2,
+                duration: 0.3,
               }}
             >
               <HireWindow onClose={toggleHireWindow} />
