@@ -99,7 +99,7 @@ export function LanguageLabel(props) {
 export function DeleteButtonLabel(props) {
   return (
     <div className="bg-[#E5484D] w-max pt-[3px] px-[10px] pb-[5px] rounded-[30px] border-[1.5px] border-[#CE2C31] shadow-[0px_-2.5px_0px_0px_#CE2C31_inset]">
-      <p className="font-inter text-xs text-white">nope</p>
+      <p className="font-inter text-xs text-white">{props.nope}</p>
     </div>
   );
 }

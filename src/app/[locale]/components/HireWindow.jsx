@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { DeleteButtonLabel } from "./Labels";
 import { Link } from "../../../navigation";
 
-export default function HireWindow({ onClose }) {
+export default function HireWindow(props) {
   const handleWindowClick = (event) => {
     event.stopPropagation();
   };
@@ -26,10 +26,10 @@ export default function HireWindow({ onClose }) {
   return (
     <div
       className="w-screen h-dvh flex justify-center items-end fixed"
-      onClick={onClose}
+      onClick={props.onClose}
     >
       <div
-        className="w-full h-[94svh] md:w-[700px] flex flex-col p-5 md:h-[500px] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
+        className="w-full h-[94svh] md:w-[700px] flex flex-col p-5 md:h-min rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
         onClick={handleWindowClick}
       >
         <div className="flex gap-1.5 items-center justify-between">
@@ -48,8 +48,8 @@ export default function HireWindow({ onClose }) {
                 Mathurin Sekine
               </h5>
               <div className="flex gap-2">
-                <p className="text-black">To: </p>
-                <p className="text-[#737373]">Future Employer</p>
+                <p className="text-black">{props.to}</p>
+                <p className="text-[#737373]">{props.futureEmployer}</p>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function HireWindow({ onClose }) {
               height="23"
               viewBox="0 0 20 20"
               fill="none"
-              onClick={onClose}
+              onClick={props.onClose}
               className="cursor-pointer"
             >
               <path
@@ -76,27 +76,33 @@ export default function HireWindow({ onClose }) {
         </div>
         <div className=" h-full">
           <div className="bg-[#E6E6E6] w-full h-[1.5px]"></div>
-          <div className="h-full w-full pt-2">
-            <p>
-              Hello future employer,
-              <br />
-              <br />I am looking for a 12-month-long internship somewhere in
-              France beginning in June 2024. <br />
-              <br />
-              Please send me an email if you can hire me. <br />
-              <br />I really need this as I don’t want to starve. <br />
-              <br />
-              Please hire me.
+          <div className="h-full w-full pt-2 flex flex-col gap-5">
+            {/* <p>{props.hello}</p>
+            <p>{props.line1}</p>
+            <p>{props.line2}</p>
+            <p>{props.line3part1}</p> */}
+            <div className="leading-normal">
+              <span>{props.hello}</span>
               <br />
               <br />
-              Please hire me.
+              <span>{props.line1}</span>
               <br />
               <br />
-              Please hire me.
+              <span>{props.line2}</span>
               <br />
               <br />
-              Please hire me.
-            </p>
+              <span>{props.line3part1}</span>
+              <span>{props.here}</span>
+              <span>{props.line3part2}</span>
+              <span>{props.here}</span>
+              <span>{props.line3part3}</span>
+              <br />
+              <br />
+              <span>{props.line4}</span>
+              <br />
+              <br />
+              <span>{props.name}</span>
+            </div>
           </div>
         </div>
         <div className="bg-[#F7F7F7] absolute bottom-0 left-0 w-full py-3 flex place-content-evenly items-center border-t-[1px] border-[#B2B2B2]">
@@ -116,7 +122,7 @@ export default function HireWindow({ onClose }) {
                     }}
                     className="absolute top-[-10px] left-[-18px] z-10 rotate-[7deg] pointer-events-none"
                   >
-                    <DeleteButtonLabel />
+                    <DeleteButtonLabel nope={props.deleteButtonLabel} />
                   </motion.div>
                 </motion.div>
               )}

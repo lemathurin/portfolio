@@ -126,7 +126,21 @@ export default function Home(props) {
                 duration: 0.3,
               }}
             >
-              <HireWindow onClose={toggleHireWindow} />
+              <HireWindow
+                onClose={toggleHireWindow}
+                to={props.to}
+                futureEmployer={props.futureEmployer}
+                hello={props.hello}
+                line1={props.line1}
+                line2={props.line2}
+                line3part1={props.line3part1}
+                line3part2={props.line3part2}
+                line3part3={props.line3part3}
+                here={props.here}
+                line4={props.line4}
+                name={props.name}
+                deleteButtonLabel={props.deleteButtonLabel}
+              />
             </motion.div>
           </motion.div>
         )}

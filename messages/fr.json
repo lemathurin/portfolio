@@ -5,6 +5,20 @@
       "p-2": "Depuis que j'ai commencé à apprendre à coder en 2023, j'ai commencé à développer Untitled Presentation App, ainsi qu'un petit jeu, un site web de dataviz, et une extension Chrome.",
       "p-3": "J'aime aussi tout ce qui est design, vous pouvez voir plus de mon travail sur Dribbble ou Layers."
     },
+    "HireWindow": {
+      "to": "pour:",
+      "futureEmployer": "futur employeur",
+      "hello": "Bonjour futur employeur,",
+      "line1": "Je suis à la recherche d'une alternance de développement front-end en France, débutant en juin 2024.",
+      "line2": "Le planning serait 4 jours en entreprise / 1 jour d’école.",
+      "line3part1": "Vous pouvez voir mes projets ",
+      "line3part2": ", et me contacter ",
+      "line3part3": ".",
+      "here": "ici",
+      "line4": "Hâte de rejoindre votre équipe !",
+      "name": "Mathurin Sekine",
+      "deleteButtonLabel": "non"
+    },
     "NavBar": {
       "language": "in english",
       "home": "accueil",

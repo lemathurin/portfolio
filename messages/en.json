@@ -5,6 +5,20 @@
       "p-2": "Since starting to learn to code in 2023, I began developing Untitled Presentation App, as well as a small game, a dataviz website, and a Chrome extension.",
       "p-3": "I also like all things design, you can see more of my work on Dribbble or Layers."
     },
+    "HireWindow": {
+      "to": "to:",
+      "futureEmployer": "future employer",
+      "hello": "Hello future employer,",
+      "line1": "I am looking for a front-end developer internship in France beginning in June 2024.",
+      "line2": "The schedule would be 4 days at work, with 1 day set aside for school.",
+      "line3part1": "You can see my projects ",
+      "line3part2": ", and contact me ",
+      "line3part3": ".",
+      "here": "here",
+      "line4": "Looking forward to joining your team!",
+      "name": "Mathurin Sekine",
+      "deleteButtonLabel": "nope"
+    },
     "NavBar": {
       "language": "en français",
       "home": "home",
