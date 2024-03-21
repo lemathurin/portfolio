@@ -103,3 +103,9 @@ export function DeleteButtonLabel(props) {
     </div>
   );
 }
+
+export function notificationAlert() {
+  return (
+    <div className="h-[2.25rem] w-[2.25rem] bg-[#FF3A30] rounded-full"></div>
+  );
+}
