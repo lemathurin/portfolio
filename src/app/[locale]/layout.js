@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "./components/Navbar";
 import { useTranslations } from "next-intl";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,6 +43,7 @@ export default function RootLayout({ children, params: { locale } }) {
           article3={n("article3")}
         />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

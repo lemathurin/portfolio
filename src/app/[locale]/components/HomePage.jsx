@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
-import { NotificationAlert } from "./Labels";
+import { FigmaLabel } from "./Labels";
 
 // import Cursor from "../components/Cursors";
 
