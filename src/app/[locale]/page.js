@@ -10,7 +10,8 @@ export default function Home() {
       l1={t("l1")}
       l2={t("l2")}
       l3={t("l3")}
-      dev={t("dev")}
+      dev1={t("dev1")}
+      dev2={t("dev2")}
       l4={t("l4")}
       projects={t("projects")}
       l5={t("l5")}

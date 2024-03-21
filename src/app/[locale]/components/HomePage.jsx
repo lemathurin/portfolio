@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
-import { FigmaLabel } from "./Labels";
+import { NotificationAlert } from "./Labels";
 
 // import Cursor from "../components/Cursors";
 
@@ -78,29 +78,45 @@ export default function Home(props) {
         </h1>
       </div>
       <div className="max-w-[80%] md:max-w-[500px] lg:max-w-[700px] flex-col justify-start items-start inline-flex gap-12 md:gap-20 lg:gap-40">
-        <div className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
-          {props.l1}
+        <div className="leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
+          <span className="font-instrument">{props.l1}</span>
           <span
             onMouseEnter={profileEnter}
             onMouseLeave={profileLeave}
-            className="cursor-none hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+            className="font-instrument cursor-none hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
           >
             Mathurin Sekine
           </span>
-          {props.l2}
-          <span className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition">
+          <span className="font-instrument">{props.l2}</span>
+          <a
+            href="https://adatechschool.fr/"
+            target="_blank"
+            className="font-instrument hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+          >
             Ada Tech School
+          </a>
+          <span className="font-instrument">{props.l3}</span>
+          <span
+            onClick={() => setIsOpened("hireWindow")}
+            className="font-instrument cursor-pointer hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+          >
+            {props.dev1}
           </span>
-          {props.l3}
-          <div className="w-max inline relative">
+          <div className="w-max inline-flex relative">
             <span
               onClick={() => setIsOpened("hireWindow")}
-              className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+              className="font-instrument cursor-pointer hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
             >
-              {props.dev}
+              {props.dev2}
             </span>
+            <div
+              onClick={() => setIsOpened("hireWindow")}
+              className="cursor-pointer absolute top-[-6px] right-[-19px] lg:top-[0px] lg:right-[-20px]"
+            >
+              <NotificationAlert />
+            </div>
           </div>
-          {props.dot}
+          <span className="font-instrument">{props.dot}</span>
         </div>
         <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {props.l4}
