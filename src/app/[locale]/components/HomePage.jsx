@@ -110,14 +110,11 @@ export default function Home(props) {
       <AnimatePresence>
         {isOpened === "hireWindow" && (
           <motion.div
-            className="w-screen h-screen fixed z-50 backdrop-blur-md bg-black/20"
+            className="w-screen h-screen fixed z-50 backdrop-blur-md bg-black/20 transform-gpu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
-              type: "spring",
-              stiffness: 700,
-              damping: 30,
               duration: 0.5,
             }}
           >
@@ -126,10 +123,7 @@ export default function Home(props) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 80 }}
               transition={{
-                type: "spring",
-                stiffness: 700,
-                damping: 30,
-                duration: 0.5,
+                duration: 0.2,
               }}
             >
               <HireWindow onClose={toggleHireWindow} />

@@ -1,36 +1,76 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { DeleteButtonLabel } from "./Labels";
 
 export default function HireWindow({ onClose }) {
   const handleWindowClick = (event) => {
     event.stopPropagation();
   };
+
+  const [isHovered, setHovered] = useState(false);
+
+  // useEffect(() => {
+  //   // Disable scrolling when the component mounts
+  //   document.body.classList.add("overflow-hidden");
+
+  //   // Re-enable scrolling when the component unmounts
+  //   return () => {
+  //     document.body.classList.remove("overflow-hidden");
+  //   };
+  // }, []); // Empty dependency array ensures this effect runs only once
+
   return (
     <div
-      className="w-screen h-screen flex justify-center items-end"
+      className="w-screen h-dvh flex justify-center items-end fixed"
       onClick={onClose}
     >
       <div
-        className="w-full h-[97svh] md:w-[700px] flex flex-col p-5 md:h-[500px] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
+        className="w-full h-[94svh] md:w-[700px] flex flex-col p-5 md:h-[500px] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
         onClick={handleWindowClick}
       >
-        <div className="flex gap-1.5 items-center">
-          <div className="w-[2.75rem] h-[2.75rem]">
-            <Image
-              className="rounded-full"
-              src="/images/profile_picture.png"
-              width={44}
-              height={44}
-              alt="My profile picture"
-            />
-          </div>
-          <div className="flex flex-col">
-            <h5 className="font-inter font-bold text-lg text-black">
-              Mathurin Sekine
-            </h5>
-            <div className="flex gap-2">
-              <p className="text-black">To: </p>
-              <p className="text-[#737373]">Future Employer</p>
+        <div className="flex gap-1.5 items-center justify-between">
+          <div className="flex gap-1.5 items-center">
+            <div className="w-[2.75rem] h-[2.75rem]">
+              <Image
+                className="rounded-full"
+                src="/images/profile_picture.png"
+                width={44}
+                height={44}
+                alt="My profile picture"
+              />
             </div>
+            <div className="flex flex-col">
+              <h5 className="font-inter font-bold text-lg text-black">
+                Mathurin Sekine
+              </h5>
+              <div className="flex gap-2">
+                <p className="text-black">To: </p>
+                <p className="text-[#737373]">Future Employer</p>
+              </div>
+            </div>
+          </div>
+          <div className="h-full pt-[4px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              viewBox="0 0 20 20"
+              fill="none"
+              onClick={onClose}
+              className="cursor-pointer"
+            >
+              <path
+                d="M9.96094 19.9219C15.4102 19.9219 19.9219 15.4004 19.9219 9.96094C19.9219 4.51172 15.4004 0 9.95117 0C4.51172 0 0 4.51172 0 9.96094C0 15.4004 4.52148 19.9219 9.96094 19.9219ZM9.96094 18.2617C5.35156 18.2617 1.66992 14.5703 1.66992 9.96094C1.66992 5.35156 5.3418 1.66016 9.95117 1.66016C14.5605 1.66016 18.2617 5.35156 18.2617 9.96094C18.2617 14.5703 14.5703 18.2617 9.96094 18.2617Z"
+                fill="#737373"
+              />
+              <path
+                d="M6.62109 14.0918C6.8457 14.0918 7.04102 14.0039 7.1875 13.8477L9.95117 11.0742L12.7344 13.8477C12.8809 13.9941 13.0664 14.0918 13.291 14.0918C13.7207 14.0918 14.0723 13.7402 14.0723 13.3008C14.0723 13.0762 13.9941 12.9004 13.8379 12.7441L11.0645 9.9707L13.8477 7.17773C14.0137 7.01172 14.082 6.8457 14.082 6.63086C14.082 6.20117 13.7305 5.84961 13.3008 5.84961C13.0957 5.84961 12.9297 5.92773 12.7637 6.09375L9.95117 8.87695L7.16797 6.10352C7.02148 5.94727 6.8457 5.86914 6.62109 5.86914C6.19141 5.86914 5.83984 6.21094 5.83984 6.64062C5.83984 6.85547 5.92773 7.04102 6.07422 7.1875L8.84766 9.9707L6.07422 12.7539C5.92773 12.9004 5.83984 13.0859 5.83984 13.3008C5.83984 13.7402 6.19141 14.0918 6.62109 14.0918Z"
+                fill="#737373"
+              />
+            </svg>
           </div>
         </div>
         <div className=" h-full">
@@ -59,18 +99,42 @@ export default function HireWindow({ onClose }) {
           </div>
         </div>
         <div className="bg-[#F7F7F7] absolute bottom-0 left-0 w-full py-3 flex place-content-evenly items-center border-t-[1px] border-[#B2B2B2]">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="24"
-            viewBox="0 0 20 24"
-            fill="none"
-          >
-            <path
-              d="M6.94217 20.1745C7.33473 20.1745 7.59299 19.9266 7.58267 19.5651L7.26241 8.51438C7.25209 8.15292 6.99382 7.91537 6.62192 7.91537C6.22935 7.91537 5.97109 8.16324 5.98142 8.52471L6.29134 19.5651C6.30167 19.9369 6.55993 20.1745 6.94217 20.1745ZM10 20.1745C10.3926 20.1745 10.6715 19.9266 10.6715 19.5651V8.52471C10.6715 8.16324 10.3926 7.91537 10 7.91537C9.60746 7.91537 9.33886 8.16324 9.33886 8.52471V19.5651C9.33886 19.9266 9.60746 20.1745 10 20.1745ZM13.0682 20.1745C13.4401 20.1745 13.6984 19.9369 13.7087 19.5651L14.0187 8.52471C14.0289 8.16324 13.7707 7.91537 13.3782 7.91537C13.0062 7.91537 12.748 8.15292 12.7376 8.52471L12.4277 19.5651C12.4174 19.9266 12.6756 20.1745 13.0682 20.1745ZM5.4649 5.21981H7.10746V3.00966C7.10746 2.42098 7.52069 2.03885 8.14052 2.03885H11.8389C12.4587 2.03885 12.872 2.42098 12.872 3.00966V5.21981H14.5145V2.90638C14.5145 1.40885 13.5434 0.5 11.9525 0.5H8.02688C6.43596 0.5 5.4649 1.40885 5.4649 2.90638V5.21981ZM0.774796 6.04604H19.2356C19.6592 6.04604 20 5.68456 20 5.26112C20 4.83768 19.6592 4.48654 19.2356 4.48654H0.774796C0.361571 4.48654 0 4.83768 0 5.26112C0 5.69489 0.361571 6.04604 0.774796 6.04604ZM5.26861 23.5H14.7417C16.219 23.5 17.2108 22.5395 17.2831 21.0627L18.0063 5.84981H16.343L15.6508 20.8871C15.6302 21.5068 15.186 21.9405 14.5765 21.9405H5.41324C4.8244 21.9405 4.38017 21.4964 4.34919 20.8871L3.61571 5.84981H1.99381L2.72727 21.073C2.79959 22.5499 3.77067 23.5 5.26861 23.5Z"
-              fill="#007AFF"
-            />
-          </svg>
+          <div className="cursor-not-allowed relative">
+            <AnimatePresence>
+              {isHovered === "deleteButton" && (
+                <motion.div className="absolute top-0 left-0">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 600,
+                      damping: 30,
+                      duration: 0.5,
+                    }}
+                    className="absolute top-[-10px] left-[-18px] z-10 rotate-[7deg] pointer-events-none"
+                  >
+                    <DeleteButtonLabel />
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="24"
+              viewBox="0 0 20 24"
+              fill="none"
+              onMouseEnter={() => setHovered("deleteButton")}
+              onMouseLeave={() => setHovered(false)}
+            >
+              <path
+                d="M6.94217 20.1745C7.33473 20.1745 7.59299 19.9266 7.58267 19.5651L7.26241 8.51438C7.25209 8.15292 6.99382 7.91537 6.62192 7.91537C6.22935 7.91537 5.97109 8.16324 5.98142 8.52471L6.29134 19.5651C6.30167 19.9369 6.55993 20.1745 6.94217 20.1745ZM10 20.1745C10.3926 20.1745 10.6715 19.9266 10.6715 19.5651V8.52471C10.6715 8.16324 10.3926 7.91537 10 7.91537C9.60746 7.91537 9.33886 8.16324 9.33886 8.52471V19.5651C9.33886 19.9266 9.60746 20.1745 10 20.1745ZM13.0682 20.1745C13.4401 20.1745 13.6984 19.9369 13.7087 19.5651L14.0187 8.52471C14.0289 8.16324 13.7707 7.91537 13.3782 7.91537C13.0062 7.91537 12.748 8.15292 12.7376 8.52471L12.4277 19.5651C12.4174 19.9266 12.6756 20.1745 13.0682 20.1745ZM5.4649 5.21981H7.10746V3.00966C7.10746 2.42098 7.52069 2.03885 8.14052 2.03885H11.8389C12.4587 2.03885 12.872 2.42098 12.872 3.00966V5.21981H14.5145V2.90638C14.5145 1.40885 13.5434 0.5 11.9525 0.5H8.02688C6.43596 0.5 5.4649 1.40885 5.4649 2.90638V5.21981ZM0.774796 6.04604H19.2356C19.6592 6.04604 20 5.68456 20 5.26112C20 4.83768 19.6592 4.48654 19.2356 4.48654H0.774796C0.361571 4.48654 0 4.83768 0 5.26112C0 5.69489 0.361571 6.04604 0.774796 6.04604ZM5.26861 23.5H14.7417C16.219 23.5 17.2108 22.5395 17.2831 21.0627L18.0063 5.84981H16.343L15.6508 20.8871C15.6302 21.5068 15.186 21.9405 14.5765 21.9405H5.41324C4.8244 21.9405 4.38017 21.4964 4.34919 20.8871L3.61571 5.84981H1.99381L2.72727 21.073C2.79959 22.5499 3.77067 23.5 5.26861 23.5Z"
+                fill="#007AFF"
+              />
+            </svg>
+          </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
