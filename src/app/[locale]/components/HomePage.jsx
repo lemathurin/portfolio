@@ -4,7 +4,15 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
-import { NotificationAlert } from "./Labels";
+import {
+  NotificationAlert,
+  ReactLabel,
+  TailwindLabel,
+  SupabaseLabel,
+  ExpressLabel,
+  FigmaLabel,
+  WelcomeLabel,
+} from "./Labels";
 import { Link } from "../../../navigation";
 
 // import Cursor from "../components/Cursors";
@@ -63,17 +71,117 @@ export default function Home(props) {
 
   const [isOpened, setIsOpened] = useState(false);
 
+  const [isHovered, setHovered] = useState(false);
+
   const toggleHireWindow = () => {
     setIsOpened(!isOpened);
   };
 
   return (
     <div className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]">
-      <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh]">
+      <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh] relative">
+        <AnimatePresence>
+          {isHovered === "ecommerce" && (
+            <motion.div className="absolute top-0 left-0">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: 12 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: 12 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute top-[-9px] left-[0px] z-10 -rotate-12 pointer-events-none"
+              >
+                <WelcomeLabel
+                  text="hello!"
+                  bgcolor="#FE6D73"
+                  bordercolor="#FE2027"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute w-max top-[20px] left-[40px] z-20 rotate-[25deg] pointer-events-none"
+              >
+                <WelcomeLabel
+                  text="hello!"
+                  bgcolor="#FE6D73"
+                  bordercolor="#FE2027"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -7 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -7 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute top-[-15px] left-[80px] z-20 rotate-[7deg] pointer-events-none"
+              >
+                <WelcomeLabel
+                  text="hello!"
+                  bgcolor="#FE6D73"
+                  bordercolor="#FE2027"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: 2 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: 2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute top-[26px] left-[130px] z-20 rotate-[20deg] pointer-events-none"
+              >
+                <WelcomeLabel
+                  text="hello!"
+                  bgcolor="#FE6D73"
+                  bordercolor="#FE2027"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute top-[-10px] left-[150px] z-10 rotate-[7deg] pointer-events-none"
+              >
+                <WelcomeLabel
+                  text="hello!"
+                  bgcolor="#FE6D73"
+                  bordercolor="#FE2027"
+                />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <h1
-          className="font-instrument text-lightMode-text text-7xl md:text-8xl lg:text-9xl greeting cursor-none"
-          onMouseEnter={textEnter}
-          onMouseLeave={textLeave}
+          className="font-instrument text-lightMode-text text-7xl md:text-8xl lg:text-9xl greeting"
+          // onMouseEnter={textEnter}
+          // onMouseLeave={textLeave}
+          onMouseEnter={() => setHovered("ecommerce")}
+          onMouseLeave={() => setHovered(false)}
         >
           {props.greeting}
         </h1>

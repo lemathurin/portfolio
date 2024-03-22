@@ -111,3 +111,25 @@ export function NotificationAlert() {
     </div>
   );
 }
+
+export function WelcomeLabel({ text, bgcolor, bordercolor }) {
+  const containerStyle = {
+    backgroundColor: bgcolor,
+    borderRadius: "30px",
+    border: `1.5px solid ${bordercolor}`,
+    padding: "3px 10px 5px",
+    boxShadow: `0px -2.5px 0px 0px ${bordercolor} inset`,
+  };
+
+  const textStyle = {
+    fontFamily: "var(--font-inter)",
+    fontSize: "14px",
+    color: "white",
+  };
+
+  return (
+    <div style={containerStyle}>
+      <p style={textStyle}>{text}</p>
+    </div>
+  );
+}
