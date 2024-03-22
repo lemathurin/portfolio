@@ -112,7 +112,7 @@ export default function Home(props) {
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute w-max top-[-20px] left-[50px] z-20 rotate-[25deg] pointer-events-none"
+                className="absolute w-max top-[-20px] left-[60px] md:left-[100px] z-20 rotate-[25deg] pointer-events-none"
               >
                 <WelcomeLabel
                   text="nice to meet you"
@@ -173,6 +173,48 @@ export default function Home(props) {
                   bgcolor="#0471A6"
                   bordercolor="#034363"
                 />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -11 }}
+                animate={{ opacity: 1, scale: 1, rotate: 11 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -11 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute top-[-40px] left-[20px] z-10 rotate-[7deg] pointer-events-none"
+              >
+                <span
+                  className="text-3xl md:text-5xl"
+                  style={{
+                    textShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  👋
+                </span>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
+                animate={{ opacity: 1, scale: 1, rotate: 15 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -20 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute bottom-[-20px] left-[50%] z-10 rotate-[7deg] pointer-events-none"
+              >
+                <span
+                  className="text-3xl md:text-5xl"
+                  style={{
+                    textShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  😄
+                </span>
               </motion.div>
             </motion.div>
           )}

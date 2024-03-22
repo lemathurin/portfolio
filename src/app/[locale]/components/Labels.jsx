@@ -118,7 +118,7 @@ export function WelcomeLabel({ text, bgcolor, bordercolor }) {
     borderRadius: "30px",
     border: `1.5px solid ${bordercolor}`,
     padding: "3px 10px 5px",
-    boxShadow: `0px -2.5px 0px 0px ${bordercolor} inset`,
+    boxShadow: `0px -2.5px 0px 0px ${bordercolor} inset, 0px 4px 10px 0px rgba(32, 32, 32, 0.25)`,
     width: "max-content",
   };
 
