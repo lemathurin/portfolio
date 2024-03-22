@@ -162,9 +162,9 @@ export default function Home(props) {
               </motion.div>
               <motion.div
                 whileTap={{ scale: 1.2 }}
-                initial={{ opacity: 0, scale: 0.5, rotate: -7 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: -25 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: -7 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -25 }}
                 transition={{
                   delay: 0.5,
                   type: "spring",
@@ -172,7 +172,7 @@ export default function Home(props) {
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute top-[20px] right-[-50px] z-20 rotate-[7deg]"
+                className="absolute top-[20px] right-[-70px] md:right-[-50px] z-20 rotate-[7deg]"
                 drag
                 dragConstraints={constraintsRef}
               >
@@ -231,9 +231,9 @@ export default function Home(props) {
               </motion.div>
               <motion.div
                 whileTap={{ scale: 1.2 }}
-                initial={{ opacity: 0, scale: 0.5, rotate: -30 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: 22 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: -30 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: 22 }}
                 transition={{
                   delay: 1.1,
                   type: "spring",
@@ -241,7 +241,7 @@ export default function Home(props) {
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute bottom-[-10px] left-[-30px] z-20 rotate-[20deg]"
+                className="absolute bottom-[-10px] left-[-70px] z-20 rotate-[20deg]"
                 drag
                 dragConstraints={constraintsRef}
               >
