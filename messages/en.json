@@ -1,6 +1,13 @@
 {
     "Home": {
       "greeting": "Hello,",
+      
+      "hey": "hey",
+      "nicetomeetyou": "nice to meet you",
+      "welcome": "welcome",
+      "givemeajob": "give me a job",
+      "clickaround": "click around",
+
       "l1": "My name is ",
       "l2": ". I am currently a student at ",
       "l3": " in Nantes, France, working towards becoming a ",

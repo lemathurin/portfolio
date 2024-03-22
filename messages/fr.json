@@ -1,6 +1,13 @@
 {
     "Home": {
       "greeting": "Bonjour,",
+
+      "hey": "salut",
+      "nicetomeetyou": "ravi de vous rencontrer",
+      "welcome": "bienvenue",
+      "givemeajob": "embauchez-moi",
+      "clickaround": "faites un tour",
+
       "l1": "Je m'appelle ",
       "l2": ". Je suis actuellement étudiant à ",
       "l3": " à Nantes, en France, en vue de devenir ",

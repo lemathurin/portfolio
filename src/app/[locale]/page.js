@@ -7,6 +7,11 @@ export default function Home() {
   return (
     <HomePage
       greeting={t("greeting")}
+      hey={t("hey")}
+      nicetomeetyou={t("nicetomeetyou")}
+      welcome={t("welcome")}
+      givemeajob={t("givemeajob")}
+      clickaround={t("clickaround")}
       l1={t("l1")}
       l2={t("l2")}
       l3={t("l3")}

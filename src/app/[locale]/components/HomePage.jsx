@@ -97,7 +97,7 @@ export default function Home(props) {
                 className="absolute top-[-9px] left-[-40px] z-10 -rotate-12 pointer-events-none"
               >
                 <WelcomeLabel
-                  text="hey"
+                  text={props.hey}
                   bgcolor="#FE6D73"
                   bordercolor="#FE2027"
                 />
@@ -115,7 +115,7 @@ export default function Home(props) {
                 className="absolute w-max top-[-20px] left-[60px] md:left-[100px] z-20 rotate-[25deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="nice to meet you"
+                  text={props.nicetomeetyou}
                   bgcolor="#FF8552"
                   bordercolor="#FF621F"
                 />
@@ -133,7 +133,7 @@ export default function Home(props) {
                 className="absolute top-[20px] right-[-50px] z-20 rotate-[7deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="welcome"
+                  text={props.welcome}
                   bgcolor="#7261A3"
                   bordercolor="#594B81"
                 />
@@ -151,7 +151,7 @@ export default function Home(props) {
                 className="absolute bottom-[-10px] left-[-30px] z-20 rotate-[20deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="give me a job"
+                  text={props.givemeajob}
                   bgcolor="#308888"
                   bordercolor="#205A5A"
                 />
@@ -169,7 +169,7 @@ export default function Home(props) {
                 className="absolute bottom-[-10px] right-[-35px] z-10 rotate-[7deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="click around"
+                  text={props.clickaround}
                   bgcolor="#0471A6"
                   bordercolor="#034363"
                 />
@@ -205,7 +205,7 @@ export default function Home(props) {
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute bottom-[-20px] left-[50%] z-10 rotate-[7deg] pointer-events-none"
+                className="absolute bottom-[-28px] left-[50%] z-10 rotate-[7deg] pointer-events-none"
               >
                 <span
                   className="text-3xl md:text-5xl"
@@ -213,7 +213,7 @@ export default function Home(props) {
                     textShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
                   }}
                 >
-                  😄
+                  🧑‍💻
                 </span>
               </motion.div>
             </motion.div>
