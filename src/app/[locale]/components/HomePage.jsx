@@ -85,7 +85,7 @@ export default function Home(props) {
   return (
     <div
       ref={constraintsRef}
-      className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]"
+      className="w-screen flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]"
     >
       <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh] relative cursor-default">
         <AnimatePresence>
@@ -276,7 +276,9 @@ export default function Home(props) {
           <a
             href="https://adatechschool.fr/"
             target="_blank"
-            className="font-instrument hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+            className="font-instrument hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-[#E74C34] transition"
+            onMouseEnter={() => setHovered("adaLink")}
+            onMouseLeave={() => setHovered(false)}
           >
             Ada Tech School
           </a>
@@ -350,6 +352,19 @@ export default function Home(props) {
           {props.dot}
         </p>
       </div>
+      <AnimatePresence>
+        {isHovered === "adaLink" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.3,
+            }}
+            className="w-screen h-screen bg-[#FDD8D0] fixed top-0 left-0 -z-10"
+          />
+        )}
+      </AnimatePresence>
 
       <motion.div
         className="homepage-cursor"
@@ -394,7 +409,6 @@ export default function Home(props) {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* <Cursor /> */}
     </div>
   );
