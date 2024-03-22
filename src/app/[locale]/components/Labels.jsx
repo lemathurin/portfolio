@@ -106,8 +106,31 @@ export function DeleteButtonLabel(props) {
 
 export function NotificationAlert() {
   return (
-    <div className="h-[2.25rem] w-[2.25rem] flex flex-col justify-center items-center bg-[#FF3A30] rounded-full font-inter text-xs text-white">
-      <p>1</p>
+    <div className="h-[1.5rem] w-[1.5rem] md:h-[1.8rem] md:w-[1.8rem] flex flex-col justify-center items-center bg-[#FF3A30] rounded-full">
+      <p className="text-base md:text-lg font-semibold text-white">1</p>
+    </div>
+  );
+}
+
+export function WelcomeLabel({ text, bgcolor, bordercolor }) {
+  const containerStyle = {
+    backgroundColor: bgcolor,
+    borderRadius: "30px",
+    border: `1.5px solid ${bordercolor}`,
+    padding: "3px 10px 5px",
+    boxShadow: `0px -2.5px 0px 0px ${bordercolor} inset, 0px 4px 10px 0px rgba(32, 32, 32, 0.25)`,
+    width: "max-content",
+  };
+
+  const textStyle = {
+    fontFamily: "var(--font-inter)",
+    fontSize: "14px",
+    color: "white",
+  };
+
+  return (
+    <div style={containerStyle}>
+      <p style={textStyle}>{text}</p>
     </div>
   );
 }

@@ -1,10 +1,18 @@
 {
     "Home": {
       "greeting": "Bonjour,",
+
+      "hey": "salut",
+      "nicetomeetyou": "ravi de vous rencontrer",
+      "welcome": "bienvenue",
+      "givemeajob": "embauchez-moi",
+      "clickaround": "faites un tour",
+
       "l1": "Je m'appelle ",
       "l2": ". Je suis actuellement étudiant à ",
       "l3": " à Nantes, en France, en vue de devenir ",
-      "dev": "développeur front-end",
+      "dev1": "développeur ",
+      "dev2": "front-end",
       "l4": "Depuis que j'ai commencé à coder en 2023, j'ai travaillé sur ",
       "projects": "plusieurs projets",
       "l5": ", dont un ",
