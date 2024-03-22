@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
@@ -78,23 +78,34 @@ export default function Home(props) {
     setIsOpened(!isOpened);
   };
 
+  const constraintsRef = useRef(null);
+
+  const isVisible = true;
+
   return (
-    <div className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]">
+    <div
+      ref={constraintsRef}
+      className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]"
+    >
       <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh] relative cursor-default">
         <AnimatePresence>
-          {isHovered === "greeting" && (
-            <motion.div className="absolute w-full h-full pointer-events-none">
+          {isVisible && (
+            <motion.div className="absolute w-full h-full">
               <motion.div
+                whileTap={{ scale: 1.2 }}
                 initial={{ opacity: 0, scale: 0.5, rotate: -12 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.5, rotate: -12 }}
                 transition={{
+                  delay: 0.1,
                   type: "spring",
                   stiffness: 600,
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute top-[-9px] left-[-40px] z-10 -rotate-12 pointer-events-none"
+                className="absolute top-[-9px] left-[-40px] z-10 -rotate-12"
+                drag
+                dragConstraints={constraintsRef}
               >
                 <WelcomeLabel
                   text={props.hey}
@@ -103,88 +114,20 @@ export default function Home(props) {
                 />
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: 13 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: 13 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 600,
-                  damping: 30,
-                  duration: 0.5,
-                }}
-                className="absolute w-max top-[-20px] left-[60px] md:left-[100px] z-20 rotate-[25deg] pointer-events-none"
-              >
-                <WelcomeLabel
-                  text={props.nicetomeetyou}
-                  bgcolor="#FF8552"
-                  bordercolor="#FF621F"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -7 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: -7 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 600,
-                  damping: 30,
-                  duration: 0.5,
-                }}
-                className="absolute top-[20px] right-[-50px] z-20 rotate-[7deg] pointer-events-none"
-              >
-                <WelcomeLabel
-                  text={props.welcome}
-                  bgcolor="#7261A3"
-                  bordercolor="#594B81"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -30 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: -30 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 600,
-                  damping: 30,
-                  duration: 0.5,
-                }}
-                className="absolute bottom-[-10px] left-[-30px] z-20 rotate-[20deg] pointer-events-none"
-              >
-                <WelcomeLabel
-                  text={props.givemeajob}
-                  bgcolor="#308888"
-                  bordercolor="#205A5A"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: 11 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: 11 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 600,
-                  damping: 30,
-                  duration: 0.5,
-                }}
-                className="absolute bottom-[-10px] right-[-35px] z-10 rotate-[7deg] pointer-events-none"
-              >
-                <WelcomeLabel
-                  text={props.clickaround}
-                  bgcolor="#0471A6"
-                  bordercolor="#034363"
-                />
-              </motion.div>
-              <motion.div
+                whileTap={{ scale: 1.2 }}
                 initial={{ opacity: 0, scale: 0.5, rotate: -11 }}
                 animate={{ opacity: 1, scale: 1, rotate: 11 }}
                 exit={{ opacity: 0, scale: 0.5, rotate: -11 }}
                 transition={{
+                  delay: 0.2,
                   type: "spring",
                   stiffness: 600,
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute top-[-40px] left-[20px] z-10 rotate-[7deg] pointer-events-none"
+                className="absolute top-[-40px] left-[20px] z-10 rotate-[7deg]"
+                drag
+                dragConstraints={constraintsRef}
               >
                 <span
                   className="text-3xl md:text-5xl"
@@ -196,16 +139,86 @@ export default function Home(props) {
                 </span>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
-                animate={{ opacity: 1, scale: 1, rotate: 15 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: -20 }}
+                whileTap={{ scale: 1.2 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: 13 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: 13 }}
                 transition={{
+                  delay: 0.3,
                   type: "spring",
                   stiffness: 600,
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute bottom-[-28px] left-[50%] z-10 rotate-[7deg] pointer-events-none"
+                className="absolute w-max top-[-20px] left-[60px] md:left-[100px] z-20 rotate-[25deg]"
+                drag
+                dragConstraints={constraintsRef}
+              >
+                <WelcomeLabel
+                  text={props.nicetomeetyou}
+                  bgcolor="#FF8552"
+                  bordercolor="#FF621F"
+                />
+              </motion.div>
+              <motion.div
+                whileTap={{ scale: 1.2 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: -7 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -7 }}
+                transition={{
+                  delay: 0.5,
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute top-[20px] right-[-50px] z-20 rotate-[7deg]"
+                drag
+                dragConstraints={constraintsRef}
+              >
+                <WelcomeLabel
+                  text={props.welcome}
+                  bgcolor="#7261A3"
+                  bordercolor="#594B81"
+                />
+              </motion.div>
+              <motion.div
+                whileTap={{ scale: 1.2 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: 11 }}
+                transition={{
+                  delay: 0.7,
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute bottom-[-10px] right-[-35px] z-10 rotate-[7deg]"
+                drag
+                dragConstraints={constraintsRef}
+              >
+                <WelcomeLabel
+                  text={props.clickaround}
+                  bgcolor="#0471A6"
+                  bordercolor="#034363"
+                />
+              </motion.div>
+              <motion.div
+                whileTap={{ scale: 1.2 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
+                animate={{ opacity: 1, scale: 1, rotate: 15 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -20 }}
+                transition={{
+                  delay: 0.9,
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute bottom-[-28px] left-[50%] z-10 rotate-[7deg]"
+                drag
+                dragConstraints={constraintsRef}
               >
                 <span
                   className="text-3xl md:text-5xl"
@@ -216,13 +229,35 @@ export default function Home(props) {
                   🧑‍💻
                 </span>
               </motion.div>
+              <motion.div
+                whileTap={{ scale: 1.2 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: -30 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -30 }}
+                transition={{
+                  delay: 1.1,
+                  type: "spring",
+                  stiffness: 600,
+                  damping: 30,
+                  duration: 0.5,
+                }}
+                className="absolute bottom-[-10px] left-[-30px] z-20 rotate-[20deg]"
+                drag
+                dragConstraints={constraintsRef}
+              >
+                <WelcomeLabel
+                  text={props.givemeajob}
+                  bgcolor="#308888"
+                  bordercolor="#205A5A"
+                />
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
         <h1
           className="font-instrument text-lightMode-text text-7xl md:text-8xl lg:text-9xl greeting"
-          onMouseEnter={() => setHovered("greeting")}
-          onMouseLeave={() => setHovered(false)}
+          // onMouseEnter={() => setHovered("greeting")}
+          // onMouseLeave={() => setHovered(false)}
         >
           {props.greeting}
         </h1>
