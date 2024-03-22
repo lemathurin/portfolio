@@ -72,6 +72,7 @@ export default function Home(props) {
   const [isOpened, setIsOpened] = useState(false);
 
   const [isHovered, setHovered] = useState(false);
+  // const [isHovered, setHovered] = useState("greeting");
 
   const toggleHireWindow = () => {
     setIsOpened(!isOpened);
@@ -79,44 +80,44 @@ export default function Home(props) {
 
   return (
     <div className="w-screen bg-lightMode-background flex-col justify-start items-center inline-flex pb-[20svh] md:pb-[30svh] lg:pb-[40vh]">
-      <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh] relative">
+      <div className="mt-[20svh] md:mt-[30svh] lg:mt-[40vh] mb-[10svh] md:mb-[15svh] lg:mb-[20svh] relative cursor-default">
         <AnimatePresence>
-          {isHovered === "ecommerce" && (
-            <motion.div className="absolute top-0 left-0">
+          {isHovered === "greeting" && (
+            <motion.div className="absolute w-full h-full pointer-events-none">
               <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: 12 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: -12 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: 12 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -12 }}
                 transition={{
                   type: "spring",
                   stiffness: 600,
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute top-[-9px] left-[0px] z-10 -rotate-12 pointer-events-none"
+                className="absolute top-[-9px] left-[-40px] z-10 -rotate-12 pointer-events-none"
               >
                 <WelcomeLabel
-                  text="hello!"
+                  text="hey"
                   bgcolor="#FE6D73"
                   bordercolor="#FE2027"
                 />
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -9 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: 13 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: -9 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: 13 }}
                 transition={{
                   type: "spring",
                   stiffness: 600,
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute w-max top-[20px] left-[40px] z-20 rotate-[25deg] pointer-events-none"
+                className="absolute w-max top-[-20px] left-[50px] z-20 rotate-[25deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="hello!"
-                  bgcolor="#FE6D73"
-                  bordercolor="#FE2027"
+                  text="nice to meet you"
+                  bgcolor="#FF8552"
+                  bordercolor="#FF621F"
                 />
               </motion.div>
               <motion.div
@@ -129,30 +130,30 @@ export default function Home(props) {
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute top-[-15px] left-[80px] z-20 rotate-[7deg] pointer-events-none"
+                className="absolute top-[20px] right-[-50px] z-20 rotate-[7deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="hello!"
-                  bgcolor="#FE6D73"
-                  bordercolor="#FE2027"
+                  text="welcome"
+                  bgcolor="#7261A3"
+                  bordercolor="#594B81"
                 />
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: 2 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: -30 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5, rotate: 2 }}
+                exit={{ opacity: 0, scale: 0.5, rotate: -30 }}
                 transition={{
                   type: "spring",
                   stiffness: 600,
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute top-[26px] left-[130px] z-20 rotate-[20deg] pointer-events-none"
+                className="absolute bottom-[-10px] left-[-30px] z-20 rotate-[20deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="hello!"
-                  bgcolor="#FE6D73"
-                  bordercolor="#FE2027"
+                  text="give me a job"
+                  bgcolor="#308888"
+                  bordercolor="#205A5A"
                 />
               </motion.div>
               <motion.div
@@ -165,12 +166,12 @@ export default function Home(props) {
                   damping: 30,
                   duration: 0.5,
                 }}
-                className="absolute top-[-10px] left-[150px] z-10 rotate-[7deg] pointer-events-none"
+                className="absolute bottom-[-10px] right-[-35px] z-10 rotate-[7deg] pointer-events-none"
               >
                 <WelcomeLabel
-                  text="hello!"
-                  bgcolor="#FE6D73"
-                  bordercolor="#FE2027"
+                  text="click around"
+                  bgcolor="#0471A6"
+                  bordercolor="#034363"
                 />
               </motion.div>
             </motion.div>
@@ -178,9 +179,7 @@ export default function Home(props) {
         </AnimatePresence>
         <h1
           className="font-instrument text-lightMode-text text-7xl md:text-8xl lg:text-9xl greeting"
-          // onMouseEnter={textEnter}
-          // onMouseLeave={textLeave}
-          onMouseEnter={() => setHovered("ecommerce")}
+          onMouseEnter={() => setHovered("greeting")}
           onMouseLeave={() => setHovered(false)}
         >
           {props.greeting}

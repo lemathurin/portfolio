@@ -119,6 +119,7 @@ export function WelcomeLabel({ text, bgcolor, bordercolor }) {
     border: `1.5px solid ${bordercolor}`,
     padding: "3px 10px 5px",
     boxShadow: `0px -2.5px 0px 0px ${bordercolor} inset`,
+    width: "max-content",
   };
 
   const textStyle = {
