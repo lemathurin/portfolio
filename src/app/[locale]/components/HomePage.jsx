@@ -60,6 +60,7 @@ export default function Home(props) {
       width: 100,
       backgroundImage: "url(/images/profile_picture.png)",
       backgroundSize: "cover",
+      boxShadow: `0px 4px 10px 0px rgba(32, 32, 32, 0.25)`,
     },
   };
 
@@ -226,7 +227,7 @@ export default function Home(props) {
                     textShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
                   }}
                 >
-                  🧑‍💻
+                  💻
                 </span>
               </motion.div>
               <motion.div
@@ -268,7 +269,7 @@ export default function Home(props) {
           <span
             onMouseEnter={profileEnter}
             onMouseLeave={profileLeave}
-            className="font-instrument cursor-none hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+            className="font-instrument cursor-none hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition"
           >
             Mathurin Sekine
           </span>
@@ -276,7 +277,7 @@ export default function Home(props) {
           <a
             href="https://adatechschool.fr/"
             target="_blank"
-            className="font-instrument hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-[#E74C34] transition"
+            className="font-instrument hover:underline text-lightMode-hoveredtext hover:text-[#E74C34] transition"
             onMouseEnter={() => setHovered("adaLink")}
             onMouseLeave={() => setHovered(false)}
           >
@@ -315,7 +316,7 @@ export default function Home(props) {
         <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">
           {props.l4}
           <Link href="/projects">
-            <span className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition">
+            <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
               {props.projects}
             </span>
           </Link>
@@ -330,7 +331,7 @@ export default function Home(props) {
           <a
             href="https://dribbble.com/mathurin"
             target="_blank"
-            className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+            className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition"
           >
             Dribbble
           </a>
@@ -338,14 +339,14 @@ export default function Home(props) {
           <a
             href="https://layers.to/mathurin"
             target="_blank"
-            className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition"
+            className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition"
           >
             Layers
           </a>
           {props.dot}
           {props.l9}
           <Link href="/contact">
-            <span className="hover:underline decoration-dashed text-lightMode-hoveredtext hover:text-lightMode-text transition">
+            <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
               {props.l10}
             </span>
           </Link>

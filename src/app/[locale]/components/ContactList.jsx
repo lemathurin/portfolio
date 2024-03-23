@@ -156,6 +156,14 @@ export default function ContactList(props) {
           {props.readcv}
         </div>
       </div>
+      {/* <video autoPlay loop muted>
+        <source
+          width={"100%"}
+          src="/videos/smallAdopteUnMeuble.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video> */}
     </div>
   );
 }
