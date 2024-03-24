@@ -82,6 +82,12 @@
       "techstack": "Tech stack et outils",
       "teammates": "Coéquipiers",
       "screenshots": "Captures d'écran",
-      "iterations": "Itérations"
+      "iterations": "Itérations",
+      "whatilearned": "Ce que j'ai appris"
+    },
+    "CaseStudyEcommerce": {
+      "title": "Projet plateform de vente",
+      "description": "L'objectif de ce projet était d'organiser 2 équipes de 5 personnes sur le front-end et le back-end, puis d'échanger les rôles au bout d'une semaine. J'ai commencé dans l'équipe front-end et j'ai posé les bases du design avec mes maquettes dans Figma, ainsi qu'en choisissant d'utiliser Shadcn/ui. La deuxième semaine, j'ai travaillé en partenariat avec des membres de l'équipe back-end pour créer des routes pour la page d'administration.",
+      "whatilearnedtext": "J'ai appris à mieux coordonner une équipe et à utiliser une bibliothèque de composants. La découverte du monde du back-end avec Supabase et Express a également été intéressante."
     }
   }

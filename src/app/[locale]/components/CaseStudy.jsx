@@ -20,15 +20,15 @@ export function CaseStudyTitle({ title }) {
 export function CaseStudyDetails({ projectType, duration, linkName, link }) {
   return (
     <div className="mt-3 flex flex-col gap-1">
-      <h3 className="font-inter italic text-lightMode-text text-xl font-semibold">
+      <h3 className="font-inter text-lightMode-text text-xl font-semibold">
         {projectType}
       </h3>
-      <h3 className="font-inter italic text-lightMode-text text-xl font-semibold">
+      <h3 className="font-inter text-lightMode-text text-xl font-semibold">
         {duration}
       </h3>
       <a
         href={link}
-        className="font-inter text-lightMode-hoveredtext hover:text-lightMode-text hover:underline text-xl font-semibold"
+        className="font-inter text-lightMode-hoveredtext hover:text-lightMode-text hover:underline text-xl font-semibold w-max"
       >
         {linkName}
       </a>

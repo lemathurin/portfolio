@@ -17,6 +17,8 @@ export const metadata = {
 
 export default function Ecommerce() {
   const c = useTranslations("CaseStudy");
+  const e = useTranslations("CaseStudyEcommerce");
+
   const techStack = [
     { name: "Figma", link: "https://www.figma.com/" },
     { name: "React Vite", link: "https://vitejs.dev/" },
@@ -40,7 +42,7 @@ export default function Ecommerce() {
     <main className="w-screen flex items-start justify-center pb-32">
       <div className="flex flex-col md:p-10 pb-36 w-[90%] md:w-full max-w-[700px]">
         <CaseStudyVideo videoPath="/videos/smallAdopteUnMeuble.mp4" />
-        <CaseStudyTitle title="E-commerce store project" />
+        <CaseStudyTitle title={e("title")} />
         <CaseStudyDetails
           projectType={c("schoolproject")}
           duration="04/03/2024 -&gt; 14/03/2024"
@@ -48,11 +50,13 @@ export default function Ecommerce() {
           link="https://github.com/adatechschool/projet-collectif-plateforme-de-meubles-adopte-un-meuble"
         />
         <CaseStudyH2 title={c("projectoverview")} />
-        <CaseStudyParagraph text="The goal of this project was to have us organize ourselves in front and back-end teams and ensure the delivery of the website. Aute laborum et non do aliqua. Ea sunt culpa exercitation magna. Excepteur eu est Lorem ut aliqua quis deserunt. Veniam velit minim eu tempor eu ipsum." />
+        <CaseStudyParagraph text={e("description")} />
         <CaseStudyH2 title={c("techstack")} />
         <CaseStudyList items={techStack} />
         <CaseStudyH2 title={c("teammates")} />
         <CaseStudyList items={teammates} />
+        <CaseStudyH2 title={c("whatilearned")} />
+        <CaseStudyParagraph text={e("whatilearnedtext")} />
         <CaseStudyH2 title={c("screenshots")} />
         <Image
           src="/images/CaseStudy-ecommerce/homepage.png"
@@ -91,6 +95,13 @@ export default function Ecommerce() {
           className="mt-3 shadow-xl"
         />
       </div>
+      {/* <div className="w-screen h-screen fixed left-0 top-0 -z-10">
+        <div className="w-screen h-screen absolute left-0 top-0 backdrop-blur bg-white/30"></div>
+        <video width="100%" height="100%" autoPlay loop muted className="">
+          <source src="/videos/smallAdopteUnMeuble.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div> */}
     </main>
   );
 }
