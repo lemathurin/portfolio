@@ -13,7 +13,7 @@
       "l3": " in Nantes, France, working towards becoming a ",
       "dev1": "front-end ",
       "dev2": "developer",
-      "l4": "Since starting to learn to code in 2023, I have worked on ",
+      "l4": "Since starting to learn to code in October 2023, I have worked on ",
       "projects": "multiple projects",
       "l5": ", including an ",
       "ecommerce": "e-commerce website",
@@ -73,5 +73,21 @@
       "layers": "more design projects",
       "readcv": "my resume",
       "clipboard": "saved to clipboard"
+    },
+    "CaseStudy": {
+      "schoolproject": "School project",
+      "personalproject": "Personal project",
+      "githubrepository": "View GitHub repository",
+      "projectoverview": "Project overview",
+      "techstack": "Tech stack and tools",
+      "teammates": "Teammates",
+      "screenshots": "Screenshots",
+      "iterations": "Iterations",
+      "whatilearned": "What I learned"
+    },
+    "CaseStudyEcommerce": {
+      "title": "E-commerce store project",
+      "description": "The objective of this project was to have 2 teams of 5 work on the front and back-end, then switch roles after a week. I started on the front-end team and layed the foundation of the design with my mockups in Figma, as well as choosing to use Shadcn/ui. For the second week, I worked in partnership with some from the back-end team to create routes for the admin page.",
+      "whatilearnedtext": "I learned to better coordinate a team and use a component library. It was also interesting to discover the world of back-end with Supabase and Express."
     }
   }
