@@ -19,7 +19,7 @@ export function CaseStudyTitle({ title }) {
 
 export function CaseStudyDetails({ projectType, duration, linkName, link }) {
   return (
-    <description className="mt-3 flex flex-col gap-1">
+    <div className="mt-3 flex flex-col gap-1">
       <h3 className="font-inter italic text-lightMode-text text-xl font-semibold">
         {projectType}
       </h3>
@@ -32,7 +32,7 @@ export function CaseStudyDetails({ projectType, duration, linkName, link }) {
       >
         {linkName}
       </a>
-    </description>
+    </div>
   );
 }
 

@@ -6,6 +6,13 @@ import {
   CaseStudyH2,
   CaseStudyList,
 } from "../../components/CaseStudy";
+import Image from "next/image";
+
+// finish this
+export const metadata = {
+  title: "E-commerce website project",
+  description: "Mathurin Sekine's portfolio",
+};
 
 export default function Ecommerce() {
   const techStack = [
@@ -28,7 +35,7 @@ export default function Ecommerce() {
     { name: "Florentin Corbiat", link: "https://github.com/CorbiatFlorentin" },
   ];
   return (
-    <main className="w-screen flex items-start justify-center">
+    <main className="w-screen flex items-start justify-center pb-32">
       <div className="flex flex-col md:p-10 pb-36 w-[90%] md:w-full max-w-[700px]">
         <CaseStudyVideo videoPath="/videos/smallAdopteUnMeuble.mp4" />
         <CaseStudyTitle title="E-commerce store project" />
@@ -38,11 +45,50 @@ export default function Ecommerce() {
           linkName="View Github repository"
           link="https://github.com/adatechschool/projet-collectif-plateforme-de-meubles-adopte-un-meuble"
         />
+        <CaseStudyH2 title="Project overview" />
+
         <CaseStudyParagraph text="The goal of this project was to have us organize ourselves in front and back-end teams and ensure the delivery of the website. Aute laborum et non do aliqua. Ea sunt culpa exercitation magna. Excepteur eu est Lorem ut aliqua quis deserunt. Veniam velit minim eu tempor eu ipsum." />
         <CaseStudyH2 title="Tech stack and tools used" />
         <CaseStudyList items={techStack} />
         <CaseStudyH2 title="Teammates" />
         <CaseStudyList items={teammates} />
+        <CaseStudyH2 title="Screenshots" />
+        <Image
+          src="/images/CaseStudy-ecommerce/homepage.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-3 shadow-xl"
+        />
+        <Image
+          src="/images/CaseStudy-ecommerce/mobileversion.png"
+          alt="screenshot of the homepage"
+          width={175}
+          height={340}
+          className="mt-14 shadow-xl"
+        />
+        <Image
+          src="/images/CaseStudy-ecommerce/articlePage.png"
+          alt="screenshot of the article page"
+          width={700}
+          height={700}
+          className="mt-14 shadow-xl"
+        />
+        <Image
+          src="/images/CaseStudy-ecommerce/aboutPage.png"
+          alt="screenshot of the article page"
+          width={700}
+          height={700}
+          className="mt-14 shadow-xl"
+        />
+        <CaseStudyH2 title="Iterations" />
+        <Image
+          src="/images/CaseStudy-ecommerce/iterations.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-3 shadow-xl"
+        />
       </div>
     </main>
   );

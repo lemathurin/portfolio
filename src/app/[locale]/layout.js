@@ -6,13 +6,13 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 const instrument = Instrument_Serif({
-  variable: "--font-instrument",
-  weight: "400",
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-instrument",
 });
 
 export const metadata = {
@@ -23,10 +23,11 @@ export const metadata = {
 export default function RootLayout({ children, params: { locale } }) {
   const n = useTranslations("NavBar");
   return (
-    <html lang={locale}>
-      <body
-        className={`${inter.variable}, ${instrument.variable} bg-lightMode-background overflow-x-hidden`}
-      >
+    <html
+      lang={locale}
+      className={`${inter.variable}, ${instrument.variable} bg-lightMode-background overflow-x-hidden`}
+    >
+      <body>
         {children}
         <NavBar
           language={n("language")}

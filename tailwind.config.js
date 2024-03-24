@@ -20,8 +20,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        instrument: ["var(--font-instrument)"],
+        inter: [`var(--font-inter)`],
+        instrument: [`var(--font-instrument)`],
       },
     },
     screens: {
