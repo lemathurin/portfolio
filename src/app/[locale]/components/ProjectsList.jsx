@@ -90,7 +90,7 @@ export default function ProjectsList(props) {
           </AnimatePresence>
 
           <h2
-            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
             onMouseEnter={() => setHovered("portfolio")}
             onMouseLeave={() => setHovered(false)}
           >
@@ -179,7 +179,7 @@ export default function ProjectsList(props) {
           </AnimatePresence>
           <Link href="/projects/ecommerce">
             <h2
-              className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+              className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
               onMouseEnter={() => setHovered("ecommerce")}
               onMouseLeave={() => setHovered(false)}
             >
@@ -226,7 +226,7 @@ export default function ProjectsList(props) {
             )}
           </AnimatePresence>
           <h2
-            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
             onMouseEnter={() => setHovered("dataviz")}
             onMouseLeave={() => setHovered(false)}
           >
@@ -272,7 +272,7 @@ export default function ProjectsList(props) {
             )}
           </AnimatePresence>
           <h2
-            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
             onMouseEnter={() => setHovered("chromeextension")}
             onMouseLeave={() => setHovered(false)}
           >
@@ -304,7 +304,7 @@ export default function ProjectsList(props) {
             )}
           </AnimatePresence>
           <h2
-            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
             onMouseEnter={() => setHovered("pico8")}
             onMouseLeave={() => setHovered(false)}
           >
@@ -364,7 +364,7 @@ export default function ProjectsList(props) {
             )}
           </AnimatePresence>
           <h2
-            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
             onMouseEnter={() => setHovered("presenterapp")}
             onMouseLeave={() => setHovered(false)}
           >
@@ -424,7 +424,7 @@ export default function ProjectsList(props) {
             )}
           </AnimatePresence>
           <h2
-            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
             onMouseEnter={() => setHovered("php")}
             onMouseLeave={() => setHovered(false)}
           >
