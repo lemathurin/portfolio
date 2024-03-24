@@ -73,5 +73,15 @@
       "layers": "more design projects",
       "readcv": "my resume",
       "clipboard": "saved to clipboard"
+    },
+    "CaseStudy": {
+      "schoolproject": "School project",
+      "personalproject": "Personal project",
+      "githubrepository": "View GitHub repository",
+      "projectoverview": "Project overview",
+      "techstack": "Tech stack and tools",
+      "teammates": "Teammates",
+      "screenshots": "Screenshots",
+      "iterations": "Iterations"
     }
   }

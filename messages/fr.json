@@ -73,5 +73,15 @@
       "layers": "plus de projets de design",
       "readcv": "mon cv",
       "clipboard": "enregistré dans le presse-papiers"
+    },
+    "CaseStudy": {
+      "schoolproject": "Projet d'école",
+      "personalproject": "Projet personnel",
+      "githubrepository": "Voir le repo sur Github",
+      "projectoverview": "Présentation du projet",
+      "techstack": "Tech stack et outils",
+      "teammates": "Coéquipiers",
+      "screenshots": "Captures d'écran",
+      "iterations": "Itérations"
     }
   }

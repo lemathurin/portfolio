@@ -7,6 +7,7 @@ import {
   CaseStudyList,
 } from "../../components/CaseStudy";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 // finish this
 export const metadata = {
@@ -15,6 +16,7 @@ export const metadata = {
 };
 
 export default function Ecommerce() {
+  const c = useTranslations("CaseStudy");
   const techStack = [
     { name: "Figma", link: "https://www.figma.com/" },
     { name: "React Vite", link: "https://vitejs.dev/" },
@@ -40,19 +42,18 @@ export default function Ecommerce() {
         <CaseStudyVideo videoPath="/videos/smallAdopteUnMeuble.mp4" />
         <CaseStudyTitle title="E-commerce store project" />
         <CaseStudyDetails
-          projectType="school project"
+          projectType={c("schoolproject")}
           duration="04/03/2024 -&gt; 14/03/2024"
-          linkName="View Github repository"
+          linkName={c("githubrepository")}
           link="https://github.com/adatechschool/projet-collectif-plateforme-de-meubles-adopte-un-meuble"
         />
-        <CaseStudyH2 title="Project overview" />
-
+        <CaseStudyH2 title={c("projectoverview")} />
         <CaseStudyParagraph text="The goal of this project was to have us organize ourselves in front and back-end teams and ensure the delivery of the website. Aute laborum et non do aliqua. Ea sunt culpa exercitation magna. Excepteur eu est Lorem ut aliqua quis deserunt. Veniam velit minim eu tempor eu ipsum." />
-        <CaseStudyH2 title="Tech stack and tools used" />
+        <CaseStudyH2 title={c("techstack")} />
         <CaseStudyList items={techStack} />
-        <CaseStudyH2 title="Teammates" />
+        <CaseStudyH2 title={c("teammates")} />
         <CaseStudyList items={teammates} />
-        <CaseStudyH2 title="Screenshots" />
+        <CaseStudyH2 title={c("screenshots")} />
         <Image
           src="/images/CaseStudy-ecommerce/homepage.png"
           alt="screenshot of the homepage"
@@ -81,7 +82,7 @@ export default function Ecommerce() {
           height={700}
           className="mt-14 shadow-xl"
         />
-        <CaseStudyH2 title="Iterations" />
+        <CaseStudyH2 title={c("iterations")} />
         <Image
           src="/images/CaseStudy-ecommerce/iterations.png"
           alt="screenshot of the homepage"

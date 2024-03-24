@@ -15,6 +15,7 @@ import {
 } from "../components/Labels";
 import { motion, AnimatePresence, stagger } from "framer-motion";
 import { useState } from "react";
+import { Link } from "../../../navigation";
 
 export default function ProjectsList(props) {
   const [isHovered, setHovered] = useState(false);
@@ -176,13 +177,15 @@ export default function ProjectsList(props) {
               </motion.div>
             )}
           </AnimatePresence>
-          <h2
-            className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
-            onMouseEnter={() => setHovered("ecommerce")}
-            onMouseLeave={() => setHovered(false)}
-          >
-            {props.ecommerce}
-          </h2>
+          <Link href="/projects/ecommerce">
+            <h2
+              className="font-instrument text-3xl text-lightMode-text hover:underline hover:text-lightMode-hoveredtext transition"
+              onMouseEnter={() => setHovered("ecommerce")}
+              onMouseLeave={() => setHovered(false)}
+            >
+              {props.ecommerce}
+            </h2>
+          </Link>
           <p className="font-inter text-xl text-lightMode-text font-extralight">
             {props.schoolproject}
           </p>
