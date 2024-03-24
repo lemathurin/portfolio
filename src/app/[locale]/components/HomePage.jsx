@@ -321,7 +321,14 @@ export default function Home(props) {
             </span>
           </Link>
           {props.l5}
-          <span>{props.ecommerce}</span>
+          <Link
+            onMouseEnter={() => setHovered("ecommercelink")}
+            onMouseLeave={() => setHovered(false)}
+            href="/projects/ecommerce"
+            className="font-instrument hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition"
+          >
+            {props.ecommerce}
+          </Link>
           {props.l6}
           <span>{props.thisPortfolio}</span>
           {props.dot}
@@ -364,6 +371,32 @@ export default function Home(props) {
             }}
             className="w-screen h-screen bg-[#FDD8D0] fixed top-0 left-0 -z-10"
           />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isHovered === "ecommercelink" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="w-screen h-screen fixed left-0 top-0 -z-10 md:flex justify-center items-center hidden"
+          >
+            <div className="w-screen h-screen absolute left-0 top-0 backdrop-blur bg-white/30"></div>
+            <video
+              autoPlay
+              loop
+              muted
+              className="h-[110%] w-[106%]"
+              style={{ objectFit: "cover" }}
+            >
+              <source src="/videos/smallAdopteUnMeuble.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </motion.div>
         )}
       </AnimatePresence>
 
