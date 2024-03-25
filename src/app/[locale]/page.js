@@ -3,7 +3,7 @@ import HomePage from "./components/HomePage";
 
 export const metadata = {
   title: "Mathurin Sekine",
-  description: "Mathurin Sekine's homepage",
+  description: "Welcome to my portfolio",
 };
 
 export default function Home() {
