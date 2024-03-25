@@ -63,13 +63,13 @@ export default function NavBar(props) {
                 <Link
                   href="/projects/ecommerce"
                   onClick={() => setActiveDropdown(null)}
-                  className="project-left relative overflow-hidden dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"
+                  className="project-left group relative overflow-hidden dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"
                 >
                   {/* <div className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"> */}
                   <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
                     {props.mainProject}
                   </h3>
-                  <div className="w-[150%] md:w-full">
+                  <div className="w-[150%] md:w-full group-hover:-rotate-2 origin-bottom-left transition-all">
                     <Image
                       className="shadow rounded"
                       src="/images/CaseStudy-ecommerce/homepage.png"
@@ -110,39 +110,41 @@ export default function NavBar(props) {
                       />
                     </div>
                   </div>
-                  <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
-                    <Link
-                      href="/projects"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
-                        {props.moreProjects}
-                      </h3>
-                      <div className="project-right-small-images">
-                        <Image
-                          className="shadow"
-                          src="/images/eym.png"
-                          width={83}
-                          height={210}
-                          alt="Screenshot of game loading screen"
-                        />
-                        <Image
-                          className="shadow"
-                          src="/images/portfolio_exploration.png"
-                          width={83}
-                          height={210}
-                          alt="Screenshot of game loading screen"
-                        />
-                        <Image
-                          className="shadow"
-                          src="/images/dataviz.png"
-                          width={110}
-                          height={83}
-                          alt="Screenshot of game loading screen"
-                        />
-                      </div>
-                    </Link>
-                  </div>
+                  <Link
+                    href="/projects"
+                    onClick={() => setActiveDropdown(null)}
+                    className="group project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"
+                  >
+                    {/* <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"> */}
+
+                    <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
+                      {props.moreProjects}
+                    </h3>
+                    <div className="project-right-small-images">
+                      <Image
+                        className="shadow group-hover:rotate-3 transition-all"
+                        src="/images/eym.png"
+                        width={83}
+                        height={210}
+                        alt="Screenshot of game loading screen"
+                      />
+                      <Image
+                        className="shadow group-hover:-rotate-6 transition-all"
+                        src="/images/pico-8_game.png"
+                        width={83}
+                        height={210}
+                        alt="Screenshot of game loading screen"
+                      />
+                      <Image
+                        className="shadow group-hover:-rotate-2 transition-all"
+                        src="/images/dataviz.png"
+                        width={110}
+                        height={83}
+                        alt="Screenshot of game loading screen"
+                      />
+                    </div>
+                    {/* </div> */}
+                  </Link>
                 </div>
               </div>
             </motion.div>
