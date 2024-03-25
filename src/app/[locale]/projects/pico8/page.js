@@ -69,6 +69,20 @@ export default function Pico8CaseStudy() {
           height={700}
           className="mt-14"
         />
+        <Image
+          src="/images/CaseStudy-pico8/pico-8_spriteeditor.png"
+          alt="screenshot of the article page"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-pico8/pico-8_mapeditor.png"
+          alt="screenshot of the article page"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
         <CaseStudyH2 title={c("iterations")} />
         <Image
           src="/images/CaseStudy-pico8/pico-8_mapdesign.png"
