@@ -95,13 +95,6 @@ export default function Ecommerce() {
           className="mt-3 shadow-xl"
         />
       </div>
-      {/* <div className="w-screen h-screen fixed left-0 top-0 -z-10">
-        <div className="w-screen h-screen absolute left-0 top-0 backdrop-blur bg-white/30"></div>
-        <video width="100%" height="100%" autoPlay loop muted className="">
-          <source src="/videos/smallAdopteUnMeuble.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> */}
     </main>
   );
 }

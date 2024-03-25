@@ -53,7 +53,7 @@ export default function Pico8CaseStudy() {
           alt="screenshot of the article page"
           width={700}
           height={700}
-          className="mt-14"
+          className="mt-3"
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_game.png"
@@ -75,7 +75,7 @@ export default function Pico8CaseStudy() {
           alt="screenshot of the article page"
           width={700}
           height={700}
-          className="mt-14"
+          className="mt-3"
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_spritedesign.png"
