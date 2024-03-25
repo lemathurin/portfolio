@@ -95,6 +95,10 @@ export default function Ecommerce() {
           className="mt-3 shadow-xl"
         />
       </div>
+      <meta property="og:image" content="/ogimages/ecommerce.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
     </main>
   );
 }
