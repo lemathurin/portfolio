@@ -94,5 +94,10 @@
       "title": "Pico-8 game project",
       "description": "This was my first group project since I started to learn to code. We discovered Lua and the Pico-8 game engine. We could create whatever kind of game we wanted. As this was our first project, we always worked together in a mob programming setup. I worked a lot on the creative direction of the game, which involved designing the character sprite, crafting the background and terrain, and developing UI elements.",
       "whatilearnedtext": "I enjoyed delving into Lua and understanding fundamental game mechanics such as gravity, collisions, and game states. Additionally, I had a great time working on the artwork, despite the challenges posed by the limited color palette of the Pico-8 engine."
+    },
+    "CaseStudyDataviz": {
+      "title": "Dataviz & API project",
+      "description": "The objective of this project was to fetch data from an API and dynamically display the results on a webpage. We decided to use the SNCF's API to show the amount of lost and found items on their network. The SNCF API is updated three times a day, which worked great for our project. I focused on the front-end of the website, recreating the SNCF's design language, going as far as researching and finding the font they use on signs in stations.",
+      "whatilearnedtext": "I learned to use auto layout in Figma, as well as the dev mode to quickly go from mockup to code. This considerably sped up my work. I also learned about APIs and how they work."
     }
   }

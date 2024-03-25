@@ -52,11 +52,17 @@ export function CaseStudyList({ items }) {
   return (
     <ul className="mt-3">
       {items.map((item, index) => (
-        <li
-          key={index}
-          className="w-max font-inter text-lightMode-hoveredtext hover:text-lightMode-text hover:underline text-lg"
-        >
-          <a href={item.link}>{item.name}</a>
+        <li key={index} className="w-max font-inter text-lg">
+          {item.link ? (
+            <a
+              href={item.link}
+              className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline"
+            >
+              {item.name}
+            </a>
+          ) : (
+            <span className="text-lightMode-text">{item.name}</span>
+          )}
         </li>
       ))}
     </ul>

@@ -9,7 +9,6 @@ import {
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-// finish this
 export const metadata = {
   title: "E-commerce website project",
   description: "E-commerce website project case study",
