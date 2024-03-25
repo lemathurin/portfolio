@@ -19,7 +19,10 @@ export default function Pico8CaseStudy() {
   const p = useTranslations("CaseStudyPico8");
 
   const techStack = [
-    { name: "Figma", link: "https://www.figma.com/" },
+    {
+      name: "Affinity Designer",
+      link: "https://affinity.serif.com/en-us/designer/",
+    },
     { name: "Pico-8", link: "https://www.lexaloffle.com/pico-8.php" },
   ];
   const teammates = [
@@ -61,6 +64,21 @@ export default function Pico8CaseStudy() {
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_menu.png"
+          alt="screenshot of the article page"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <CaseStudyH2 title={c("iterations")} />
+        <Image
+          src="/images/CaseStudy-pico8/pico-8_mapdesign.png"
+          alt="screenshot of the article page"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-pico8/pico-8_spritedesign.png"
           alt="screenshot of the article page"
           width={700}
           height={700}
