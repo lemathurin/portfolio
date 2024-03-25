@@ -60,19 +60,24 @@ export default function NavBar(props) {
               onMouseLeave={handleMouseLeave}
             >
               <div className="project-dropdown h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
-                <div className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
+                <Link
+                  href="/projects/ecommerce"
+                  className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"
+                >
+                  {/* <div className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"> */}
                   <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
-                    {props.presenterApp}
+                    {props.mainProject}
                   </h3>
                   <Image
-                    className="shadow hover:-translate-y-5 transition-all"
-                    src="/images/presenter_app.png"
+                    className="shadow rounded"
+                    src="/images/CaseStudy-ecommerce/homepage.png"
                     width={400}
                     height={210}
                     alt="Screenshot of the unfinished project"
                     priority={true}
                   />
-                </div>
+                  {/* </div> */}
+                </Link>
                 <div className="project-right-section gap-[0.3125rem] md:gap-[0.625rem]">
                   <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
                     <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
@@ -80,21 +85,21 @@ export default function NavBar(props) {
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow hover:-translate-y-2 transition-all"
+                        className="shadow"
                         src="/images/pico-8_loading.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-2 transition-all"
+                        className="shadow"
                         src="/images/pico-8_menu.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game menu screen"
                       />
                       <Image
-                        className="shadow hover:-translate-y-2 transition-all"
+                        className="shadow"
                         src="/images/pico-8_game.png"
                         width={83}
                         height={83}
@@ -112,21 +117,21 @@ export default function NavBar(props) {
                       </h3>
                       <div className="project-right-small-images">
                         <Image
-                          className="shadow hover:-translate-y-2 transition-all"
+                          className="shadow"
                           src="/images/eym.png"
                           width={83}
                           height={210}
                           alt="Screenshot of game loading screen"
                         />
                         <Image
-                          className="shadow hover:-translate-y-2 transition-all"
+                          className="shadow"
                           src="/images/portfolio_exploration.png"
                           width={83}
                           height={210}
                           alt="Screenshot of game loading screen"
                         />
                         <Image
-                          className="shadow hover:-translate-y-2 transition-all"
+                          className="shadow"
                           src="/images/dataviz.png"
                           width={110}
                           height={83}
