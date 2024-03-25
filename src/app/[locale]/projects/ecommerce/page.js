@@ -40,7 +40,7 @@ export default function Ecommerce() {
   ];
   return (
     <main className="w-screen flex items-start justify-center pb-32">
-      <div className="flex flex-col md:p-10 pb-36 w-[90%] md:w-full max-w-[700px]">
+      <div className="flex flex-col pt-10 md:p-10 pb-36 w-[80%] md:w-full max-w-[700px]">
         <CaseStudyVideo videoPath="/videos/smallAdopteUnMeuble.mp4" />
         <CaseStudyTitle title={e("title")} />
         <CaseStudyDetails
