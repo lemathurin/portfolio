@@ -95,6 +95,10 @@ export default function Dataviz() {
           className="mt-3"
         />
       </div>
+      <meta property="og:image" content="/ogimages/dataviz.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
     </main>
   );
 }
