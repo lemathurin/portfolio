@@ -303,13 +303,15 @@ export default function ProjectsList(props) {
               </motion.div>
             )}
           </AnimatePresence>
-          <h2
-            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
-            onMouseEnter={() => setHovered("pico8")}
-            onMouseLeave={() => setHovered(false)}
-          >
-            {props.pico8game}
-          </h2>
+          <Link href="/projects/pico8">
+            <h2
+              className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
+              onMouseEnter={() => setHovered("pico8")}
+              onMouseLeave={() => setHovered(false)}
+            >
+              {props.pico8game}
+            </h2>
+          </Link>
           <p className="font-inter text-xl text-lightMode-text font-extralight">
             {props.schoolproject}
           </p>

@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl";
 // finish this
 export const metadata = {
   title: "E-commerce website project",
-  description: "Mathurin Sekine's portfolio",
+  description: "E-commerce website project case study",
 };
 
 export default function Ecommerce() {
@@ -40,7 +40,7 @@ export default function Ecommerce() {
   ];
   return (
     <main className="w-screen flex items-start justify-center pb-32">
-      <div className="flex flex-col md:p-10 pb-36 w-[90%] md:w-full max-w-[700px]">
+      <div className="flex flex-col pt-10 md:p-10 pb-36 w-[80%] md:w-full max-w-[700px]">
         <CaseStudyVideo videoPath="/videos/smallAdopteUnMeuble.mp4" />
         <CaseStudyTitle title={e("title")} />
         <CaseStudyDetails
@@ -95,13 +95,6 @@ export default function Ecommerce() {
           className="mt-3 shadow-xl"
         />
       </div>
-      {/* <div className="w-screen h-screen fixed left-0 top-0 -z-10">
-        <div className="w-screen h-screen absolute left-0 top-0 backdrop-blur bg-white/30"></div>
-        <video width="100%" height="100%" autoPlay loop muted className="">
-          <source src="/videos/smallAdopteUnMeuble.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> */}
     </main>
   );
 }

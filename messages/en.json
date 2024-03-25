@@ -45,7 +45,7 @@
       "projects": "my projects",
       "notes": "my notes",
       "contact": "contact",
-      "presenter-app": "Untitled Presentation App",
+      "mainproject": "E-commerce store project",
       "pico-8": "PICO-8 game",
       "more-projects": "More projects",
       "notes-comingsoon": "Coming soon™",
@@ -89,5 +89,10 @@
       "title": "E-commerce store project",
       "description": "The objective of this project was to have 2 teams of 5 work on the front and back-end, then switch roles after a week. I started on the front-end team and layed the foundation of the design with my mockups in Figma, as well as choosing to use Shadcn/ui. For the second week, I worked in partnership with some from the back-end team to create routes for the admin page.",
       "whatilearnedtext": "I learned to better coordinate a team and use a component library. It was also interesting to discover the world of back-end with Supabase and Express."
+    },
+    "CaseStudyPico8": {
+      "title": "Pico-8 game project",
+      "description": "This was my first group project since I started to learn to code. We discovered Lua and the Pico-8 game engine. We could create whatever kind of game we wanted. As this was our first project, we always worked together in a mob programming setup. I worked a lot on the creative direction of the game, which involved designing the character sprite, crafting the background and terrain, and developing UI elements.",
+      "whatilearnedtext": "I enjoyed delving into Lua and understanding fundamental game mechanics such as gravity, collisions, and game states. Additionally, I had a great time working on the artwork, despite the challenges posed by the limited color palette of the Pico-8 engine."
     }
   }
