@@ -26,7 +26,7 @@ export default function Pico8CaseStudy() {
     { name: "Pico-8", link: "https://www.lexaloffle.com/pico-8.php" },
   ];
   const teammates = [
-    { name: "Mehdi Bejjar", link: "https://github.com/annatehiva" },
+    { name: "Mehdi Bejjar", link: "https://github.com/bejjarmehdi" },
     { name: "Daniela Ortúzar", link: "https://github.com/danielaortuzar" },
   ];
   return (

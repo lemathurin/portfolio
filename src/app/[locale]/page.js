@@ -1,6 +1,17 @@
 import { useTranslations } from "next-intl";
 import HomePage from "./components/HomePage";
 
+export const metadata = {
+  title: "Mathurin Sekine",
+  description: "Mathurin Sekine's homepage",
+  ogImage: {
+    url: "/ogimages/home.png",
+    type: "image/png",
+    width: "1200",
+    height: "630",
+  },
+};
+
 export default function Home() {
   const t = useTranslations("Home");
   const h = useTranslations("HireWindow");
