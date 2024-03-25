@@ -12,7 +12,7 @@ import { useTranslations } from "next-intl";
 // finish this
 export const metadata = {
   title: "E-commerce website project",
-  description: "Mathurin Sekine's portfolio",
+  description: "E-commerce website project case study",
 };
 
 export default function Ecommerce() {

@@ -89,21 +89,21 @@ export default function NavBar(props) {
                     <div className="project-right-small-images">
                       <Image
                         className="shadow"
-                        src="/images/pico-8_loading.png"
+                        src="/images/CaseStudy-pico8/pico-8_loading.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game loading screen"
                       />
                       <Image
                         className="shadow"
-                        src="/images/pico-8_menu.png"
+                        src="/images/CaseStudy-pico8/pico-8_menu.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game menu screen"
                       />
                       <Image
                         className="shadow"
-                        src="/images/pico-8_game.png"
+                        src="/images/CaseStudy-pico8/pico-8_game.png"
                         width={83}
                         height={83}
                         alt="Screenshot of game"
@@ -130,7 +130,7 @@ export default function NavBar(props) {
                       />
                       <Image
                         className="shadow group-hover:-rotate-6 transition-all"
-                        src="/images/pico-8_game.png"
+                        src="/images/CaseStudy-pico8/pico-8_game.png"
                         width={83}
                         height={210}
                         alt="Screenshot of game loading screen"
