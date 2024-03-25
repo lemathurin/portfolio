@@ -19,7 +19,7 @@ export default function Dataviz() {
   const d = useTranslations("CaseStudyDataviz");
   const techStack = [
     { name: "Figma", link: "https://www.figma.com/" },
-    { name: "Basic HTML, CSS, Javascript", link: null },
+    { name: "HTML, CSS, Javascript", link: null },
   ];
   const teammates = [
     { name: "Tianhong Huang", link: "https://github.com/Tianhong258" },
@@ -44,6 +44,56 @@ export default function Dataviz() {
         <CaseStudyH2 title={c("whatilearned")} />
         <CaseStudyParagraph text={d("whatilearnedtext")} />
         <CaseStudyH2 title={c("screenshots")} />
+        <Image
+          src="/images/CaseStudy-dataviz/landing.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-3"
+        />
+        <Image
+          src="/images/CaseStudy-dataviz/screen.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-dataviz/infoscreen.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-dataviz/wall.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-dataviz/texts.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-dataviz/2ndinfoscreen.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <CaseStudyH2 title={c("iterations")} />
+        <Image
+          src="/images/CaseStudy-dataviz/iteration.png"
+          alt="screenshot of the homepage"
+          width={700}
+          height={700}
+          className="mt-3"
+        />
       </div>
     </main>
   );

@@ -225,13 +225,15 @@ export default function ProjectsList(props) {
               </motion.div>
             )}
           </AnimatePresence>
-          <h2
-            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
-            onMouseEnter={() => setHovered("dataviz")}
-            onMouseLeave={() => setHovered(false)}
-          >
-            {props.dataviz}
-          </h2>
+          <Link href="/projects/dataviz">
+            <h2
+              className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
+              onMouseEnter={() => setHovered("dataviz")}
+              onMouseLeave={() => setHovered(false)}
+            >
+              {props.dataviz}
+            </h2>
+          </Link>
           <p className="font-inter text-xl text-lightMode-text font-extralight">
             {props.schoolproject}
           </p>
