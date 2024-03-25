@@ -62,20 +62,22 @@ export default function NavBar(props) {
               <div className="project-dropdown h-[13rem] md:h-[17.125rem] p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.625rem] md:rounded-[1.25rem]">
                 <Link
                   href="/projects/ecommerce"
-                  className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"
+                  className="project-left relative overflow-hidden dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"
                 >
                   {/* <div className="project-left dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"> */}
                   <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
                     {props.mainProject}
                   </h3>
-                  <Image
-                    className="shadow rounded"
-                    src="/images/CaseStudy-ecommerce/homepage.png"
-                    width={400}
-                    height={210}
-                    alt="Screenshot of the unfinished project"
-                    priority={true}
-                  />
+                  <div className="w-[150%] md:w-full">
+                    <Image
+                      className="shadow rounded"
+                      src="/images/CaseStudy-ecommerce/homepage.png"
+                      width={400}
+                      height={210}
+                      alt="Screenshot of the unfinished project"
+                      priority={true}
+                    />
+                  </div>
                   {/* </div> */}
                 </Link>
                 <div className="project-right-section gap-[0.3125rem] md:gap-[0.625rem]">
