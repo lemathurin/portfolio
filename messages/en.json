@@ -99,5 +99,10 @@
       "title": "Dataviz & API project",
       "description": "The objective of this project was to fetch data from an API and dynamically display the results on a webpage. We decided to use the SNCF's API to show the amount of lost and found items on their network. The SNCF API is updated three times a day, which worked great for our project. I focused on the front-end of the website, recreating the SNCF's design language, going as far as researching and finding the font they use on signs in stations.",
       "whatilearnedtext": "I learned to use auto layout in Figma, as well as the dev mode to quickly go from mockup to code. This considerably sped up my work. I also learned about APIs and how they work."
+    },
+    "CaseStudyExtension": {
+      "title": "Browser extension project",
+      "description": "We were tasked with creating an extension for Google Chrome. Our team decided to make a Pomodoro timer. I took inspiration from Teenage Engineering's design for the extension's look.",
+      "whatilearnedtext": "I learned about the browser ecosystem, and how I don't love it."
     }
   }
