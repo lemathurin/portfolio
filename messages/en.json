@@ -87,7 +87,7 @@
     },
     "CaseStudyEcommerce": {
       "title": "E-commerce store project",
-      "description": "The objective of this project was to have 2 teams of 5 work on the front and back-end, then switch roles after a week. I started on the front-end team and layed the foundation of the design with my mockups in Figma, as well as choosing to use Shadcn/ui. For the second week, I worked in partnership with some from the back-end team to create routes for the admin page.",
+      "description": "The objective of this project was to have two teams of five work on the front and back-end, then switch roles after a week. I started on the front-end team and laid the foundation of the design with my mockups in Figma, as well as choosing to use Shadcn/ui. For the second week, I worked in partnership with some from the back-end team to create routes for the admin page.",
       "whatilearnedtext": "I learned to better coordinate a team and use a component library. It was also interesting to discover the world of back-end with Supabase and Express."
     },
     "CaseStudyPico8": {
