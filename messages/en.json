@@ -104,5 +104,12 @@
       "title": "Browser extension project",
       "description": "We were tasked with creating an extension for Google Chrome. Our team decided to make a Pomodoro timer. I took inspiration from Teenage Engineering's design for the extension's look.",
       "whatilearnedtext": "I learned about the browser ecosystem, and how I don't love it."
+    },
+    "CaseStudyPHP": {
+      "title": "PHP social network project",
+      "description": "This project was a little different, as we started with broken code that we were supposed to fix and improve. The website's features closely resembled Twitter and Facebook. Users had to be able to create accounts, post posts, like posts, and follow other users.",
+      "whatilearnedtext": "I learned how to write SQL, but didn't enjoy PHP that much.",
+      "beforedesign": "Before redesign",
+      "afterdesign": "After redesign"
     }
   }

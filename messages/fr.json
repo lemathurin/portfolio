@@ -104,5 +104,12 @@
       "title": "Projet extension navigateur",
       "description": "On nous a demandé de créer une extension pour Google Chrome. Notre équipe a décidé de créer un minuteur Pomodoro. Je me suis inspiré du design de Teenage Engineering pour l'apparence de l'extension.",
       "whatilearnedtext": "J'ai découvert l'écosystème du navigateur et j'ai appris que je ne l'aimais pas."
+    },
+    "CaseStudyPHP": {
+      "title": "Projet réseau social PHP",
+      "description": "Ce projet était un peu différent, car on partait d'un code cassé qu'on était censé corriger et améliorer. Les fonctionnalités du site web ressemblaient beaucoup à celles de Twitter et de Facebook. Les utilisateurs devaient pouvoir créer des comptes, publier des messages, aimer des messages et suivre d'autres utilisateurs.",
+      "whatilearnedtext": "J'ai appris à écrire du SQL, mais je n'ai pas beaucoup apprécié PHP.",
+      "beforedesign": "Avant la refonte",
+      "afterdesign": "Après la refonte"
     }
   }
