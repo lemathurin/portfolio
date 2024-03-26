@@ -46,14 +46,14 @@ export default function Extension() {
         <CaseStudyH2 title={c("screenshots")} />
         <Image
           src="/images/CaseStudy-extension/extension.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the extension opened in Google Chrome."
           width={700}
           height={700}
           className="mt-3"
         />
         <Image
           src="/images/CaseStudy-extension/extensionbig.png"
-          alt="screenshot of the homepage"
+          alt="A closeup screenshot of the extenion."
           width={700}
           height={700}
           className="mt-14"
@@ -61,7 +61,7 @@ export default function Extension() {
         <CaseStudyH2 title={c("iterations")} />
         <Image
           src="/images/CaseStudy-extension/extensioniterations.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the Figma file."
           width={700}
           height={700}
           className="mt-3"

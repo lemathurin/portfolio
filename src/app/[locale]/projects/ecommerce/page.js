@@ -59,14 +59,14 @@ export default function Ecommerce() {
         <CaseStudyH2 title={c("screenshots")} />
         <Image
           src="/images/CaseStudy-ecommerce/homepage.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the homepage."
           width={700}
           height={700}
           className="mt-3 shadow-xl"
         />
         <Image
           src="/images/CaseStudy-ecommerce/mobileversion.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the mobile version of the homepage."
           width={175}
           height={340}
           className="mt-14 shadow-xl"
@@ -80,7 +80,7 @@ export default function Ecommerce() {
         />
         <Image
           src="/images/CaseStudy-ecommerce/aboutPage.png"
-          alt="screenshot of the article page"
+          alt="The about page with the credits."
           width={700}
           height={700}
           className="mt-14 shadow-xl"
@@ -88,7 +88,7 @@ export default function Ecommerce() {
         <CaseStudyH2 title={c("iterations")} />
         <Image
           src="/images/CaseStudy-ecommerce/iterations.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the Figma file."
           width={700}
           height={700}
           className="mt-3 shadow-xl"

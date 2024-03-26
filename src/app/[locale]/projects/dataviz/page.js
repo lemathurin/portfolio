@@ -46,42 +46,42 @@ export default function Dataviz() {
         <CaseStudyH2 title={c("screenshots")} />
         <Image
           src="/images/CaseStudy-dataviz/landing.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the landing page."
           width={700}
           height={700}
           className="mt-3"
         />
         <Image
           src="/images/CaseStudy-dataviz/screen.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of a screen that looks like the ones found in stations."
           width={700}
           height={700}
           className="mt-14"
         />
         <Image
           src="/images/CaseStudy-dataviz/infoscreen.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the project."
           width={700}
           height={700}
           className="mt-14"
         />
         <Image
           src="/images/CaseStudy-dataviz/wall.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the project."
           width={700}
           height={700}
           className="mt-14"
         />
         <Image
           src="/images/CaseStudy-dataviz/texts.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the project."
           width={700}
           height={700}
           className="mt-14"
         />
         <Image
           src="/images/CaseStudy-dataviz/2ndinfoscreen.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the project."
           width={700}
           height={700}
           className="mt-14"
@@ -89,7 +89,7 @@ export default function Dataviz() {
         <CaseStudyH2 title={c("iterations")} />
         <Image
           src="/images/CaseStudy-dataviz/iteration.png"
-          alt="screenshot of the homepage"
+          alt="A screenshot of the Figma file."
           width={700}
           height={700}
           className="mt-3"

@@ -75,7 +75,7 @@ export default function NavBar(props) {
                       src="/images/CaseStudy-ecommerce/homepage.png"
                       width={400}
                       height={210}
-                      alt="Screenshot of the unfinished project"
+                      alt="Screenshot of the e-commerce website project"
                       priority={true}
                     />
                   </div>
@@ -126,21 +126,21 @@ export default function NavBar(props) {
                         src="/images/eym.png"
                         width={83}
                         height={210}
-                        alt="Screenshot of game loading screen"
+                        alt="Screenshot of the browser extension project"
                       />
                       <Image
                         className="shadow group-hover:-rotate-6 transition-all"
                         src="/images/CaseStudy-pico8/pico-8_game.png"
                         width={83}
                         height={210}
-                        alt="Screenshot of game loading screen"
+                        alt="Screenshot of the Pico-8 game"
                       />
                       <Image
                         className="shadow group-hover:-rotate-2 transition-all"
                         src="/images/dataviz.png"
                         width={110}
                         height={83}
-                        alt="Screenshot of game loading screen"
+                        alt="Screenshot of a page from the dataviz project"
                       />
                     </div>
                     {/* </div> */}

@@ -50,35 +50,35 @@ export default function Pico8CaseStudy() {
         <CaseStudyH2 title={c("screenshots")} />
         <Image
           src="/images/CaseStudy-pico8/pico-8_loading.png"
-          alt="screenshot of the article page"
+          alt="The game's loading screen."
           width={700}
           height={700}
           className="mt-3"
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_game.png"
-          alt="screenshot of the article page"
+          alt="A screenshot of the game itself."
           width={700}
           height={700}
           className="mt-14"
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_menu.png"
-          alt="screenshot of the article page"
+          alt="The game's menu screen."
           width={700}
           height={700}
           className="mt-14"
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_spriteeditor.png"
-          alt="screenshot of the article page"
+          alt="Pico-8's sprite editor."
           width={700}
           height={700}
           className="mt-14"
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_mapeditor.png"
-          alt="screenshot of the article page"
+          alt="Pico-8's map editor."
           width={700}
           height={700}
           className="mt-14"
@@ -86,14 +86,14 @@ export default function Pico8CaseStudy() {
         <CaseStudyH2 title={c("iterations")} />
         <Image
           src="/images/CaseStudy-pico8/pico-8_mapdesign.png"
-          alt="screenshot of the article page"
+          alt="A screenshot of the Affinity Designer's file showing iterations of the map design."
           width={700}
           height={700}
           className="mt-3"
         />
         <Image
           src="/images/CaseStudy-pico8/pico-8_spritedesign.png"
-          alt="screenshot of the article page"
+          alt="A screenshot of the Affinity Designer's file showing the sprite design."
           width={700}
           height={700}
           className="mt-14"
