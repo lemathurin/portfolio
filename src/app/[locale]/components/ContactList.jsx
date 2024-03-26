@@ -14,7 +14,7 @@ export default function ContactList(props) {
       setEmail("");
       setShowEmail(false);
     } else {
-      setEmail("test@gmail.com");
+      setEmail("mathurin.sekine@gmail.com");
       setShowEmail(true);
     }
   };

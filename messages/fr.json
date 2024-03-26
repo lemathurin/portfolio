@@ -91,7 +91,7 @@
       "whatilearnedtext": "J'ai appris à mieux coordonner une équipe et à utiliser une bibliothèque de composants. La découverte du monde du back-end avec Supabase et Express a également été intéressante."
     },
     "CaseStudyPico8": {
-      "title": "Projet de jeu pico-8",
+      "title": "Projet de jeu Pico-8",
       "description": "C'était mon premier projet de groupe depuis le début de ma formation de développeur. On a découvert Lua et le moteur de jeu Pico-8. On pouvait créer n'importe quel type de jeu. Comme il s'agissait de notre premier projet, on a travaillé ensemble dans une configuration de mob programming. J'ai beaucoup travaillé sur la direction créative du jeu, ce qui impliquait la création du sprite du personnage ainsi que l'arrière-plan, le terrain et les éléments de l'interface utilisateur.",
       "whatilearnedtext": "J'ai appris à programmer en Lua et à comprendre les mécanismes fondamentaux des jeux tels que la gravité, les collisions et les game states. J'ai pris beaucoup de plaisir à travailler sur l'art, même si la palette de couleurs du Pico-8 est très limitée."
     },
