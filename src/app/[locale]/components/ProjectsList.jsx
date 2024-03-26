@@ -370,7 +370,7 @@ export default function ProjectsList(props) {
             )}
           </AnimatePresence>
           <h2
-            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition"
+            className="font-instrument text-3xl hover:text-lightMode-text hover:underline text-lightMode-hoveredtext transition cursor-not-allowed"
             onMouseEnter={() => setHovered("presenterapp")}
             onMouseLeave={() => setHovered(false)}
           >
