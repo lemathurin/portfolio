@@ -111,5 +111,13 @@
       "whatilearnedtext": "I learned how to write SQL, but didn't enjoy PHP that much.",
       "beforedesign": "Before redesign",
       "afterdesign": "After redesign"
+    },
+    "CaseStudyPortfolioV1": {
+      "title": "Portfolio version 1.0",
+      "description": "Portfolio version 1.0 was the first personal development project I completed since starting at Ada Tech School. It needed to showcase the projects I had worked on, provide links to my other social media pages, and include information about myself. Additionally, it had to be available in both English and French.",
+      "designinspiration": "Design inspiration",
+      "whatilearnedtext": "I learned how to write SQL, but didn't enjoy PHP that much.",
+      "beforedesign": "Before redesign",
+      "afterdesign": "After redesign"
     }
   }
