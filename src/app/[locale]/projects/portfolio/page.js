@@ -29,7 +29,7 @@ export default function PortfolioCaseStudy() {
     { name: "Framer Motion", link: "https://www.framer.com/motion/" },
     { name: "Vercel", link: "https://vercel.com/" },
   ];
-  const teammates = [
+  const credits = [
     { name: "Mehdi Bejjar", link: "https://github.com/bejjarmehdi" },
     { name: "Daniela Ortúzar", link: "https://github.com/danielaortuzar" },
   ];
@@ -41,7 +41,7 @@ export default function PortfolioCaseStudy() {
           projectType={c("personalproject")}
           duration="02/2024 -&gt; 04/2024"
           linkName={c("githubrepository")}
-          link="https://github.com/adatechschool/projet-collectif-pico8-daniela-mehdi-mathurin"
+          link="https://github.com/lemathurin/portfolio"
         />
         <CaseStudyH2 title={c("projectoverview")} />
         <CaseStudyParagraph text={p("description")} />
