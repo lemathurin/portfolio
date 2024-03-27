@@ -36,7 +36,7 @@ export default function RootLayout({ children, params: { locale } }) {
           notes={n("notes")}
           contact={n("contact")}
           mainProject={n("mainproject")}
-          pico8={n("pico-8")}
+          topright={n("topRight")}
           moreProjects={n("more-projects")}
           notesComingSoon={n("notes-comingsoon")}
           article1={n("article1")}
