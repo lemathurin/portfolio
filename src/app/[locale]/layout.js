@@ -46,12 +46,12 @@ export default function RootLayout({ children, params: { locale } }) {
         />
         <Analytics />
         <SpeedInsights />
+        <Script
+          defer
+          src="https://analytics.eu.umami.is/script.js"
+          data-website-id="32ce4860-c0eb-4a51-ad5d-907e3e893423"
+        ></Script>
       </body>
-      <script
-        defer
-        src="https://analytics.eu.umami.is/script.js"
-        data-website-id="32ce4860-c0eb-4a51-ad5d-907e3e893423"
-      ></script>
     </html>
   );
 }
