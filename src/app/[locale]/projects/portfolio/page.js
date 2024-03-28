@@ -5,6 +5,7 @@ import {
   CaseStudyParagraph,
   CaseStudyH2,
   CaseStudyList,
+  CaseStudyLink,
 } from "../../components/CaseStudy";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -48,6 +49,23 @@ export default function PortfolioCaseStudy() {
         <CaseStudyH2 title={c("techstack")} />
         <CaseStudyList items={techStack} />
         <CaseStudyH2 title={p("designinspiration")} />
+        <Image
+          src="/images/CaseStudy-portfolio/godot.png"
+          alt="A screenshot of cognacgodet.com website. It shows big serif text with images between words."
+          width={700}
+          height={700}
+          className="mt-3"
+        />
+        <CaseStudyLink text="Cognac Godet" link="https://cognacgodet.com/" />
+        <CaseStudyParagraph text={p("1stinspiration")} />
+        <Image
+          src="/images/CaseStudy-portfolio/amie.png"
+          alt="A screenshot of cognacgodet.com website. It shows big serif text with images between words."
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <CaseStudyLink text="Amie" link="https://amie.so/" />
       </div>
     </main>
   );
