@@ -69,6 +69,8 @@ export function CaseStudyList({ items }) {
           {item.link ? (
             <a
               href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline font-inter"
             >
               {item.name}

@@ -31,8 +31,13 @@ export default function PortfolioCaseStudy() {
     { name: "Vercel", link: "https://vercel.com/" },
   ];
   const credits = [
-    { name: "Mehdi Bejjar", link: "https://github.com/bejjarmehdi" },
-    { name: "Daniela Ortúzar", link: "https://github.com/danielaortuzar" },
+    { name: "Fred Arnoux", link: "#" },
+    { name: "Thomas Sanlis", link: "https://twitter.com/T_Zahil" },
+    { name: "Alexis Moulliere", link: "https://github.com/realalexis" },
+    { name: "Audrey Gueguen", link: "https://github.com/AudreyGgn" },
+    { name: "Anais Sparesotto", link: "#" },
+    { name: "Axel Bourdet", link: "#" },
+    { name: "Sarah Trichet-Allaire", link: "#" },
   ];
   return (
     <main className="w-screen flex items-start justify-center pb-32">
@@ -111,13 +116,6 @@ export default function PortfolioCaseStudy() {
           className="mt-14"
         />
         <Image
-          src="/images/CaseStudy-portfolio/iteration4.png"
-          alt="Iteration 3"
-          width={700}
-          height={700}
-          className="mt-14"
-        />
-        <Image
           src="/images/CaseStudy-portfolio/iteration5.png"
           alt="Iteration 4"
           width={700}
@@ -131,6 +129,8 @@ export default function PortfolioCaseStudy() {
           height={700}
           className="mt-14"
         />
+        <CaseStudyH2 title={p("thanks")} />
+        <CaseStudyList items={credits} />
       </div>
     </main>
   );
