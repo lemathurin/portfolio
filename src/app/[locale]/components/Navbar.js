@@ -82,34 +82,40 @@ export default function NavBar(props) {
                   {/* </div> */}
                 </Link>
                 <div className="project-right-section gap-[0.3125rem] md:gap-[0.625rem]">
-                  <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]">
+                  <Link
+                    href="/projects/portfolio"
+                    onClick={() => setActiveDropdown(null)}
+                    className="group project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"
+                  >
+                    {/* <div className="project-right-small dropdown-boxes p-[0.3125rem] md:p-[0.625rem] gap-[0.3125rem] md:gap-[0.625rem] rounded-[0.3125rem] md:rounded-[0.625rem]"> */}
                     <h3 className="dropdown-text font-instrument text-[1.7rem] md:text-[2.1875rem]">
-                      {props.pico8}
+                      {props.topright}
                     </h3>
                     <div className="project-right-small-images">
                       <Image
-                        className="shadow"
-                        src="/images/CaseStudy-pico8/pico-8_loading.png"
-                        width={83}
-                        height={83}
-                        alt="Screenshot of game loading screen"
+                        className="shadow group-hover:-rotate-3 transition-all"
+                        src="/images/CaseStudy-portfolio/homepage.png"
+                        width={100}
+                        height={100}
+                        alt="Screenshot of my portfolio's homepage"
                       />
                       <Image
-                        className="shadow"
-                        src="/images/CaseStudy-pico8/pico-8_menu.png"
-                        width={83}
-                        height={83}
-                        alt="Screenshot of game menu screen"
+                        className="shadow group-hover:rotate-3 transition-all"
+                        src="/images/CaseStudy-portfolio/projectsnavbar.png"
+                        width={100}
+                        height={100}
+                        alt="Screenshot of the navbar with the 'notes' dropdown"
                       />
                       <Image
-                        className="shadow"
-                        src="/images/CaseStudy-pico8/pico-8_game.png"
-                        width={83}
-                        height={83}
-                        alt="Screenshot of game"
+                        className="shadow group-hover:-rotate-3 transition-all"
+                        src="/images/CaseStudy-portfolio/notesnavbar.png"
+                        width={100}
+                        height={100}
+                        alt="Screenshot of the navbar with the 'projects' dropdown"
                       />
                     </div>
-                  </div>
+                    {/* </div> */}
+                  </Link>
                   <Link
                     href="/projects"
                     onClick={() => setActiveDropdown(null)}

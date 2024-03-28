@@ -46,7 +46,7 @@
       "notes": "mes notes",
       "contact": "contact",
       "mainproject": "Projet plateforme de vente",
-      "pico-8": "Jeu PICO-8",
+      "topRight": "Portfolio v1.0",
       "more-projects": "Plus de projets",
       "notes-comingsoon": "Bientôt disponible™",
       "article1": "Mon premier portfolio",
@@ -111,5 +111,15 @@
       "whatilearnedtext": "J'ai appris à écrire du SQL, mais je n'ai pas beaucoup apprécié PHP.",
       "beforedesign": "Avant la refonte",
       "afterdesign": "Après la refonte"
+    },
+    "CaseStudyPortfolioV1": {
+      "title": "Portfolio version 1.0",
+      "description": "La version 1.0 du portfolio est le premier projet de développement personnel que j'ai réalisé depuis mon arrivé à Ada Tech School. Il fallait qu'il présente les projets sur lesquels j'avais travaillé, qu'il fournisse les liens vers mes autres pages de réseaux sociaux et qu'il inclue des informations sur moi-même. De plus, il devait être disponible en anglais et en français.",
+      "designinspiration": "Inspiration du design",
+      "1stinspiration": "J'ai aimé le texte serif avec des images entre les mots de Cognac Godet.",
+      "2ndinspiration": "Quand le nouveau site web d'Amie a été publié, j'ai tout de suite été attirée par sa barre de navigation. J'ai expérimenté plusieurs designs, mais je revenais toujours à un design similaire. Merci, Amie !",
+      "3rdinspiration": "J'ai aimé l'aspect simple et propre du site web de Pedro Duarte. Par conséquent, mes pages consacrées aux analyses de projet ont fini par ressembler à ses articles de blog. Excellent site web, Pedro !",
+      "4thinspiration": "J'ai utilisé le guide des boutons de Farrel Putra pour créer les étiquettes de mon site web. Une technique très minimaliste qui donne de très bons résultats.",
+      "thanks": "Un grand merci à ceux qui m'ont aidé"
     }
   }

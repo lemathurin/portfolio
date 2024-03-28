@@ -36,6 +36,19 @@ export function CaseStudyDetails({ projectType, duration, linkName, link }) {
   );
 }
 
+export function CaseStudyLink({ text, link }) {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline w-max font-inter mt-2"
+    >
+      {text}
+    </a>
+  );
+}
+
 export function CaseStudyParagraph({ text }) {
   return <p className="mt-3 font-inter text-lightMode-text text-lg">{text}</p>;
 }
@@ -56,7 +69,9 @@ export function CaseStudyList({ items }) {
           {item.link ? (
             <a
               href={item.link}
-              className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline font-inter"
             >
               {item.name}
             </a>
