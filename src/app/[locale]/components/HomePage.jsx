@@ -330,7 +330,12 @@ export default function Home(props) {
             {props.ecommerce}
           </Link>
           {props.l6}
-          <span>{props.thisPortfolio}</span>
+          <Link
+            href="/projects/portfolio"
+            className="font-instrument hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition"
+          >
+            <span>{props.thisPortfolio}</span>
+          </Link>
           {props.dot}
         </p>
         <p className="font-instrument leading-tight md:leading-snug lg:leading-normal text-justify text-lightMode-text text-3xl md:text-4xl lg:text-5xl">

@@ -126,31 +126,61 @@ export default function ContactList(props) {
           {props.linkedin}
         </div>
         <div className="font-instrument hover:text-lightMode-text text-3xl hover:underline text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
-          <Link href="https://github.com/lemathurin">GitHub</Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/lemathurin"
+          >
+            GitHub
+          </Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.github}
         </div>
         <div className="font-instrument hover:text-lightMode-text text-3xl hover:underline text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
-          <Link href="https://twitter.com/mathurin_sekine">Twitter</Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/mathurin_sekine"
+          >
+            Twitter
+          </Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.twitter}
         </div>
         <div className="font-instrument hover:text-lightMode-text text-3xl hover:underline text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
-          <Link href="https://dribbble.com/mathurin">Dribbble</Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://dribbble.com/mathurin"
+          >
+            Dribbble
+          </Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.dribbble}
         </div>
         <div className="font-instrument hover:text-lightMode-text text-3xl hover:underline text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
-          <Link href="https://layers.to/mathurin">Layers</Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://layers.to/mathurin"
+          >
+            Layers
+          </Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.layers}
         </div>
         <div className="font-instrument hover:text-lightMode-text text-3xl hover:underline text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
-          <Link href="https://read.cv/mathurin">read.cv</Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://read.cv/mathurin"
+          >
+            read.cv
+          </Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.readcv}
