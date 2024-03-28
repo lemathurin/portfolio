@@ -132,6 +132,10 @@ export default function PortfolioCaseStudy() {
         <CaseStudyH2 title={p("thanks")} />
         <CaseStudyList items={credits} />
       </div>
+      <meta property="og:image" content="/ogimages/portfolio.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
     </main>
   );
 }
