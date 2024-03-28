@@ -39,7 +39,7 @@ export default function PortfolioCaseStudy() {
       name: "Anais Sparesotto",
       link: "https://fr.linkedin.com/in/anais-sparesotto",
     },
-    { name: "Axel Bourdet", link: "#" },
+    { name: "Axel Bourdet", link: "https://thedreampunk.com/en/" },
     {
       name: "Sarah Trichet-Allaire",
       link: "https://mastodon.cloud/@Sarah_Trichet_Allaire",
