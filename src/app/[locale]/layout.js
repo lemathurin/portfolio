@@ -4,6 +4,7 @@ import NavBar from "./components/Navbar";
 import { useTranslations } from "next-intl";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +47,11 @@ export default function RootLayout({ children, params: { locale } }) {
         <Analytics />
         <SpeedInsights />
       </body>
+      <script
+        defer
+        src="https://analytics.eu.umami.is/script.js"
+        data-website-id="32ce4860-c0eb-4a51-ad5d-907e3e893423"
+      ></script>
     </html>
   );
 }
