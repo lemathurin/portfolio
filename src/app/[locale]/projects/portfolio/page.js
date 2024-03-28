@@ -60,12 +60,77 @@ export default function PortfolioCaseStudy() {
         <CaseStudyParagraph text={p("1stinspiration")} />
         <Image
           src="/images/CaseStudy-portfolio/amie.png"
-          alt="A screenshot of cognacgodet.com website. It shows big serif text with images between words."
+          alt="A screenshot of Amie's website's navbar."
           width={700}
           height={700}
           className="mt-14"
         />
         <CaseStudyLink text="Amie" link="https://amie.so/" />
+        <CaseStudyParagraph text={p("2ndinspiration")} />
+        <Image
+          src="/images/CaseStudy-portfolio/pedro.png"
+          alt="A screenshot of Pedro Duarte's website's blog."
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <CaseStudyLink text="Pedro Duarte" link="https://ped.ro/" />
+        <CaseStudyParagraph text={p("3rdinspiration")} />
+        <Image
+          src="/images/CaseStudy-portfolio/button.png"
+          alt="A screenshot of Pedro Duarte's website's blog."
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <CaseStudyLink
+          text="Farrel Putra"
+          link="https://twitter.com/farrelput/status/1768952348976558161/photo/2"
+        />
+        <CaseStudyParagraph text={p("4thinspiration")} />
+        <CaseStudyH2 title={c("iterations")} />
+        <Image
+          src="/images/CaseStudy-portfolio/iteration1.png"
+          alt="A screenshot of Farrel Putra's Twitter post."
+          width={700}
+          height={700}
+          className="mt-3"
+        />
+        <Image
+          src="/images/CaseStudy-portfolio/iteration2.png"
+          alt="Iteration 1"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-portfolio/iteration3.png"
+          alt="Iteration 2"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-portfolio/iteration4.png"
+          alt="Iteration 3"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-portfolio/iteration5.png"
+          alt="Iteration 4"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
+        <Image
+          src="/images/CaseStudy-portfolio/iterations.png"
+          alt="All the iterations"
+          width={700}
+          height={700}
+          className="mt-14"
+        />
       </div>
     </main>
   );

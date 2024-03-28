@@ -117,6 +117,9 @@
       "description": "Portfolio version 1.0 was the first personal development project I completed since starting at Ada Tech School. It needed to showcase the projects I had worked on, provide links to my other social media pages, and include information about myself. Additionally, it had to be available in both English and French.",
       "designinspiration": "Design inspiration",
       "whatilearnedtext": "I learned how to write SQL, but didn't enjoy PHP that much.",
-      "1stinspiration": "I liked the large serif text with images between the words from Cognac Godet."
+      "1stinspiration": "I liked the large serif text with images between the words from Cognac Godet.",
+      "2ndinspiration": "When Amie's new website was released, I was instantly drawn to their navbar. I experimented with a couple of designs but kept returning to one that looked similar. Thanks, Amie!",
+      "3rdinspiration": "I liked the clean and simple appearance of Pedro Duarte's website. As a result, my case study pages ended up resembling his blog posts. Great website, Pedro!",
+      "4thinspiration": "I used Farrel Putra's guide to buttons to create the labels on my website. A very minimalistic technique that yields great results. "
     }
   }

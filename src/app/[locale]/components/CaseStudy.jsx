@@ -42,9 +42,9 @@ export function CaseStudyLink({ text, link }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline w-max"
+      className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline w-max font-inter mt-2"
     >
-      {text} ↗
+      {text}
     </a>
   );
 }
@@ -69,7 +69,7 @@ export function CaseStudyList({ items }) {
           {item.link ? (
             <a
               href={item.link}
-              className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline"
+              className="text-lightMode-hoveredtext hover:text-lightMode-text hover:underline font-inter"
             >
               {item.name}
             </a>
