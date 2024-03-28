@@ -40,7 +40,10 @@ export default function PortfolioCaseStudy() {
       link: "https://fr.linkedin.com/in/anais-sparesotto",
     },
     { name: "Axel Bourdet", link: "#" },
-    { name: "Sarah Trichet-Allaire", link: "#" },
+    {
+      name: "Sarah Trichet-Allaire",
+      link: "https://mastodon.cloud/@Sarah_Trichet_Allaire",
+    },
   ];
   return (
     <main className="w-screen flex items-start justify-center pb-32">
