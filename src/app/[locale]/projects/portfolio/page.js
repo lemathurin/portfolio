@@ -35,7 +35,10 @@ export default function PortfolioCaseStudy() {
     { name: "Thomas Sanlis", link: "https://twitter.com/T_Zahil" },
     { name: "Alexis Moulliere", link: "https://github.com/realalexis" },
     { name: "Audrey Gueguen", link: "https://github.com/AudreyGgn" },
-    { name: "Anais Sparesotto", link: "#" },
+    {
+      name: "Anais Sparesotto",
+      link: "https://fr.linkedin.com/in/anais-sparesotto",
+    },
     { name: "Axel Bourdet", link: "#" },
     { name: "Sarah Trichet-Allaire", link: "#" },
   ];
