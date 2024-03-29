@@ -29,7 +29,7 @@ export default function HireWindow(props) {
       onClick={props.onClose}
     >
       <div
-        className="w-full h-[94svh] md:w-[700px] flex flex-col p-5 md:h-[30rem] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
+        className="w-full h-[94dvh] md:w-[700px] flex flex-col p-5 md:h-[35rem] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
         onClick={handleWindowClick}
       >
         <div className="flex gap-1.5 items-center justify-between">
@@ -74,9 +74,9 @@ export default function HireWindow(props) {
             </svg>
           </div>
         </div>
-        <div className=" h-full">
+        <div className="h-full">
           <div className="bg-[#E6E6E6] w-full h-[1.5px]"></div>
-          <div className="h-full w-full pt-2 flex flex-col gap-5">
+          <div className="h-min w-full pt-2 flex flex-col gap-5 overflow-scroll bg-orange-600">
             <div className="leading-normal">
               <span>{props.hello}</span>
               <br />
@@ -85,8 +85,19 @@ export default function HireWindow(props) {
               <br />
               <br />
               <span>{props.line2}</span>
-              <span>{props.contract}</span>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://entreprendre.service-public.fr/vosdroits/F31704"
+              >
+                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
+                  {props.contract}
+                </span>
+              </Link>
               <span>{props.line2part2}</span>
+              <br />
+              <br />
+              <span>{props.ideally}</span>
               <br />
               <br />
               <span>{props.line3part1}</span>

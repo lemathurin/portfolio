@@ -17,7 +17,6 @@ export const metadata = {
 export default function Pico8CaseStudy() {
   const c = useTranslations("CaseStudy");
   const p = useTranslations("CaseStudyPico8");
-  const test = useTranslations("HireWindow");
 
   const techStack = [
     {
@@ -33,7 +32,6 @@ export default function Pico8CaseStudy() {
   return (
     <main className="w-screen flex items-start justify-center pb-32">
       <div className="flex flex-col pt-10 md:p-10 pb-36 w-[80%] md:w-full max-w-[700px]">
-        <h1>{test("contract")}</h1>
         <CaseStudyTitle title={p("title")} />
         <CaseStudyDetails
           projectType={c("schoolproject")}
