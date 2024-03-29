@@ -85,6 +85,8 @@ export default function HireWindow(props) {
               <br />
               <br />
               <span>{props.line2}</span>
+              <span>{props.contract}</span>
+              <span>{props.line2part2}</span>
               <br />
               <br />
               <span>{props.line3part1}</span>

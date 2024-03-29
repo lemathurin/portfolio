@@ -436,9 +436,13 @@ export default function Home(props) {
                 hello={props.hello}
                 line1={props.line1}
                 line2={props.line2}
+                contract={props.contract}
+                line2part2={props.line2part2}
+                ideally={props.ideally}
                 line3part1={props.line3part1}
                 line3part2={props.line3part2}
                 line3part3={props.line3part3}
+                period={props.period}
                 here={props.here}
                 line4={props.line4}
                 name={props.name}
