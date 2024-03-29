@@ -113,7 +113,11 @@ export default function HireWindow(props) {
                 </span>
               </Link>
               <span>{props.line3part3}</span>
-              <Link href="/contact">
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/19M9duOG8hs7_V3DzsSBJa6r6rTEWhL_Y/view?usp=sharing"
+              >
                 <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
                   {props.here}
                 </span>
