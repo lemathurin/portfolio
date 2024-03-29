@@ -42,9 +42,13 @@ export default function Home() {
         hello={h("hello")}
         line1={h("line1")}
         line2={h("line2")}
+        contract={h("contract")}
+        line2part2={h("line2part2")}
+        ideally={h("ideally")}
         line3part1={h("line3part1")}
         line3part2={h("line3part2")}
         line3part3={h("line3part3")}
+        period={h("period")}
         here={h("here")}
         line4={h("line4")}
         name={h("name")}

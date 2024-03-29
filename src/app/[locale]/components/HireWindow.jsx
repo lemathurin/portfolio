@@ -100,6 +100,12 @@ export default function HireWindow(props) {
                 </span>
               </Link>
               <span>{props.line3part3}</span>
+              <Link href="/contact">
+                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
+                  {props.here}
+                </span>
+              </Link>
+              <span>{props.period}</span>
               <br />
               <br />
               <span>{props.line4}</span>
