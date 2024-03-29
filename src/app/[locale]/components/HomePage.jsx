@@ -14,6 +14,7 @@ import {
   WelcomeLabel,
 } from "./Labels";
 import { Link } from "../../../navigation";
+import { RemoveScroll } from "react-remove-scroll";
 
 // import Cursor from "../components/Cursors";
 
@@ -421,30 +422,36 @@ export default function Home(props) {
               duration: 0.8,
             }}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 80 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 80 }}
-              transition={{
-                duration: 0.3,
-              }}
-            >
-              <HireWindow
-                onClose={toggleHireWindow}
-                to={props.to}
-                futureEmployer={props.futureEmployer}
-                hello={props.hello}
-                line1={props.line1}
-                line2={props.line2}
-                line3part1={props.line3part1}
-                line3part2={props.line3part2}
-                line3part3={props.line3part3}
-                here={props.here}
-                line4={props.line4}
-                name={props.name}
-                deleteButtonLabel={props.deleteButtonLabel}
-              />
-            </motion.div>
+            <RemoveScroll>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 80 }}
+                transition={{
+                  duration: 0.3,
+                }}
+              >
+                <HireWindow
+                  onClose={toggleHireWindow}
+                  to={props.to}
+                  futureEmployer={props.futureEmployer}
+                  hello={props.hello}
+                  line1={props.line1}
+                  line2={props.line2}
+                  contract={props.contract}
+                  line2part2={props.line2part2}
+                  ideally={props.ideally}
+                  line3part1={props.line3part1}
+                  line3part2={props.line3part2}
+                  line3part3={props.line3part3}
+                  period={props.period}
+                  here={props.here}
+                  line4={props.line4}
+                  name={props.name}
+                  deleteButtonLabel={props.deleteButtonLabel}
+                />
+              </motion.div>
+            </RemoveScroll>
           </motion.div>
         )}
       </AnimatePresence>

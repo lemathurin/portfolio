@@ -119,8 +119,14 @@ export default function ContactList(props) {
             )}
           </AnimatePresence>
         </div>
-        <div className="font-instrument text-lightMode-hoveredtext text-3xl hover:text-[#5C271F] hover:line-through transition cursor-not-allowed w-min pt-8 md:pt-0">
-          LinkedIn
+        <div className="font-instrument hover:text-lightMode-text text-3xl hover:underline text-lightMode-hoveredtext transition w-min pt-8 md:pt-0">
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/mathurinsekine/"
+          >
+            Linkedin
+          </Link>
         </div>
         <div className="font-inter text-lightMode-text font-extralight  text-xl flex items-end md:justify-end">
           {props.linkedin}

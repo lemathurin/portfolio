@@ -29,10 +29,10 @@ export default function HireWindow(props) {
       onClick={props.onClose}
     >
       <div
-        className="w-full h-[94svh] md:w-[700px] flex flex-col p-5 md:h-[30rem] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
+        className="w-full h-[94dvh] md:w-[700px] flex flex-col md:h-[35rem] rounded-tl-lg rounded-tr-lg bg-white shadow-xl overflow-hidden relative gap-3 border-[1.5px] border-[#B2B2B2]"
         onClick={handleWindowClick}
       >
-        <div className="flex gap-1.5 items-center justify-between">
+        <div className="flex gap-1.5 items-center justify-between pt-5 px-5">
           <div className="flex gap-3 items-center">
             <div className="w-[2.75rem] h-[2.75rem]">
               <Image
@@ -74,9 +74,9 @@ export default function HireWindow(props) {
             </svg>
           </div>
         </div>
-        <div className=" h-full">
+        <div className="h-full overflow-scroll md:overflow-hidden px-5">
           <div className="bg-[#E6E6E6] w-full h-[1.5px]"></div>
-          <div className="h-full w-full pt-2 flex flex-col gap-5">
+          <div className="h-min w-full pt-2 flex flex-col gap-5 pb-20">
             <div className="leading-normal">
               <span>{props.hello}</span>
               <br />
@@ -85,6 +85,19 @@ export default function HireWindow(props) {
               <br />
               <br />
               <span>{props.line2}</span>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://entreprendre.service-public.fr/vosdroits/F31704"
+              >
+                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
+                  {props.contract}
+                </span>
+              </Link>
+              <span>{props.line2part2}</span>
+              <br />
+              <br />
+              <span>{props.ideally}</span>
               <br />
               <br />
               <span>{props.line3part1}</span>
@@ -100,6 +113,16 @@ export default function HireWindow(props) {
                 </span>
               </Link>
               <span>{props.line3part3}</span>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/19M9duOG8hs7_V3DzsSBJa6r6rTEWhL_Y/view?usp=sharing"
+              >
+                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
+                  {props.here}
+                </span>
+              </Link>
+              <span>{props.period}</span>
               <br />
               <br />
               <span>{props.line4}</span>
