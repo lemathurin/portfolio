@@ -31,7 +31,7 @@ export default function PortfolioCaseStudy() {
     { name: "Vercel", link: "https://vercel.com/" },
   ];
   const credits = [
-    { name: "Fred Arnoux", link: "#" },
+    { name: "Fred Arnoux", link: "https://www.linkedin.com/in/farnoux/" },
     { name: "Thomas Sanlis", link: "https://twitter.com/T_Zahil" },
     { name: "Alexis Moulliere", link: "https://github.com/realalexis" },
     { name: "Audrey Gueguen", link: "https://github.com/AudreyGgn" },
