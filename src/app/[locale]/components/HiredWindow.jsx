@@ -39,7 +39,7 @@ export default function HireWindow(props) {
               </h5>
               <div className="flex gap-2">
                 <p className="text-black">{props.to}</p>
-                <p className="text-[#737373]">{props.futureEmployer}</p>
+                <p className="text-[#737373]">{props.recipient}</p>
               </div>
             </div>
           </div>
@@ -68,55 +68,23 @@ export default function HireWindow(props) {
           <div className="bg-[#E6E6E6] w-full h-[1.5px]"></div>
           <div className="h-min w-full pt-2 flex flex-col gap-5 pb-20">
             <div className="leading-normal">
-              <span>{props.hello}</span>
+              <span>{props.opening}</span>
               <br />
               <br />
-              <span>{props.line1}</span>
-              <br />
-              <br />
-              <span>{props.line2}</span>
+              <span>{props.part1}</span>
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://entreprendre.service-public.fr/vosdroits/F31704"
+                href="https://www.juisci.com/"
               >
                 <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
-                  {props.contract}
+                  {props.juisci}
                 </span>
               </Link>
-              <span>{props.line2part2}</span>
+              <span>{props.part2}</span>
               <br />
               <br />
-              <span>{props.ideally}</span>
-              <br />
-              <br />
-              <span>{props.line3part1}</span>
-              <Link href="/projects">
-                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
-                  {props.here}
-                </span>
-              </Link>
-              <span>{props.line3part2}</span>
-              <Link href="/contact">
-                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
-                  {props.here}
-                </span>
-              </Link>
-              <span>{props.line3part3}</span>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://drive.google.com/file/d/19M9duOG8hs7_V3DzsSBJa6r6rTEWhL_Y/view?usp=sharing"
-              >
-                <span className="hover:underline text-lightMode-hoveredtext hover:text-lightMode-text transition">
-                  {props.here}
-                </span>
-              </Link>
-              <span>{props.period}</span>
-              <br />
-              <br />
-              <span>{props.line4}</span>
-              <br />
+              <span>{props.goodday}</span>
               <br />
               <span>{props.name}</span>
             </div>

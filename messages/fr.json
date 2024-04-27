@@ -43,6 +43,17 @@
       "name": "Mathurin Sekine",
       "deleteButtonLabel": "non"
     },
+    "HiredWindow": {
+      "opening": "Bonjour,",
+      "to": "pour:",
+      "recipient": "vous",
+      "part1": "J'ai été embauché chez ",
+      "juisci": "Juisci",
+      "part2": " en tant que développeur front-end à partir de juin 2024 !",
+      "goodday": "Bonne journée,",
+      "name": "Mathurin Sekine",
+      "deleteButtonLabel": "non"
+    },
     "NavBar": {
       "language": "in english",
       "home": "accueil",
