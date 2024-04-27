@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import HireWindow from "./HireWindow";
+import HiredWindow from "./HiredWindow";
 import {
   NotificationAlert,
   ReactLabel,
@@ -15,8 +16,6 @@ import {
 } from "./Labels";
 import { Link } from "../../../navigation";
 import { RemoveScroll } from "react-remove-scroll";
-
-// import Cursor from "../components/Cursors";
 
 export default function Home(props) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -76,7 +75,7 @@ export default function Home(props) {
   const [isHovered, setHovered] = useState(false);
   // const [isHovered, setHovered] = useState("greeting");
 
-  const toggleHireWindow = () => {
+  const toggleHiredWindow = () => {
     setIsOpened(!isOpened);
   };
 
@@ -287,14 +286,14 @@ export default function Home(props) {
           <span className="font-instrument">{props.l3}</span>
           <span className="underline decoration-[#63635D]">
             <span
-              onClick={() => setIsOpened("hireWindow")}
+              onClick={() => setIsOpened("hiredWindow")}
               className="font-instrument cursor-pointer"
             >
               {props.dev1}
             </span>
             <div className="w-max inline-flex relative underline decoration-[#63635D]">
               <span
-                onClick={() => setIsOpened("hireWindow")}
+                onClick={() => setIsOpened("hiredWindow")}
                 className="font-instrument cursor-pointer"
               >
                 {props.dev2}
@@ -305,7 +304,7 @@ export default function Home(props) {
                 initial={{ scale: 1 }}
                 animate={{ rotate: 0 }}
                 exit={{ scale: 1 }}
-                onClick={() => setIsOpened("hireWindow")}
+                onClick={() => setIsOpened("hiredWindow")}
                 className="cursor-pointer absolute top-[-6px] right-[-19px] lg:top-[0px] lg:right-[-20px]"
               >
                 <NotificationAlert />
@@ -411,7 +410,7 @@ export default function Home(props) {
         variants={variants}
         animate={cursorVariant}
       ></motion.div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isOpened === "hireWindow" && (
           <motion.div
             className="w-screen h-screen fixed z-50 backdrop-blur-md bg-black/20 transform-gpu"
@@ -454,8 +453,44 @@ export default function Home(props) {
             </RemoveScroll>
           </motion.div>
         )}
+      </AnimatePresence> */}
+      <AnimatePresence>
+        {isOpened === "hiredWindow" && (
+          <motion.div
+            className="w-screen h-screen fixed z-50 backdrop-blur-md bg-black/20 transform-gpu"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.8,
+            }}
+          >
+            <RemoveScroll>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 80 }}
+                transition={{
+                  duration: 0.3,
+                }}
+              >
+                <HiredWindow
+                  onClose={toggleHiredWindow}
+                  opening={props.opening}
+                  to={props.to}
+                  recipient={props.recipient}
+                  part1={props.part1}
+                  juisci={props.juisci}
+                  part2={props.part2}
+                  goodday={props.goodday}
+                  name={props.name}
+                  deleteButtonLabel={props.deleteButtonLabel}
+                />
+              </motion.div>
+            </RemoveScroll>
+          </motion.div>
+        )}
       </AnimatePresence>
-      {/* <Cursor /> */}
     </div>
   );
 }

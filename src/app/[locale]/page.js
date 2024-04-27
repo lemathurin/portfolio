@@ -9,6 +9,7 @@ export const metadata = {
 export default function Home() {
   const t = useTranslations("Home");
   const h = useTranslations("HireWindow");
+  const i = useTranslations("HiredWindow");
   return (
     <>
       <HomePage
@@ -37,7 +38,7 @@ export default function Home() {
         presenterApp={t("presenter-app")}
         pico8={t("pico-8")}
         moreProjects={t("more-projects")}
-        to={h("to")}
+        // to={h("to")}
         futureEmployer={h("futureEmployer")}
         hello={h("hello")}
         line1={h("line1")}
@@ -51,8 +52,17 @@ export default function Home() {
         period={h("period")}
         here={h("here")}
         line4={h("line4")}
-        name={h("name")}
-        deleteButtonLabel={h("deleteButtonLabel")}
+        // name={h("name")}
+        // deleteButtonLabel={h("deleteButtonLabel")}
+        opening={i("opening")}
+        to={i("to")}
+        recipient={i("recipient")}
+        part1={i("part1")}
+        juisci={i("juisci")}
+        part2={i("part2")}
+        goodday={i("goodday")}
+        name={i("name")}
+        deleteButtonLabel={i("deleteButtonLabel")}
       />
       <meta property="og:image" content="/ogimages/home.png" />
       <meta property="og:image:type" content="image/png" />
