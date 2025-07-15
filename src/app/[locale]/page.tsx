@@ -8,8 +8,8 @@ export default function Home() {
   const t = useTranslations();
 
   return (
-    <main className="flex justify-center">
-      <article className="max-w-96 text-justify flex flex-col gap-9 py-9">
+    <main className="flex justify-center p-5 md:p-0 md:py-9">
+      <article className="max-w-96 text-justify flex flex-col gap-9">
         <header className="flex justify-between items-center w-full gap-4">
           <LanguageToggle />
           <Clock />
