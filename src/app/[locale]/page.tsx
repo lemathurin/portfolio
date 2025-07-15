@@ -73,9 +73,6 @@ export default function Home() {
                   {chunks}
                 </Link>
               ),
-              email: (chunks) => (
-                <span className="font-mono opacity-70 text-sm">{chunks}</span>
-              ),
             })}
           </p>
           <br />
