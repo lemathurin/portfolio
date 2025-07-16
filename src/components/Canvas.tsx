@@ -3,11 +3,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
-interface InteractiveCanvasProps {
+interface CanvasProps {
   children: React.ReactNode;
 }
 
-const InteractiveCanvas: React.FC<InteractiveCanvasProps> = ({ children }) => {
+const Canvas: React.FC<CanvasProps> = ({ children }) => {
   const DIV_WIDTH = 2500;
   const DIV_HEIGHT = 2500;
 
@@ -102,4 +102,4 @@ const InteractiveCanvas: React.FC<InteractiveCanvasProps> = ({ children }) => {
 const clamp = (val: number, min: number, max: number) =>
   Math.max(min, Math.min(max, val));
 
-export default InteractiveCanvas;
+export default Canvas;

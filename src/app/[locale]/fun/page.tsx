@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import InteractiveCanvas from "@/components/InteractiveCanvas";
+import Canvas from "@/components/Canvas";
 import Link from "next/link";
 
 export default function FunPage() {
   return (
-    <InteractiveCanvas>
+    <Canvas>
       <h1
         style={{
           position: "fixed",
@@ -167,6 +167,6 @@ export default function FunPage() {
           my old portfolio
         </Link>
       </div>
-    </InteractiveCanvas>
+    </Canvas>
   );
 }
