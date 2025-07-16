@@ -15,8 +15,8 @@ export default function FunPage() {
           transform: "translate(-50%, -50%)",
           zIndex: 10,
           pointerEvents: "none",
+          fontFamily: "var(--font-mono)",
         }}
-        className="opacity-70"
       >
         scroll around the page
       </h1>
@@ -86,7 +86,7 @@ export default function FunPage() {
       >
         <Image
           src="/skytree.jpeg"
-          alt="Avatar 2022"
+          alt="A photo of the Tokyo Skytree against a bright blue sky."
           width={500}
           height={500}
           className="shadow-lg"
@@ -99,7 +99,7 @@ export default function FunPage() {
         />
         <Image
           src="/boat.jpeg"
-          alt="Avatar 2016"
+          alt="A photo of a boat of the coast of an island with mountains."
           width={800}
           height={800}
           className="shadow-lg"
@@ -113,7 +113,7 @@ export default function FunPage() {
 
         <Image
           src="/sunset.jpeg"
-          alt="Avatar 2025"
+          alt="A photo of a man walking on a beach with the sunset behind him."
           width={500}
           height={500}
           className="shadow-lg"
@@ -144,7 +144,7 @@ export default function FunPage() {
       >
         <Image
           src="/portfolio-v1.png"
-          alt="Avatar 2025"
+          alt="A screenshot of my first portfolio."
           width={500}
           height={500}
           style={{

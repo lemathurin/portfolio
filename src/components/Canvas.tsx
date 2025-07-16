@@ -91,6 +91,11 @@ const Canvas: React.FC<CanvasProps> = ({ children }) => {
           x,
           y,
           willChange: "transform",
+          backgroundImage: `
+            linear-gradient(to right, var(--secondary) 1px, transparent 1px),
+            linear-gradient(to bottom, var(--secondary) 1px, transparent 1px)
+          `,
+          backgroundSize: "25px 25px",
         }}
       >
         {children}

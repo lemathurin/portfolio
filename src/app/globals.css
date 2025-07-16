@@ -3,6 +3,7 @@
 
 :root {
   --background: #fafaf9;
+  --secondary: #e7e5e4;
   --foreground: #0c0a09;
   --font-sans: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
@@ -19,6 +20,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0c0a09;
+    --secondary: #44403c;
     --foreground: #fafaf9;
     --yellow: #d8ab23;
   }
@@ -32,7 +34,7 @@ body {
 
 /* Style all Next.js Link components */
 a {
-  @apply underline decoration-auto text-current opacity-70;
+  @apply text-current underline decoration-auto opacity-70;
 }
 
 a:hover {
