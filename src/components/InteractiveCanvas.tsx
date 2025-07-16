@@ -1,55 +1,100 @@
 "use client";
 
-import React from "react";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import React, { useRef, useEffect, useState } from "react";
+import { motion, useMotionValue } from "framer-motion";
 
 interface InteractiveCanvasProps {
   children: React.ReactNode;
   onItemClick?: (itemId: string) => void;
 }
 
-const InteractiveCanvas: React.FC<InteractiveCanvasProps> = ({
-  children,
-  onItemClick,
-}) => {
+const InteractiveCanvas: React.FC<InteractiveCanvasProps> = ({ children }) => {
   const DIV_WIDTH = 3000;
-  const DIV_HEIGHT = 2000;
+  const DIV_HEIGHT = 3000;
+
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const [constraints, setConstraints] = useState({
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+  });
+
+  useEffect(() => {
+    const updateBoundsAndCenter = () => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const viewportWidth = container.offsetWidth;
+      const viewportHeight = container.offsetHeight;
+
+      const maxOffsetX = DIV_WIDTH - viewportWidth;
+      const maxOffsetY = DIV_HEIGHT - viewportHeight;
+
+      setConstraints({
+        left: -maxOffsetX,
+        right: 0,
+        top: -maxOffsetY,
+        bottom: 0,
+      });
+
+      // Center the canvas initially
+      x.set(clamp((viewportWidth - DIV_WIDTH) / 2, -maxOffsetX, 0));
+      y.set(clamp((viewportHeight - DIV_HEIGHT) / 2, -maxOffsetY, 0));
+    };
+
+    updateBoundsAndCenter();
+    window.addEventListener("resize", updateBoundsAndCenter);
+    return () => window.removeEventListener("resize", updateBoundsAndCenter);
+  }, [x, y]);
+
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      x.set(clamp(x.get() - e.deltaX, constraints.left, constraints.right));
+      y.set(clamp(y.get() - e.deltaY, constraints.top, constraints.bottom));
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener("wheel", handleWheel, { passive: false });
+    }
+    return () => {
+      container?.removeEventListener("wheel", handleWheel);
+    };
+  }, [x, y, constraints]);
 
   return (
-    <TransformWrapper
-      minScale={1}
-      maxScale={1}
-      disabled={false} // ensure panning is enabled
-      limitToBounds={true} // allow dragging outside the visible area
-      panning={{
-        disabled: false,
-        velocityDisabled: false,
+    <div
+      ref={containerRef}
+      style={{
+        width: "100vw",
+        height: "100dvh",
+        overflow: "hidden",
       }}
-      doubleClick={{ disabled: true }} // optional: disable zoom on double click
-      pinch={{ disabled: true }} // optional: disable pinch zoom
-      wheel={{ disabled: true }} // optional: disable wheel zoom
     >
-      <TransformComponent
-        wrapperStyle={{
-          width: "100vw",
-          height: "100dvh",
-          overflow: "hidden",
-          background: "red",
+      <motion.div
+        drag
+        dragMomentum={false}
+        dragConstraints={constraints}
+        style={{
+          width: DIV_WIDTH,
+          height: DIV_HEIGHT,
+          x,
+          y,
         }}
       >
-        <div
-          style={{
-            width: `${DIV_WIDTH}px`,
-            height: `${DIV_HEIGHT}px`,
-            position: "relative",
-            backgroundColor: "blue",
-          }}
-        >
-          {children}
-        </div>
-      </TransformComponent>
-    </TransformWrapper>
+        {children}
+      </motion.div>
+    </div>
   );
 };
+
+const clamp = (val: number, min: number, max: number) =>
+  Math.max(min, Math.min(max, val));
 
 export default InteractiveCanvas;
