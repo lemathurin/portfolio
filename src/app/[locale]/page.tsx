@@ -28,7 +28,7 @@ export default function Home() {
 
         <section aria-labelledby="intro-heading">
           <h1 id="intro-heading" className="sr-only">
-            About me
+            {t("intro.title")}
           </h1>
           <p>{t("intro.wave")}</p>
           <br />

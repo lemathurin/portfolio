@@ -1,6 +1,7 @@
 {
   "languageToggle": "in English",
   "intro": {
+    "title": "A propos de moi",
     "wave": "👋 Salut.",
     "greeting": "Je suis Mathurin Sekine, un développeur fullstack actuellement ouvert à de nouvelles opportunités.",
     "experience": "J’ai précédemment travaillé chez <juisci>Juisci</juisci> en tant que développeur frontend, où j’ai contribué au développement et à l’amélioration de leur application web. Je suis récemment diplômé de <ada>Ada Tech School</ada> avec un titre de Concepteur Développeur d’Applications (niveau Bac +3).",
