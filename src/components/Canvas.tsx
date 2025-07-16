@@ -24,8 +24,38 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
     bottom: 0,
   });
 
+  const STORAGE_KEY = "canvas_position";
+
+  function savePosition() {
+    sessionStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ x: x.get(), y: y.get() }),
+    );
+  }
+
+  function restorePosition() {
+    const savedPosition = sessionStorage.getItem(STORAGE_KEY);
+    if (savedPosition) {
+      const { x: savedX, y: savedY } = JSON.parse(savedPosition);
+      x.set(savedX);
+      y.set(savedY);
+    } else {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const viewportWidth = container.offsetWidth;
+      const viewportHeight = container.offsetHeight;
+
+      const maxOffsetX = DIV_WIDTH - viewportWidth;
+      const maxOffsetY = DIV_HEIGHT - viewportHeight;
+
+      x.set(clamp((viewportWidth - DIV_WIDTH) / 2, -maxOffsetX, 0));
+      y.set(clamp((viewportHeight - DIV_HEIGHT) / 2, -maxOffsetY, 0));
+    }
+  }
+
   useEffect(() => {
-    const updateBoundsAndCenter = () => {
+    function updateBoundsAndCenter() {
       const container = containerRef.current;
       if (!container) return;
 
@@ -42,10 +72,8 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
         bottom: 0,
       });
 
-      // Center the canvas initially
-      x.set(clamp((viewportWidth - DIV_WIDTH) / 2, -maxOffsetX, 0));
-      y.set(clamp((viewportHeight - DIV_HEIGHT) / 2, -maxOffsetY, 0));
-    };
+      restorePosition();
+    }
 
     updateBoundsAndCenter();
     window.addEventListener("resize", updateBoundsAndCenter);
@@ -53,11 +81,12 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
   }, [x, y]);
 
   useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
+    function handleWheel(e: WheelEvent) {
       e.preventDefault();
       x.set(clamp(x.get() - e.deltaX, constraints.left, constraints.right));
       y.set(clamp(y.get() - e.deltaY, constraints.top, constraints.bottom));
-    };
+      savePosition();
+    }
 
     const container = containerRef.current;
     if (container) {
@@ -71,6 +100,8 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
   const isTouchDevice =
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
+
+  console.log("restoring", sessionStorage.getItem(STORAGE_KEY));
 
   return (
     <div
@@ -88,6 +119,7 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
         dragElastic={isTouchDevice ? undefined : 0}
         dragMomentum={isTouchDevice ? undefined : false}
         dragConstraints={constraints}
+        onDragEnd={savePosition}
         style={{
           width: DIV_WIDTH,
           height: DIV_HEIGHT,
