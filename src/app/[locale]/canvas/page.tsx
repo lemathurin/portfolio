@@ -5,15 +5,21 @@ import Canvas from "@/components/Canvas";
 import Link from "next/link";
 import LanguageToggle from "@/components/LanguageToggle";
 import Clock from "@/components/Clock";
+import { useTranslations } from "next-intl";
 
 export default function CanvasPage() {
+  const t = useTranslations("canvas");
+
   return (
     <>
       <header className="bg-primary fixed top-0 right-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">
         <LanguageToggle />
-        <button className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100">
-          accessible version
-        </button>
+        <Link
+          href="/canvas/accessible"
+          className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
+        >
+          {t("accessibleVersion")}
+        </Link>
       </header>
       <Canvas>
         <h1
@@ -27,7 +33,7 @@ export default function CanvasPage() {
             whiteSpace: "nowrap",
           }}
         >
-          scroll around the page
+          {t("scrollHint")}
         </h1>
         <section
           className="relative"
@@ -84,7 +90,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            My profile throughout the years. (2016, 2022, 2025)
+            {t("profileYears")}
           </p>
         </section>
         <section
@@ -143,7 +149,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            some nice pictures I took
+            {t("nicePictures")}
           </p>
         </section>
         <section
@@ -176,7 +182,7 @@ export default function CanvasPage() {
               transform: "rotate(1deg)",
             }}
           >
-            my old portfolio
+            {t("oldPortfolio")}
           </Link>
         </section>
       </Canvas>
@@ -186,7 +192,7 @@ export default function CanvasPage() {
           className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
         >
           <span style={{ fontFamily: "system-ui, Arial, sans-serif" }}>←</span>{" "}
-          back home
+          {t("homeLink")}
         </Link>
         <Clock />
       </footer>

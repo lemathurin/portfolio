@@ -15,5 +15,15 @@
     "closing": "Cheers,",
     "signature": "Mathurin Sekine",
     "more": "If you want to see a little more, go see <canvas>this page</canvas>."
+  },
+  "canvas": {
+    "accessibleVersion": "accessible version",
+    "scrollHint": "scroll around the page :)",
+    "profileYears": "my profile throughout the years. (2016, 2022, 2025)",
+    "nicePictures": "some nice pictures I took",
+    "oldPortfolio": "my old portfolio",
+    "homeLink": "home",
+    "profilePhoto": "profile photo",
+    "viewOldPortfolio": "view my old portfolio"
   }
 }

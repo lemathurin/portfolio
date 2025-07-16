@@ -15,5 +15,15 @@
     "closing": "Bonne journée,",
     "signature": "Mathurin Sekine",
     "more": "Si vous voulez en voir un peu plus, allez voir <canvas>cette page</canvas>."
+  },
+  "canvas": {
+    "accessibleVersion": "version accessible",
+    "scrollHint": "faites défiler la page :)",
+    "profileYears": "mon profil au fil des années. (2016, 2022, 2025)",
+    "nicePictures": "quelques belles photos que j'ai prises",
+    "oldPortfolio": "mon ancien portfolio",
+    "homeLink": "accueil",
+    "profilePhoto": "photo de profil",
+    "viewOldPortfolio": "voir mon ancien portfolio"
   }
 }
