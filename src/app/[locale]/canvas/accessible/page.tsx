@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function AccessibleCanvasPage() {
-  const t = useTranslations("canvas");
+  const t = useTranslations();
 
   return (
     <main className="flex justify-center p-5 md:p-0 md:py-9">
@@ -15,7 +15,7 @@ export default function AccessibleCanvasPage() {
             href="/"
             className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
           >
-            {t("homeLink")}
+            {t("canvas.homeLink")}
           </Link>
         </header>
 
@@ -24,7 +24,7 @@ export default function AccessibleCanvasPage() {
           className="flex flex-col gap-4"
         >
           <h2 id="profile-heading" className="text-xl">
-            {t("profilePhoto")}
+            {t("canvas.profilePhoto")}
           </h2>
           <figure className="flex w-full justify-center bg-[var(--yellow)]">
             <Image
@@ -50,7 +50,7 @@ export default function AccessibleCanvasPage() {
               height={250}
             />
           </figure>
-          <p>{t("profileYears")}</p>
+          <p>{t("canvas.profileYears")}</p>
         </section>
 
         <section
@@ -58,12 +58,12 @@ export default function AccessibleCanvasPage() {
           className="flex flex-col gap-4"
         >
           <h2 id="photos-heading" className="text-xl">
-            {t("nicePictures")}
+            {t("canvas.nicePictures")}
           </h2>
           <figure>
             <Image
               src="/skytree.jpeg"
-              alt="A photo of the Tokyo Skytree against a bright blue sky."
+              alt={t("canvas.skytreeAlt")}
               width={500}
               height={500}
             />
@@ -71,7 +71,7 @@ export default function AccessibleCanvasPage() {
           <figure>
             <Image
               src="/boat.jpeg"
-              alt="A photo of a boat off the coast of an island with mountains."
+              alt={t("canvas.boatAlt")}
               width={800}
               height={800}
             />
@@ -79,7 +79,7 @@ export default function AccessibleCanvasPage() {
           <figure>
             <Image
               src="/sunset.jpeg"
-              alt="A photo of a man walking on a beach with the sunset behind him."
+              alt={t("canvas.sunsetAlt")}
               width={500}
               height={500}
             />
@@ -88,18 +88,18 @@ export default function AccessibleCanvasPage() {
 
         <section aria-labelledby="portfolio-heading">
           <h2 id="portfolio-heading" className="text-xl">
-            {t("oldPortfolio")}
+            {t("canvas.oldPortfolio")}
           </h2>
           <figure>
             <Image
               src="/portfolio-v1.png"
-              alt="A screenshot of my first portfolio."
+              alt={t("canvas.portfolioV1Alt")}
               width={500}
               height={500}
             />
             <figcaption>
               <Link href="#" target="_blank">
-                {t("viewOldPortfolio")}
+                {t("canvas.viewOldPortfolio")}
               </Link>
             </figcaption>
           </figure>

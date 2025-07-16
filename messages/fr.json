@@ -24,6 +24,10 @@
     "oldPortfolio": "mon ancien portfolio",
     "homeLink": "accueil",
     "profilePhoto": "photo de profil",
-    "viewOldPortfolio": "voir mon ancien portfolio"
+    "viewOldPortfolio": "voir mon ancien portfolio",
+    "skytreeAlt": "Une photo de la Tokyo Skytree contre un ciel bleu éclatant.",
+    "boatAlt": "Une photo d'un bateau au large d'une île avec des montagnes.",
+    "sunsetAlt": "Une photo d'un homme marchant sur une plage avec le coucher de soleil derrière lui.",
+    "portfolioV1Alt": "Une capture d'écran de mon premier portfolio."
   }
 }

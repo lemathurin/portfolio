@@ -8,7 +8,7 @@ import Clock from "@/components/Clock";
 import { useTranslations } from "next-intl";
 
 export default function CanvasPage() {
-  const t = useTranslations("canvas");
+  const t = useTranslations();
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function CanvasPage() {
           href="/canvas/accessible"
           className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
         >
-          {t("accessibleVersion")}
+          {t("canvas.accessibleVersion")}
         </Link>
       </header>
       <Canvas>
@@ -33,7 +33,7 @@ export default function CanvasPage() {
             whiteSpace: "nowrap",
           }}
         >
-          {t("scrollHint")}
+          {t("canvas.scrollHint")}
         </h1>
         <section
           className="relative"
@@ -90,7 +90,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            {t("profileYears")}
+            {t("canvas.profileYears")}
           </p>
         </section>
         <section
@@ -103,7 +103,7 @@ export default function CanvasPage() {
         >
           <Image
             src="/skytree.jpeg"
-            alt="A photo of the Tokyo Skytree against a bright blue sky."
+            alt={t("canvas.skytreeAlt")}
             width={500}
             height={500}
             className="shadow-lg"
@@ -116,7 +116,7 @@ export default function CanvasPage() {
           />
           <Image
             src="/boat.jpeg"
-            alt="A photo of a boat of the coast of an island with mountains."
+            alt={t("canvas.boatAlt")}
             width={800}
             height={800}
             className="shadow-lg"
@@ -130,7 +130,7 @@ export default function CanvasPage() {
 
           <Image
             src="/sunset.jpeg"
-            alt="A photo of a man walking on a beach with the sunset behind him."
+            alt={t("canvas.sunsetAlt")}
             width={500}
             height={500}
             className="shadow-lg"
@@ -149,7 +149,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            {t("nicePictures")}
+            {t("canvas.nicePictures")}
           </p>
         </section>
         <section
@@ -161,7 +161,7 @@ export default function CanvasPage() {
         >
           <Image
             src="/portfolio-v1.png"
-            alt="A screenshot of my first portfolio."
+            alt={t("canvas.portfolioV1Alt")}
             width={500}
             height={500}
             style={{
@@ -182,7 +182,7 @@ export default function CanvasPage() {
               transform: "rotate(1deg)",
             }}
           >
-            {t("oldPortfolio")}
+            {t("canvas.oldPortfolio")}
           </Link>
         </section>
       </Canvas>
@@ -192,7 +192,7 @@ export default function CanvasPage() {
           className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
         >
           <span style={{ fontFamily: "system-ui, Arial, sans-serif" }}>←</span>{" "}
-          {t("homeLink")}
+          {t("canvas.homeLink")}
         </Link>
         <Clock />
       </footer>
