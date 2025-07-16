@@ -4,6 +4,7 @@ import Image from "next/image";
 import Canvas from "@/components/Canvas";
 import Link from "next/link";
 import LanguageToggle from "@/components/LanguageToggle";
+import Clock from "@/components/Clock";
 
 export default function CanvasPage() {
   return (
@@ -179,6 +180,16 @@ export default function CanvasPage() {
           </Link>
         </section>
       </Canvas>
+      <footer className="bg-primary fixed right-0 bottom-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">
+        <Link
+          href="/"
+          className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
+        >
+          <span style={{ fontFamily: "system-ui, Arial, sans-serif" }}>←</span>{" "}
+          back home
+        </Link>
+        <Clock />
+      </footer>
     </>
   );
 }
