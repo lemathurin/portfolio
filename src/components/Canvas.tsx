@@ -1,17 +1,17 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
-interface CanvasProps {
+export default function Canvas({
+  children,
+  role,
+}: {
   children: React.ReactNode;
   role?: string;
-}
-
-const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
+}) {
   const DIV_WIDTH = 2500;
   const DIV_HEIGHT = 2500;
-
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollEnabledRef = useRef(false);
   const [hasRestored, setHasRestored] = useState(false);
@@ -181,9 +181,7 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
       )}
     </div>
   );
-};
+}
 
 const clamp = (val: number, min: number, max: number) =>
   Math.max(min, Math.min(max, val));
-
-export default Canvas;
