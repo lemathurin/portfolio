@@ -13,6 +13,8 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
   const DIV_HEIGHT = 2500;
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const scrollEnabledRef = useRef(false);
+  const [hasRestored, setHasRestored] = useState(false);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -23,6 +25,8 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
     top: 0,
     bottom: 0,
   });
+
+  // console.log("Initial motion values:", x.get(), y.get());
 
   const STORAGE_KEY = "canvas_position";
 
@@ -39,6 +43,8 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
       const { x: savedX, y: savedY } = JSON.parse(savedPosition);
       x.set(savedX);
       y.set(savedY);
+      console.log("restoring x:", savedX);
+      console.log("restoring y:", savedY);
     } else {
       const container = containerRef.current;
       if (!container) return;
@@ -51,7 +57,16 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
 
       x.set(clamp((viewportWidth - DIV_WIDTH) / 2, -maxOffsetX, 0));
       y.set(clamp((viewportHeight - DIV_HEIGHT) / 2, -maxOffsetY, 0));
+      console.log("centering x:", (viewportWidth - DIV_WIDTH) / 2);
+      console.log("centering y:", (viewportHeight - DIV_HEIGHT) / 2);
     }
+    setHasRestored(true);
+
+    scrollEnabledRef.current = false;
+    setTimeout(() => {
+      scrollEnabledRef.current = true;
+      console.log("Scroll handling re-enabled");
+    }, 1100);
   }
 
   useEffect(() => {
@@ -82,9 +97,34 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
 
   useEffect(() => {
     function handleWheel(e: WheelEvent) {
+      if (!hasRestored) {
+        console.log("Blocked wheel because position not restored yet");
+        return;
+      }
+
+      if (!scrollEnabledRef.current) {
+        console.log("Blocked wheel: momentum scroll blocked");
+        e.preventDefault();
+        return;
+      }
+
       e.preventDefault();
-      x.set(clamp(x.get() - e.deltaX, constraints.left, constraints.right));
-      y.set(clamp(y.get() - e.deltaY, constraints.top, constraints.bottom));
+
+      const newX = clamp(
+        x.get() - e.deltaX,
+        constraints.left,
+        constraints.right,
+      );
+      const newY = clamp(
+        y.get() - e.deltaY,
+        constraints.top,
+        constraints.bottom,
+      );
+
+      // console.log("scrolling to:", newX, newY, e.deltaX, e.deltaY);
+
+      x.set(newX);
+      y.set(newY);
       savePosition();
     }
 
@@ -101,8 +141,6 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
 
-  console.log("restoring", sessionStorage.getItem(STORAGE_KEY));
-
   return (
     <div
       ref={containerRef}
@@ -114,27 +152,32 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
         transform: "translateZ(0)",
       }}
     >
-      <motion.div
-        drag
-        dragElastic={isTouchDevice ? undefined : 0}
-        dragMomentum={isTouchDevice ? undefined : false}
-        dragConstraints={constraints}
-        onDragEnd={savePosition}
-        style={{
-          width: DIV_WIDTH,
-          height: DIV_HEIGHT,
-          x,
-          y,
-          backgroundImage: `
+      {hasRestored && (
+        <motion.div
+          drag
+          dragElastic={isTouchDevice ? undefined : 0}
+          dragMomentum={isTouchDevice ? undefined : false}
+          dragConstraints={constraints}
+          onDragEnd={() => {
+            savePosition();
+            // console.log("dragged to:", x.get(), y.get());
+          }}
+          style={{
+            width: DIV_WIDTH,
+            height: DIV_HEIGHT,
+            x,
+            y,
+            backgroundImage: `
             linear-gradient(to right, var(--secondary) 1px, transparent 1px),
             linear-gradient(to bottom, var(--secondary) 1px, transparent 1px)
           `,
-          backgroundSize: "25px 25px",
-          zIndex: -1,
-        }}
-      >
-        {children}
-      </motion.div>
+            backgroundSize: "25px 25px",
+            zIndex: -1,
+          }}
+        >
+          {children}
+        </motion.div>
+      )}
     </div>
   );
 };
