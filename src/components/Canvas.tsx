@@ -43,8 +43,8 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
       const { x: savedX, y: savedY } = JSON.parse(savedPosition);
       x.set(savedX);
       y.set(savedY);
-      console.log("restoring x:", savedX);
-      console.log("restoring y:", savedY);
+      // console.log("restoring x:", savedX);
+      // console.log("restoring y:", savedY);
     } else {
       const container = containerRef.current;
       if (!container) return;
@@ -57,15 +57,15 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
 
       x.set(clamp((viewportWidth - DIV_WIDTH) / 2, -maxOffsetX, 0));
       y.set(clamp((viewportHeight - DIV_HEIGHT) / 2, -maxOffsetY, 0));
-      console.log("centering x:", (viewportWidth - DIV_WIDTH) / 2);
-      console.log("centering y:", (viewportHeight - DIV_HEIGHT) / 2);
+      // console.log("centering x:", (viewportWidth - DIV_WIDTH) / 2);
+      // console.log("centering y:", (viewportHeight - DIV_HEIGHT) / 2);
     }
     setHasRestored(true);
 
     scrollEnabledRef.current = false;
     setTimeout(() => {
       scrollEnabledRef.current = true;
-      console.log("Scroll handling re-enabled");
+      // console.log("Scroll handling re-enabled");
     }, 1100);
   }
 
@@ -98,12 +98,12 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
   useEffect(() => {
     function handleWheel(e: WheelEvent) {
       if (!hasRestored) {
-        console.log("Blocked wheel because position not restored yet");
+        // console.log("Blocked wheel because position not restored yet");
         return;
       }
 
       if (!scrollEnabledRef.current) {
-        console.log("Blocked wheel: momentum scroll blocked");
+        // console.log("Blocked wheel: momentum scroll blocked");
         e.preventDefault();
         return;
       }
@@ -150,6 +150,7 @@ const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
         height: "100dvh",
         overflow: "hidden",
         transform: "translateZ(0)",
+        cursor: "move",
       }}
     >
       {hasRestored && (
