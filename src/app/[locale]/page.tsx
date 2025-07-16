@@ -26,10 +26,7 @@ export default function Home() {
           />
         </figure>
 
-        <section aria-labelledby="intro-heading">
-          <h1 id="intro-heading" className="sr-only">
-            {t("intro.title")}
-          </h1>
+        <section aria-label={t("intro.title")}>
           <p>{t("intro.wave")}</p>
           <br />
           <p>{t("intro.greeting")}</p>
