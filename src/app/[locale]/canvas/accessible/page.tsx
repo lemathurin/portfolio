@@ -26,7 +26,7 @@ export default function AccessibleCanvasPage() {
           <h2 id="profile-heading" className="text-xl">
             {t("canvas.profilePhoto")}
           </h2>
-          <figure className="flex w-full justify-center bg-[var(--yellow)]">
+          <figure className="flex w-full justify-center bg-[#FFCD34]">
             <Image
               src="/me-2016.png"
               alt="Avatar 2016"
@@ -34,7 +34,7 @@ export default function AccessibleCanvasPage() {
               height={250}
             />
           </figure>
-          <figure className="flex w-full justify-center bg-[var(--yellow)]">
+          <figure className="flex w-full justify-center bg-[#FFCD34]">
             <Image
               src="/me-2022.png"
               alt="Avatar 2022"
@@ -42,7 +42,7 @@ export default function AccessibleCanvasPage() {
               height={250}
             />
           </figure>
-          <figure className="flex w-full justify-center bg-[var(--yellow)]">
+          <figure className="flex w-full justify-center bg-[#FFCD34]">
             <Image
               src="/me-2025.png"
               alt="Avatar 2025"
