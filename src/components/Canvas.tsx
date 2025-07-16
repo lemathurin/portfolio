@@ -5,9 +5,10 @@ import { motion, useMotionValue } from "framer-motion";
 
 interface CanvasProps {
   children: React.ReactNode;
+  role?: string;
 }
 
-const Canvas: React.FC<CanvasProps> = ({ children }) => {
+const Canvas: React.FC<CanvasProps> = ({ children, role }) => {
   const DIV_WIDTH = 2500;
   const DIV_HEIGHT = 2500;
 
@@ -74,6 +75,7 @@ const Canvas: React.FC<CanvasProps> = ({ children }) => {
   return (
     <div
       ref={containerRef}
+      role={role}
       style={{
         width: "100vw",
         height: "100dvh",
