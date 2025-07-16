@@ -1,5 +1,9 @@
 {
   "languageToggle": "in English",
+  "Metadata": {
+    "title": "Mathurin Sekine | Développeur Fullstack",
+    "description": "Portfolio de Mathurin Sekine, développeur fullstack spécialisé dans React, Next.js et les technologies web modernes."
+  },
   "intro": {
     "title": "A propos de moi",
     "wave": "👋 Salut.",
