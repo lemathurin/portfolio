@@ -68,6 +68,10 @@ const InteractiveCanvas: React.FC<InteractiveCanvasProps> = ({ children }) => {
     };
   }, [x, y, constraints]);
 
+  const isTouchDevice =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
   return (
     <div
       ref={containerRef}
@@ -79,13 +83,15 @@ const InteractiveCanvas: React.FC<InteractiveCanvasProps> = ({ children }) => {
     >
       <motion.div
         drag
-        dragMomentum={false}
+        dragElastic={isTouchDevice ? undefined : 0}
+        dragMomentum={isTouchDevice ? undefined : false}
         dragConstraints={constraints}
         style={{
           width: DIV_WIDTH,
           height: DIV_HEIGHT,
           x,
           y,
+          willChange: "transform",
         }}
       >
         {children}
