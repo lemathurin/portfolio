@@ -4,9 +4,8 @@ import Image from "next/image";
 import Canvas from "@/components/Canvas";
 import Link from "next/link";
 import LanguageToggle from "@/components/LanguageToggle";
-import Clock from "@/components/Clock";
 
-export default function FunPage() {
+export default function CanvasPage() {
   return (
     <>
       <header className="bg-primary fixed top-0 right-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">
