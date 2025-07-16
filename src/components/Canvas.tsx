@@ -78,6 +78,7 @@ const Canvas: React.FC<CanvasProps> = ({ children }) => {
         width: "100vw",
         height: "100dvh",
         overflow: "hidden",
+        transform: "translateZ(0)",
       }}
     >
       <motion.div
@@ -90,12 +91,12 @@ const Canvas: React.FC<CanvasProps> = ({ children }) => {
           height: DIV_HEIGHT,
           x,
           y,
-          willChange: "transform",
           backgroundImage: `
             linear-gradient(to right, var(--secondary) 1px, transparent 1px),
             linear-gradient(to bottom, var(--secondary) 1px, transparent 1px)
           `,
           backgroundSize: "25px 25px",
+          zIndex: -1,
         }}
       >
         {children}
