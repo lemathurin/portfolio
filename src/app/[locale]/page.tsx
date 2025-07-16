@@ -9,13 +9,13 @@ export default function Home() {
 
   return (
     <main className="flex justify-center p-5 md:p-0 md:py-9">
-      <article className="max-w-96 text-justify flex flex-col gap-9">
-        <header className="flex justify-between items-center w-full gap-4">
+      <article className="flex max-w-96 flex-col gap-9 text-justify">
+        <header className="flex w-full items-center justify-between gap-4">
           <LanguageToggle />
           <Clock />
         </header>
 
-        <figure className="w-full h-36 bg-[var(--yellow)] relative overflow-hidden flex items-end justify-center">
+        <figure className="relative flex h-36 w-full items-end justify-center overflow-hidden bg-[var(--yellow)]">
           <Image
             src="/me-100.svg"
             alt="Mathurin Sekine's avatar"

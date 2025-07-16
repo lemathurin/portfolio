@@ -11,7 +11,7 @@ export default function FunPage() {
     <InteractiveCanvas onItemClick={handleItemClick}>
       {/* Text block at 100, 150 */}
       <div
-        className="absolute cursor-pointer hover:shadow-lg transition-shadow bg-white p-4 rounded shadow border"
+        className="absolute cursor-pointer rounded border bg-white p-4 shadow transition-shadow hover:shadow-lg"
         style={{
           left: 100,
           top: 150,
@@ -29,7 +29,7 @@ export default function FunPage() {
       <img
         src="/test.jpeg"
         alt="Sample image"
-        className="absolute cursor-pointer hover:shadow-lg transition-shadow max-w-none"
+        className="absolute max-w-none cursor-pointer transition-shadow hover:shadow-lg"
         style={{
           left: 400,
           top: 300,
@@ -44,7 +44,7 @@ export default function FunPage() {
 
       {/* Another text block at 800, 500 */}
       <div
-        className="absolute cursor-pointer hover:shadow-lg transition-shadow bg-blue-100 p-6 rounded-lg border-2 border-blue-300"
+        className="absolute cursor-pointer rounded-lg border-2 border-blue-300 bg-blue-100 p-6 transition-shadow hover:shadow-lg"
         style={{
           left: 800,
           top: 500,
@@ -55,7 +55,7 @@ export default function FunPage() {
           handleItemClick("text-2");
         }}
       >
-        <h3 className="font-bold text-lg mb-2">Another Text Block</h3>
+        <h3 className="mb-2 text-lg font-bold">Another Text Block</h3>
         <p>This one has different styling and is positioned manually</p>
       </div>
 
@@ -63,7 +63,7 @@ export default function FunPage() {
       <img
         src="/me-100.svg"
         alt="Another image"
-        className="absolute cursor-pointer hover:shadow-lg transition-shadow max-w-none rounded-lg"
+        className="absolute max-w-none cursor-pointer rounded-lg transition-shadow hover:shadow-lg"
         style={{
           left: 1200,
           top: 800,
@@ -78,7 +78,7 @@ export default function FunPage() {
 
       {/* Custom component at 600, 1000 */}
       <div
-        className="absolute cursor-pointer hover:shadow-lg transition-shadow"
+        className="absolute cursor-pointer transition-shadow hover:shadow-lg"
         style={{
           left: 600,
           top: 1000,
@@ -88,7 +88,7 @@ export default function FunPage() {
           handleItemClick("custom-1");
         }}
       >
-        <div className="bg-gradient-to-r from-purple-400 to-pink-400 p-4 rounded-lg text-white">
+        <div className="rounded-lg bg-gradient-to-r from-purple-400 to-pink-400 p-4 text-white">
           <h2 className="text-xl font-bold">Custom Component</h2>
           <p>You can place any React component here</p>
         </div>
