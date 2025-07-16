@@ -5,12 +5,11 @@ import { motion, useMotionValue } from "framer-motion";
 
 interface InteractiveCanvasProps {
   children: React.ReactNode;
-  onItemClick?: (itemId: string) => void;
 }
 
 const InteractiveCanvas: React.FC<InteractiveCanvasProps> = ({ children }) => {
-  const DIV_WIDTH = 3000;
-  const DIV_HEIGHT = 3000;
+  const DIV_WIDTH = 2500;
+  const DIV_HEIGHT = 2500;
 
   const containerRef = useRef<HTMLDivElement>(null);
 

@@ -1,100 +1,172 @@
 "use client";
 
+import Image from "next/image";
 import InteractiveCanvas from "@/components/InteractiveCanvas";
+import Link from "next/link";
 
 export default function FunPage() {
-  const handleItemClick = (itemId: string) => {
-    console.log("Clicked item:", itemId);
-  };
-
   return (
-    <InteractiveCanvas onItemClick={handleItemClick}>
-      {/* Text block at 100, 150 */}
-      <div
-        className="absolute cursor-pointer rounded border bg-white p-4 shadow transition-shadow hover:shadow-lg"
+    <InteractiveCanvas>
+      <h1
         style={{
-          left: 100,
-          top: 150,
-          width: 200,
+          position: "fixed",
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: 10,
+          pointerEvents: "none",
         }}
-        onClick={(e) => {
-          e.stopPropagation();
-          handleItemClick("text-1");
+        className="opacity-70"
+      >
+        scroll around the page
+      </h1>
+      <div
+        className="relative"
+        style={{
+          left: 1250,
+          top: 700,
         }}
       >
-        This is a text block that users can click on
+        <Image
+          src="/me-2016.png"
+          alt="Avatar 2016"
+          width={250}
+          height={250}
+          className="shadow-lg"
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            transform: "rotate(-5deg)",
+          }}
+        />
+        <Image
+          src="/me-2022.png"
+          alt="Avatar 2022"
+          width={250}
+          height={250}
+          className="shadow-lg"
+          style={{
+            position: "absolute",
+            left: 235,
+            top: 20,
+            transform: "rotate(5deg)",
+          }}
+        />
+        <Image
+          src="/me-2025.png"
+          alt="Avatar 2025"
+          width={250}
+          height={250}
+          className="shadow-lg"
+          style={{
+            position: "absolute",
+            left: 470,
+            top: 10,
+            transform: "rotate(-3deg)",
+          }}
+        />
+        <p
+          style={{
+            position: "absolute",
+            left: 150,
+            top: 300,
+            transform: "rotate(2deg)",
+          }}
+        >
+          My profile throughout the years. (2016, 2022, 2025)
+        </p>
       </div>
-
-      {/* Image at 400, 300 */}
-      <img
-        src="/test.jpeg"
-        alt="Sample image"
-        className="absolute max-w-none cursor-pointer transition-shadow hover:shadow-lg"
-        style={{
-          left: 400,
-          top: 300,
-          width: 200,
-        }}
-        draggable={false}
-        onClick={(e) => {
-          e.stopPropagation();
-          handleItemClick("image-1");
-        }}
-      />
-
-      {/* Another text block at 800, 500 */}
       <div
-        className="absolute cursor-pointer rounded-lg border-2 border-blue-300 bg-blue-100 p-6 transition-shadow hover:shadow-lg"
+        className="relative"
         style={{
-          left: 800,
-          top: 500,
-          width: 250,
-        }}
-        onClick={(e) => {
-          e.stopPropagation();
-          handleItemClick("text-2");
+          left: 450,
+          top: 1600,
         }}
       >
-        <h3 className="mb-2 text-lg font-bold">Another Text Block</h3>
-        <p>This one has different styling and is positioned manually</p>
+        <Image
+          src="/skytree.jpeg"
+          alt="Avatar 2022"
+          width={500}
+          height={500}
+          className="shadow-lg"
+          style={{
+            position: "absolute",
+            left: -30,
+            top: 40,
+            transform: "rotate(-5deg)",
+          }}
+        />
+        <Image
+          src="/boat.jpeg"
+          alt="Avatar 2016"
+          width={800}
+          height={800}
+          className="shadow-lg"
+          style={{
+            position: "absolute",
+            left: 480,
+            top: 50,
+            transform: "rotate(2deg)",
+          }}
+        />
+
+        <Image
+          src="/sunset.jpeg"
+          alt="Avatar 2025"
+          width={500}
+          height={500}
+          className="shadow-lg"
+          style={{
+            position: "absolute",
+            left: -200,
+            top: -600,
+            transform: "rotate(2deg)",
+          }}
+        />
+        <p
+          style={{
+            position: "absolute",
+            left: 550,
+            top: 0,
+            transform: "rotate(2deg)",
+          }}
+        >
+          some nice pictures I took
+        </p>
       </div>
-
-      {/* Image at 1200, 800 */}
-      <img
-        src="/me-100.svg"
-        alt="Another image"
-        className="absolute max-w-none cursor-pointer rounded-lg transition-shadow hover:shadow-lg"
-        style={{
-          left: 1200,
-          top: 800,
-          width: 400,
-        }}
-        draggable={false}
-        onClick={(e) => {
-          e.stopPropagation();
-          handleItemClick("image-2");
-        }}
-      />
-
-      {/* Custom component at 600, 1000 */}
       <div
-        className="absolute cursor-pointer transition-shadow hover:shadow-lg"
+        className="relative"
         style={{
-          left: 600,
-          top: 1000,
-        }}
-        onClick={(e) => {
-          e.stopPropagation();
-          handleItemClick("custom-1");
+          left: 1750,
+          top: 1200,
         }}
       >
-        <div className="rounded-lg bg-gradient-to-r from-purple-400 to-pink-400 p-4 text-white">
-          <h2 className="text-xl font-bold">Custom Component</h2>
-          <p>You can place any React component here</p>
-        </div>
+        <Image
+          src="/portfolio-v1.png"
+          alt="Avatar 2025"
+          width={500}
+          height={500}
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            transform: "rotate(-2deg)",
+          }}
+        />
+        <Link
+          target="_blank"
+          href="#"
+          style={{
+            position: "absolute",
+            left: 200,
+            top: 350,
+            transform: "rotate(1deg)",
+          }}
+        >
+          my old portfolio
+        </Link>
       </div>
-
-      {/* Add as many elements as you want, positioned wherever you want */}
     </InteractiveCanvas>
   );
 }
