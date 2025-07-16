@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Clock from "@/components/Clock";
 import LanguageToggle from "@/components/LanguageToggle";
 import Link from "next/link";
+import { Link as I18nLink } from "@/i18n/navigation";
 
 export default function Home() {
   const t = useTranslations();
@@ -78,6 +79,13 @@ export default function Home() {
           <br />
           <p>{t("intro.closing")}</p>
           <p>{t("intro.signature")}</p>
+          <br />
+          <br />
+          <p>
+            {t.rich("intro.more", {
+              canvas: (chunks) => <I18nLink href="/canvas">{chunks}</I18nLink>,
+            })}
+          </p>
         </section>
       </article>
     </main>
