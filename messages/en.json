@@ -29,5 +29,9 @@
     "boatAlt": "A photo of a boat off the coast of an island with mountains.",
     "sunsetAlt": "A photo of a man walking on a beach with the sunset behind him.",
     "portfolioV1Alt": "A screenshot of my first portfolio."
+  },
+  "404": {
+    "error": "error 404",
+    "message": "This page doesn't exist. Maybe there used to be something here, but it's either gone or has been moved. I hope you'll find what you're looking for."
   }
 }
