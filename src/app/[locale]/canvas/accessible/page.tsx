@@ -23,9 +23,7 @@ export default function AccessibleCanvasPage() {
           aria-labelledby="profile-heading"
           className="flex flex-col gap-4"
         >
-          <h2 id="profile-heading" className="text-xl">
-            {t("canvas.profilePhoto")}
-          </h2>
+          <h2 id="profile-heading">{t("canvas.profilePhoto")}</h2>
           <figure className="flex w-full justify-center bg-[#FFCD34]">
             <Image
               src="/me-2016.png"
@@ -57,9 +55,7 @@ export default function AccessibleCanvasPage() {
           aria-labelledby="photos-heading"
           className="flex flex-col gap-4"
         >
-          <h2 id="photos-heading" className="text-xl">
-            {t("canvas.nicePictures")}
-          </h2>
+          <h2 id="photos-heading">{t("canvas.nicePictures")}</h2>
           <figure>
             <Image
               src="/skytree.jpeg"
@@ -87,9 +83,7 @@ export default function AccessibleCanvasPage() {
         </section>
 
         <section aria-labelledby="portfolio-heading">
-          <h2 id="portfolio-heading" className="text-xl">
-            {t("canvas.oldPortfolio")}
-          </h2>
+          <h2 id="portfolio-heading">{t("canvas.oldPortfolio")}</h2>
           <figure>
             <Image
               src="/portfolio-v1.png"

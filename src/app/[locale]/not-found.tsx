@@ -13,7 +13,7 @@ export default function NotFound() {
           <LanguageToggle />
           <Clock />
         </header>
-        <h1 className="text-xl">{t("404.error")}</h1>
+        <h2>{t("404.error")}</h2>
         <p>{t("404.message")}</p>
         <Link href="/">{t("canvas.homeLink")}</Link>
       </article>

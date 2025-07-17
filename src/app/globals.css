@@ -48,3 +48,11 @@ a[target="_blank"]::after {
   /* @apply text-xs align-[0.3em]; */
   /* @apply ml-1; */
 }
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-lg);
+}

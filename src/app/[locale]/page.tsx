@@ -96,6 +96,66 @@ export default function Home() {
             })}
           </p>
         </section>
+        <section
+          className="flex flex-col gap-2.5"
+          aria-labelledby="past-projects-heading"
+        >
+          <h2 id="past-projects-heading">{t("projects.title")}</h2>
+          <div className="grid grid-cols-1 gap-4">
+            <article>
+              <h3>
+                <Link
+                  target="_blank"
+                  href="https://github.com/lemathurin/portfolio/tree/v1"
+                >
+                  {t("projects.oldPortfolio.title")}
+                </Link>
+              </h3>
+              <p>{t("projects.oldPortfolio.description")}</p>
+              <p className="text-sm opacity-70">
+                Next.js, Tailwind CSS, Motion
+              </p>
+            </article>
+            <article>
+              <h3>
+                <Link
+                  target="_blank"
+                  href="https://github.com/lemathurin/e-commerce-website"
+                >
+                  {t("projects.ecommerce.title")}
+                </Link>
+              </h3>
+              <p>{t("projects.ecommerce.description")}</p>
+              <p className="text-sm opacity-70">
+                React, Tailwind CSS, Express.js
+              </p>
+            </article>
+            <article>
+              <h3>
+                <Link
+                  target="_blank"
+                  href="https://github.com/lemathurin/dataviz-sncf"
+                >
+                  {t("projects.dataviz.title")}
+                </Link>
+              </h3>
+              <p>{t("projects.dataviz.description")}</p>
+              <p className="text-sm opacity-70">JavaScript, HTML, CSS</p>
+            </article>
+            <article>
+              <h3>
+                <Link
+                  target="_blank"
+                  href="https://github.com/lemathurin/pico8"
+                >
+                  {t("projects.pico8.title")}
+                </Link>
+              </h3>
+              <p>{t("projects.pico8.description")}</p>
+              <p className="text-sm opacity-70">Lua</p>
+            </article>
+          </div>
+        </section>
       </article>
     </main>
   );

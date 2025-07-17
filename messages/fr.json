@@ -16,6 +16,25 @@
     "signature": "Mathurin Sekine",
     "more": "Si vous voulez en voir un peu plus sur moi, <canvas>allez voir cette page</canvas>."
   },
+  "projects": {
+    "title": "Projets passés",
+    "oldPortfolio": {
+      "title": "Ancien portfolio",
+      "description": "Version 1 de ce portfolio. Il sera bientôt de nouveau disponible."
+    },
+    "ecommerce": {
+      "title": "Site e-commerce",
+      "description": "Projet scolaire. Mon premier gros projet en équipe."
+    },
+    "dataviz": {
+      "title": "Dataviz SNCF",
+      "description": "Projet scolaire. Ma première utilisation d'une API."
+    },
+    "pico8": {
+      "title": "Pico-8",
+      "description": "Mon tout premier projet de code."
+    }
+  },
   "canvas": {
     "accessibleVersion": "version accessible",
     "scrollHint": "faites défiler la page :)",
