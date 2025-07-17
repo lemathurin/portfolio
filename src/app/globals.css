@@ -1,0 +1,50 @@
+@import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400|inter:400);
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9;
+  --secondary: #e7e5e4;
+  --foreground: #0c0a09;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --yellow: #ffcd34;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0c0a09;
+    --secondary: #44403c;
+    --foreground: #fafaf9;
+    --yellow: #d8ab23;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Style all Next.js Link components */
+a {
+  @apply text-current underline decoration-auto opacity-70;
+}
+
+a:hover {
+  @apply no-underline opacity-100;
+}
+
+/* Figure out */
+a[target="_blank"]::after {
+  content: " ↗";
+  font-family: system-ui, Arial, sans-serif;
+  /* @apply text-xs align-[0.3em]; */
+  /* @apply ml-1; */
+}

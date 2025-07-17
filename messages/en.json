@@ -1,140 +1,33 @@
 {
-    "Home": {
-      "greeting": "Hello,",
-      
-      "hey": "hey",
-      "nicetomeetyou": "nice to meet you",
-      "welcome": "welcome",
-      "givemeajob": "how are you?",
-      "clickaround": "click around",
-
-      "l1": "My name is ",
-      "l2": ". I am currently a student at ",
-      "l3": " in Nantes, France, working towards becoming a ",
-      "dev1": "front-end ",
-      "dev2": "developer",
-      "l4": "Since starting to learn to code in October 2023, I have worked on ",
-      "projects": "multiple projects",
-      "l5": ", including an ",
-      "ecommerce": "e-commerce website",
-      "l6": " and ",
-      "thisPortfolio": "this portfolio",
-      "l7": "I also like all things design, you can see more of my work on ",
-      "l8": " and ",
-      "l9": " You can also contact me via ",
-      "l10": "email or through other means",
-      "dot": "."
-    },
-    "HireWindow": {
-      "to": "to:",
-      "futureEmployer": "future employer",
-      "hello": "Hello future employer,",
-      "line1": "I am looking for a front-end developer internship in France beginning in June 2024.",
-      "line2": "The schedule would consist of 4 days at work, with 1 day allocated for school, under an ",
-      "contract": "apprenticeship contract",
-      "line2part2": ". (with financial aid!)",
-      "ideally": "Ideally, I would like to work front-end for web or mobile, but I can also work full-stack.",
-      "line3part1": "You can see my projects ",
-      "line3part2": ", contact me ",
-      "line3part3": ", and download my cv ",
-      "period": ".",
-      "here": "here",
-      "line4": "Looking forward to joining your team!",
-      "name": "Mathurin Sekine",
-      "deleteButtonLabel": "nope"
-    },
-    "HiredWindow": {
-      "opening": "Hello,",
-      "to": "to:",
-      "recipient": "you",
-      "part1": "I've been hired at ",
-      "juisci": "Juisci",
-      "part2": " as a front-end developer starting in June 2024!",
-      "goodday": "Have a good day,",
-      "name": "Mathurin Sekine",
-      "deleteButtonLabel": "nope"
-    },
-    "NavBar": {
-      "language": "en français",
-      "home": "home",
-      "projects": "my projects",
-      "notes": "my notes",
-      "contact": "contact",
-      "mainproject": "E-commerce store project",
-      "topRight": "Portfolio v1.0",
-      "more-projects": "More projects",
-      "notes-comingsoon": "Coming soon™",
-      "article1": "My first portfolio",
-      "article2": "Learning to code",
-      "article3": "My next project"
-    },
-    "Projects" : {
-      "portfolio": "Portfolio",
-      "ecommerce": "E-commerce store",
-      "dataviz": "Dataviz website",
-      "chromeextension": "Chrome extension",
-      "pico8game": "Pico-8 game",
-      "presenterapp": "Untitled Presentation App",
-      "phpsocialnetwork": "PHP Social Network",
-      "schoolproject": "school project",
-      "personalproject": "personal project"
-    },
-    "Contact": {
-      "email": "I’ll answer as soon as possible",
-      "linkedin": "you can also contact me here",
-      "github": "dev projects",
-      "twitter": "currently not very active",
-      "dribbble": "design projects",
-      "layers": "more design projects",
-      "readcv": "my resume",
-      "clipboard": "saved to clipboard"
-    },
-    "CaseStudy": {
-      "schoolproject": "School project",
-      "personalproject": "Personal project",
-      "githubrepository": "View GitHub repository",
-      "projectoverview": "Project overview",
-      "techstack": "Tech stack and tools",
-      "teammates": "Teammates",
-      "screenshots": "Screenshots",
-      "iterations": "Iterations",
-      "whatilearned": "What I learned"
-    },
-    "CaseStudyEcommerce": {
-      "title": "E-commerce store project",
-      "description": "The objective of this project was to have two teams of five work on the front and back-end, then switch roles after a week. I started on the front-end team and laid the foundation of the design with my mockups in Figma, as well as choosing to use Shadcn/ui. For the second week, I worked in partnership with some from the back-end team to create routes for the admin page.",
-      "whatilearnedtext": "I learned to better coordinate a team and use a component library. It was also interesting to discover the world of back-end with Supabase and Express."
-    },
-    "CaseStudyPico8": {
-      "title": "Pico-8 game project",
-      "description": "This was my first group project since I started to learn to code. We discovered Lua and the Pico-8 game engine. We could create whatever kind of game we wanted. As this was our first project, we always worked together in a mob programming setup. I worked a lot on the creative direction of the game, which involved designing the character sprite, crafting the background and terrain, and developing UI elements.",
-      "whatilearnedtext": "I enjoyed delving into Lua and understanding fundamental game mechanics such as gravity, collisions, and game states. Additionally, I had a great time working on the artwork, despite the challenges posed by the limited color palette of the Pico-8 engine."
-    },
-    "CaseStudyDataviz": {
-      "title": "Dataviz & API project",
-      "description": "The objective of this project was to fetch data from an API and dynamically display the results on a webpage. We decided to use the SNCF's API to show the amount of lost and found items on their network. The SNCF API is updated three times a day, which worked great for our project. I focused on the front-end of the website, recreating the SNCF's design language, going as far as researching and finding the font they use on signs in stations.",
-      "whatilearnedtext": "I learned to use auto layout in Figma, as well as the dev mode to quickly go from mockup to code. This considerably sped up my work. I also learned about APIs and how they work."
-    },
-    "CaseStudyExtension": {
-      "title": "Browser extension project",
-      "description": "We were tasked with creating an extension for Google Chrome. Our team decided to make a Pomodoro timer. I took inspiration from Teenage Engineering's design for the extension's look.",
-      "whatilearnedtext": "I learned about the browser ecosystem, and how I don't love it."
-    },
-    "CaseStudyPHP": {
-      "title": "PHP social network project",
-      "description": "This project was a little different, as we started with broken code that we were supposed to fix and improve. The website's features closely resembled Twitter and Facebook. Users had to be able to create accounts, post posts, like posts, and follow other users.",
-      "whatilearnedtext": "I learned how to write SQL, but didn't enjoy PHP that much.",
-      "beforedesign": "Before redesign",
-      "afterdesign": "After redesign"
-    },
-    "CaseStudyPortfolioV1": {
-      "title": "Portfolio version 1.0",
-      "description": "Portfolio version 1.0 was the first personal development project I completed since starting at Ada Tech School. It needed to showcase the projects I had worked on, provide links to my other social media pages, and include information about myself. Additionally, it had to be available in both English and French.",
-      "designinspiration": "Design inspiration",
-      "1stinspiration": "I liked the large serif text with images between the words from Cognac Godet.",
-      "2ndinspiration": "When Amie's new website was released, I was instantly drawn to their navbar. I experimented with a couple of designs but kept returning to one that looked similar. Thanks, Amie!",
-      "3rdinspiration": "I liked the clean and simple appearance of Pedro Duarte's website. As a result, my case study pages ended up resembling his blog posts. Great website, Pedro!",
-      "4thinspiration": "I used Farrel Putra's guide to buttons to create the labels on my website. A very minimalistic technique that yields great results.",
-      "thanks": "Big thanks to those who helped me"
-    }
+  "languageToggle": "en français",
+  "Metadata": {
+    "title": "Mathurin Sekine",
+    "description": "Fullstack developer, specializing in React, Next.js, and modern web technologies."
+  },
+  "intro": {
+    "title": "About me",
+    "wave": "👋 Hey.",
+    "greeting": "I’m Mathurin Sekine, a fullstack developer currently open to new opportunities.",
+    "experience": "Previously, I worked as a frontend developer at <juisci>Juisci</juisci>, where I contributed to building and improving their web app. I recently earned my diploma in Application Design and Development (Bachelor’s level) from <ada>Ada Tech School</ada>.",
+    "project": "While I search for my next role, I’m actively working on a personal project called [project name].",
+    "skills": "My skill set includes frontend technologies like React, Next.js, and Tailwind CSS, as well as backend frameworks such as Express.js and Nest.js. I'm also comfortable using design tools like Figma, and I am capable of contributing to every stage of a project — from concept and UI design to backend architecture and implementation.",
+    "contact": "If you think I’d be a great fit for your team, feel free to reach out via <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter>, or <mailto>email</mailto>. You can also check out my <cv>CV</cv> and <github>GitHub</github> for more about my experience and work.",
+    "closing": "Cheers,",
+    "signature": "Mathurin Sekine",
+    "more": "If you want to see a little more about me, <canvas>visit this page</canvas>."
+  },
+  "canvas": {
+    "accessibleVersion": "accessible version",
+    "scrollHint": "scroll around the page :)",
+    "profileYears": "my profile throughout the years. (2016, 2022, 2025)",
+    "nicePictures": "some nice pictures I took",
+    "oldPortfolio": "my old portfolio",
+    "homeLink": "home",
+    "profilePhoto": "profile photo",
+    "viewOldPortfolio": "view my old portfolio",
+    "skytreeAlt": "A photo of the Tokyo Skytree against a bright blue sky.",
+    "boatAlt": "A photo of a boat off the coast of an island with mountains.",
+    "sunsetAlt": "A photo of a man walking on a beach with the sunset behind him.",
+    "portfolioV1Alt": "A screenshot of my first portfolio."
   }
+}
