@@ -172,9 +172,7 @@ export default function CanvasPage() {
               pointerEvents: "none",
             }}
           />
-          <Link
-            target="_blank"
-            href="#"
+          <p
             style={{
               position: "absolute",
               left: 200,
@@ -183,7 +181,7 @@ export default function CanvasPage() {
             }}
           >
             {t("canvas.oldPortfolio")}
-          </Link>
+          </p>
         </section>
       </Canvas>
       <footer className="bg-primary fixed right-0 bottom-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">

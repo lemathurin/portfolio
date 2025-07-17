@@ -97,11 +97,7 @@ export default function AccessibleCanvasPage() {
               width={500}
               height={500}
             />
-            <figcaption>
-              <Link href="#" target="_blank">
-                {t("canvas.viewOldPortfolio")}
-              </Link>
-            </figcaption>
+            <figcaption>{t("canvas.oldPortfolio")}</figcaption>
           </figure>
         </section>
       </article>
