@@ -6,7 +6,7 @@
   },
   "intro": {
     "title": "A propos de moi",
-    "wave": "👋 Salut.",
+    "wave": "👋 Salut !",
     "greeting": "Je suis Mathurin Sekine, un développeur fullstack actuellement ouvert à de nouvelles opportunités.",
     "experience": "J’ai précédemment travaillé chez <juisci>Juisci</juisci> en tant que développeur frontend, où j’ai contribué au développement et à l’amélioration de leur application web. Je suis récemment diplômé de <ada>Ada Tech School</ada> avec un titre de Concepteur Développeur d’Applications (niveau Bac +3).",
     "project": "En attendant de trouver mon prochain poste, je travaille activement sur un projet personnel nommé [nom du projet].",
@@ -14,7 +14,7 @@
     "contact": "Si vous pensez que je pourrais être un bon ajout à votre équipe, n’hésitez pas à me contacter via <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> ou par <mailto>email</mailto>. Vous pouvez également consulter mon <cv>CV</cv> et mon <github>GitHub</github> pour en savoir plus sur mon parcours et mes projets.",
     "closing": "Bonne journée,",
     "signature": "Mathurin Sekine",
-    "more": "Si vous voulez en voir un peu plus sur moi, <canvas>visitez cette page</canvas>."
+    "more": "Si vous voulez en voir un peu plus sur moi, <canvas>allez voir cette page</canvas>."
   },
   "canvas": {
     "accessibleVersion": "version accessible",

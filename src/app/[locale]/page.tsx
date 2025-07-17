@@ -71,7 +71,10 @@ export default function Home() {
                 </Link>
               ),
               cv: (chunks) => (
-                <Link target="_blank" href="#">
+                <Link
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1UCXUY5eaDHlGNqP18yvHJ3Bli5_bo5YA/view?usp=sharing"
+                >
                   {chunks}
                 </Link>
               ),
