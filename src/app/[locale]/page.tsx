@@ -46,8 +46,8 @@ export default function Home() {
             })}
           </p>
           <br />
-          <p>{t("intro.project")}</p>
-          <br />
+          {/* <p>{t("intro.project")}</p> */}
+          {/* <br /> */}
           <p>{t("intro.skills")}</p>
           <br />
           <p>
