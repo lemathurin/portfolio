@@ -70,6 +70,16 @@ export default function Home() {
                   {chunks}
                 </Link>
               ),
+              cv: (chunks) => (
+                <Link target="_blank" href="#">
+                  {chunks}
+                </Link>
+              ),
+              github: (chunks) => (
+                <Link target="_blank" href="https://github.com/lemathurin">
+                  {chunks}
+                </Link>
+              ),
             })}
           </p>
           <br />
