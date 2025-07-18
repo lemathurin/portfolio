@@ -26,7 +26,7 @@ export default function AccessibleCanvasPage() {
           <h2 id="profile-heading">{t("canvas.profilePhoto")}</h2>
           <figure className="flex w-full justify-center bg-[#FFCD34]">
             <Image
-              src="/me-2016.png"
+              src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXliqVsBCbbFRm7wShzYQZJ4WeOX8q02spPHKE"
               alt="Avatar 2016"
               width={250}
               height={250}
@@ -34,7 +34,7 @@ export default function AccessibleCanvasPage() {
           </figure>
           <figure className="flex w-full justify-center bg-[#FFCD34]">
             <Image
-              src="/me-2022.png"
+              src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwX1wRGlfIRHdtW9MuSenZ7CN360Bwy8IpQijUb"
               alt="Avatar 2022"
               width={250}
               height={250}
@@ -42,7 +42,7 @@ export default function AccessibleCanvasPage() {
           </figure>
           <figure className="flex w-full justify-center bg-[#FFCD34]">
             <Image
-              src="/me-2025.png"
+              src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXcbArxXFWPh3xNZjmzVMS5t9QDGin0YqvX2lw"
               alt="Avatar 2025"
               width={250}
               height={250}
@@ -58,7 +58,7 @@ export default function AccessibleCanvasPage() {
           <h2 id="photos-heading">{t("canvas.nicePictures")}</h2>
           <figure>
             <Image
-              src="/skytree.jpeg"
+              src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwX2zP6Isjab2JnoGdL156AWIvsmt0jQPpKyFz8"
               alt={t("canvas.skytreeAlt")}
               width={500}
               height={500}
@@ -66,7 +66,7 @@ export default function AccessibleCanvasPage() {
           </figure>
           <figure>
             <Image
-              src="/boat.jpeg"
+              src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXHSk6BSAi8sevGcB4FyxCY9AX7lOpHVJzWb6f"
               alt={t("canvas.boatAlt")}
               width={800}
               height={800}
@@ -74,7 +74,7 @@ export default function AccessibleCanvasPage() {
           </figure>
           <figure>
             <Image
-              src="/sunset.jpeg"
+              src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXZOH8OaCSLlRducqbNZgY7F3QVhKp02nC4JrI"
               alt={t("canvas.sunsetAlt")}
               width={500}
               height={500}
@@ -86,7 +86,7 @@ export default function AccessibleCanvasPage() {
           <h2 id="portfolio-heading">{t("canvas.oldPortfolio")}</h2>
           <figure>
             <Image
-              src="/portfolio-v1.png"
+              src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXvqgwD1hpJmwX8nIfCriaYKcTs17Wdk5eDNt6"
               alt={t("canvas.portfolioV1Alt")}
               width={500}
               height={500}
