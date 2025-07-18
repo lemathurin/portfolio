@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Clock from "@/components/Clock";
 import LanguageToggle from "@/components/LanguageToggle";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function Home() {
   const t = useTranslations();

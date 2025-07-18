@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Canvas from "@/components/Canvas";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import LanguageToggle from "@/components/LanguageToggle";
 import Clock from "@/components/Clock";
 import { useTranslations } from "next-intl";

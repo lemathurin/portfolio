@@ -6,4 +6,8 @@ export const routing = defineRouting({
 
   // Used when no locale matches
   defaultLocale: "en",
+
+  // Don't use cookies to determine locale
+  localeCookie: false,
+  localePrefix: "always",
 });
