@@ -111,7 +111,7 @@ export default function Home() {
                 app with a modular, domain-driven architecture and RBAC-based
                 access controls.
               </p>
-              <p className="text-sm opacity-70">
+              <p className="text-sm text-[var(--secondary)]">
                 Next.js, Tailwind CSS, shadcn/ui, Axios, Express.js, Prisma ORM,
                 PostgreSQL, Docker, Coolify, Figma
               </p>
@@ -130,7 +130,7 @@ export default function Home() {
               </Link>
 
               <p>{t("projects.oldPortfolio.description")}</p>
-              <p className="text-sm opacity-70">
+              <p className="text-sm text-[var(--secondary)]">
                 Next.js, Tailwind CSS, Motion
               </p>
             </article>
@@ -140,7 +140,7 @@ export default function Home() {
               </Link>
 
               <p>{t("projects.ecommerce.description")}</p>
-              <p className="text-sm opacity-70">
+              <p className="text-sm text-[var(--secondary)]">
                 React, Tailwind CSS, Express.js
               </p>
             </article>
@@ -150,7 +150,9 @@ export default function Home() {
               </Link>
 
               <p>{t("projects.dataviz.description")}</p>
-              <p className="text-sm opacity-70">JavaScript, HTML, CSS</p>
+              <p className="text-sm text-[var(--secondary)]">
+                JavaScript, HTML, CSS
+              </p>
             </article>
             <article className="flex flex-col gap-0.5">
               <Link className="pb-1" href="/projects/pico8">
@@ -158,7 +160,7 @@ export default function Home() {
               </Link>
 
               <p>{t("projects.pico8.description")}</p>
-              <p className="text-sm opacity-70">Lua</p>
+              <p className="text-sm text-[var(--secondary)]">Lua</p>
             </article>
           </div>
         </section>
