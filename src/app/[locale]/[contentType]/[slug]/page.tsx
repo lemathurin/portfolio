@@ -37,12 +37,16 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function ContentPage({
-  params,
-}: {
-  params: { locale: string; contentType: string; slug: string };
-}) {
-  const { locale, contentType, slug } = await Promise.resolve(params);
+interface PageProps {
+  params: Promise<{
+    locale: string;
+    contentType: string;
+    slug: string;
+  }>;
+}
+
+export default async function ContentPage({ params }: PageProps) {
+  const { locale, contentType, slug } = await params;
 
   const { content } = await getMDXContent({
     locale,
