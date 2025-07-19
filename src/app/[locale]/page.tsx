@@ -123,7 +123,7 @@ export default function Home() {
           aria-labelledby="past-projects-heading"
         >
           <h2 id="past-projects-heading">{t("projects.title")}</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid gap-4 sm:grid-cols-2">
             <article className="flex flex-col gap-0.5">
               <Link
                 className="pb-1"

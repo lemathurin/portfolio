@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 
 export type ContentType = "projects" | "canvas" | "articles";
 
-// Get all available content types by reading the content directory
 export async function getContentTypes(): Promise<string[]> {
   try {
     const contentDir = path.join(process.cwd(), "content");
