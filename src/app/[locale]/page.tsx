@@ -9,10 +9,10 @@ export default function Home() {
 
   return (
     <main className="flex justify-center p-5 md:p-0 md:py-9">
-      <article className="flex max-w-96 flex-col gap-9 text-justify">
+      <article className="flex max-w-lg flex-col gap-9 text-justify">
         <header className="flex w-full items-center justify-between gap-4">
-          <LanguageToggle />
           <Clock />
+          <LanguageToggle />
         </header>
 
         <figure className="relative flex h-36 w-full items-end justify-center overflow-hidden bg-[var(--yellow)]">
@@ -97,60 +97,82 @@ export default function Home() {
           </p>
         </section>
         <section
-          className="flex flex-col gap-2.5"
+          className="flex flex-col gap-2.5 pt-5 text-left"
+          aria-labelledby="recent-projects-heading"
+        >
+          <h2 id="recent-projects-heading">Recent project</h2>
+          <div className="grid grid-cols-1 gap-4">
+            <article className="flex flex-col gap-0.5">
+              <Link className="pb-1" href="/projects/home-inventory">
+                Home inventory app
+              </Link>
+              <p>
+                Project made to valid the RNCP certification. A full-stack web
+                app with a modular, domain-driven architecture and RBAC-based
+                access controls.
+              </p>
+              <p className="text-sm opacity-70">
+                Next.js, Tailwind CSS, shadcn/ui, Axios, Express.js, Prisma ORM,
+                PostgreSQL, Docker, Coolify, Figma
+              </p>
+            </article>
+          </div>
+        </section>
+        <section
+          className="flex flex-col gap-2.5 py-5 text-left"
           aria-labelledby="past-projects-heading"
         >
           <h2 id="past-projects-heading">{t("projects.title")}</h2>
-          <div className="grid grid-cols-1 gap-4">
-            <article>
-              <h3>
-                <Link
-                  target="_blank"
-                  href="https://github.com/lemathurin/portfolio/tree/v1"
-                >
-                  {t("projects.oldPortfolio.title")}
-                </Link>
-              </h3>
+          <div className="grid grid-cols-2 gap-4">
+            <article className="flex flex-col gap-0.5">
+              <Link
+                className="pb-1"
+                target="_blank"
+                href="https://github.com/lemathurin/portfolio/tree/v1"
+              >
+                {t("projects.oldPortfolio.title")}
+              </Link>
+
               <p>{t("projects.oldPortfolio.description")}</p>
               <p className="text-sm opacity-70">
                 Next.js, Tailwind CSS, Motion
               </p>
             </article>
-            <article>
-              <h3>
-                <Link
-                  target="_blank"
-                  href="https://github.com/lemathurin/e-commerce-website"
-                >
-                  {t("projects.ecommerce.title")}
-                </Link>
-              </h3>
+            <article className="flex flex-col gap-0.5">
+              <Link
+                className="pb-1"
+                target="_blank"
+                href="https://github.com/lemathurin/e-commerce-website"
+              >
+                {t("projects.ecommerce.title")}
+              </Link>
+
               <p>{t("projects.ecommerce.description")}</p>
               <p className="text-sm opacity-70">
                 React, Tailwind CSS, Express.js
               </p>
             </article>
-            <article>
-              <h3>
-                <Link
-                  target="_blank"
-                  href="https://github.com/lemathurin/dataviz-sncf"
-                >
-                  {t("projects.dataviz.title")}
-                </Link>
-              </h3>
+            <article className="flex flex-col gap-0.5">
+              <Link
+                className="pb-1"
+                target="_blank"
+                href="https://github.com/lemathurin/dataviz-sncf"
+              >
+                {t("projects.dataviz.title")}
+              </Link>
+
               <p>{t("projects.dataviz.description")}</p>
               <p className="text-sm opacity-70">JavaScript, HTML, CSS</p>
             </article>
-            <article>
-              <h3>
-                <Link
-                  target="_blank"
-                  href="https://github.com/lemathurin/pico8"
-                >
-                  {t("projects.pico8.title")}
-                </Link>
-              </h3>
+            <article className="flex flex-col gap-0.5">
+              <Link
+                className="pb-1"
+                target="_blank"
+                href="https://github.com/lemathurin/pico8"
+              >
+                {t("projects.pico8.title")}
+              </Link>
+
               <p>{t("projects.pico8.description")}</p>
               <p className="text-sm opacity-70">Lua</p>
             </article>
