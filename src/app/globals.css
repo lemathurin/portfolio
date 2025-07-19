@@ -45,7 +45,7 @@ a:hover {
   color: var(--foreground);
 }
 
-a[target="_blank"]:not(:has(img))::after {
+/* a[target="_blank"]:not(:has(img))::after {
   content: " ↗";
   font-family: system-ui, Arial, sans-serif;
   text-decoration: none;
@@ -57,4 +57,4 @@ h2 {
 
 h3 {
   font-size: var(--text-lg);
-}
+} */
