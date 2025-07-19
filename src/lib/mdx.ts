@@ -13,7 +13,7 @@ export async function getContentTypes(): Promise<string[]> {
     return entries
       .filter((entry) => entry.isDirectory())
       .map((entry) => entry.name);
-  } catch (err) {
+  } catch {
     return [];
   }
 }
@@ -41,7 +41,7 @@ export async function getMDXContent({ locale, slug, contentType }: MDXParams) {
   let mdxSource: string;
   try {
     mdxSource = await fs.readFile(filePath, "utf-8");
-  } catch (err) {
+  } catch {
     return notFound();
   }
 

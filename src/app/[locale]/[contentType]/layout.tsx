@@ -3,10 +3,10 @@ import { Link } from "@/i18n/navigation";
 
 export default function ContentLayout({
   children,
-  params,
+  //   params,
 }: {
   children: React.ReactNode;
-  params: { contentType: string };
+  //   params: { contentType: string };
 }) {
   return (
     <main className="flex justify-center p-5 md:p-0 md:py-9">
