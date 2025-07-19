@@ -8,15 +8,15 @@ export default function AccessibleCanvasPage() {
 
   return (
     <main className="flex justify-center p-5 md:p-0 md:py-9">
-      <article className="flex max-w-96 flex-col gap-9 text-justify">
+      <article className="flex max-w-lg flex-col gap-9 text-justify">
         <header className="flex w-full items-center justify-between gap-4">
-          <LanguageToggle />
           <Link
             href="/"
             className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
           >
             {t("canvas.homeLink")}
           </Link>
+          <LanguageToggle />
         </header>
 
         <section
@@ -60,7 +60,7 @@ export default function AccessibleCanvasPage() {
             <Image
               src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwX2zP6Isjab2JnoGdL156AWIvsmt0jQPpKyFz8"
               alt={t("canvas.skytreeAlt")}
-              width={500}
+              width={600}
               height={500}
             />
           </figure>
@@ -76,7 +76,7 @@ export default function AccessibleCanvasPage() {
             <Image
               src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXZOH8OaCSLlRducqbNZgY7F3QVhKp02nC4JrI"
               alt={t("canvas.sunsetAlt")}
-              width={500}
+              width={600}
               height={500}
             />
           </figure>
@@ -88,10 +88,9 @@ export default function AccessibleCanvasPage() {
             <Image
               src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXvqgwD1hpJmwX8nIfCriaYKcTs17Wdk5eDNt6"
               alt={t("canvas.portfolioV1Alt")}
-              width={500}
+              width={600}
               height={500}
             />
-            <figcaption>{t("canvas.oldPortfolio")}</figcaption>
           </figure>
         </section>
       </article>

@@ -18,7 +18,9 @@ export default function ProjectsLayout({
           </Link>
           <LanguageToggle />
         </header>
-        {children}
+        <article className="prose prose-stone dark:prose-invert">
+          {children}
+        </article>
       </div>
     </main>
   );
