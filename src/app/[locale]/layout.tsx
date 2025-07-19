@@ -6,6 +6,11 @@ import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export async function generateMetadata({
   params,
@@ -55,7 +60,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.className}>
       <body className="antialiased">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <Analytics />
