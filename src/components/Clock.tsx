@@ -7,23 +7,28 @@ export default function Clock() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    setMounted(true); // Mark as mounted
+    setMounted(true);
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
 
-  if (!mounted) return null; // Don't render on server
+  if (!mounted) return null;
 
   return (
-    <span className="font-mono text-sm" aria-label="Current time in Nantes">
+    <span
+      className="text-sm text-[var(--secondary)]"
+      aria-label="Current time in Nantes"
+    >
       Nantes -{" "}
-      {currentTime.toLocaleTimeString("fr-FR", {
-        timeZone: "Europe/Paris",
-        // hour: "2-digit",
-        // minute: "2-digit",
-      })}
+      <span className="font-mono">
+        {currentTime.toLocaleTimeString("fr-FR", {
+          timeZone: "Europe/Paris",
+          // hour: "2-digit",
+          // minute: "2-digit",
+        })}
+      </span>
     </span>
   );
 }

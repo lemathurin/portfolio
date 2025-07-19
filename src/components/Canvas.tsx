@@ -169,8 +169,8 @@ export default function Canvas({
             x,
             y,
             backgroundImage: `
-            linear-gradient(to right, var(--secondary) 1px, transparent 1px),
-            linear-gradient(to bottom, var(--secondary) 1px, transparent 1px)
+            linear-gradient(to right, var(--bg-secondary) 1px, transparent 1px),
+            linear-gradient(to bottom, var(--bg-secondary) 1px, transparent 1px)
           `,
             backgroundSize: "25px 25px",
             zIndex: -1,
