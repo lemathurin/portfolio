@@ -21,12 +21,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/projects/portfolio",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/projects/ecommerce",
-        destination: "/",
+        destination: "/projects/portfolio-v1",
         permanent: true,
       },
       {
