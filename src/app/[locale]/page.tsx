@@ -125,11 +125,7 @@ export default function Home() {
           <h2 id="past-projects-heading">{t("projects.title")}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <article className="flex flex-col gap-0.5">
-              <Link
-                className="pb-1"
-                target="_blank"
-                href="https://github.com/lemathurin/portfolio/tree/v1"
-              >
+              <Link className="pb-1" href="/projects/portfolio-v1">
                 {t("projects.oldPortfolio.title")}
               </Link>
 
@@ -139,11 +135,7 @@ export default function Home() {
               </p>
             </article>
             <article className="flex flex-col gap-0.5">
-              <Link
-                className="pb-1"
-                target="_blank"
-                href="https://github.com/lemathurin/e-commerce-website"
-              >
+              <Link className="pb-1" href="/projects/ecommerce">
                 {t("projects.ecommerce.title")}
               </Link>
 
@@ -153,11 +145,7 @@ export default function Home() {
               </p>
             </article>
             <article className="flex flex-col gap-0.5">
-              <Link
-                className="pb-1"
-                target="_blank"
-                href="https://github.com/lemathurin/dataviz-sncf"
-              >
+              <Link className="pb-1" href="/projects/dataviz">
                 {t("projects.dataviz.title")}
               </Link>
 
@@ -165,11 +153,7 @@ export default function Home() {
               <p className="text-sm opacity-70">JavaScript, HTML, CSS</p>
             </article>
             <article className="flex flex-col gap-0.5">
-              <Link
-                className="pb-1"
-                target="_blank"
-                href="https://github.com/lemathurin/pico8"
-              >
+              <Link className="pb-1" href="/projects/pico8">
                 {t("projects.pico8.title")}
               </Link>
 
