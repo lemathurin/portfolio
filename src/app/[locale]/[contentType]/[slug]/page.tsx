@@ -1,4 +1,4 @@
-import { getMDXContent, getContentTypes } from "@/lib/mdx";
+import { getMDXContent, getContentTypes } from "@/lib/mdxLoader";
 import fs from "node:fs/promises";
 import path from "node:path";
 

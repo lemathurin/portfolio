@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
+import { mdxComponents } from "./mdxComponents";
 
 export type ContentType = "projects" | "canvas" | "articles";
 
@@ -25,6 +26,7 @@ export interface MDXParams {
 
 export async function getMDXContent({ locale, slug, contentType }: MDXParams) {
   const availableTypes = await getContentTypes();
+
   if (!availableTypes.includes(contentType)) {
     return notFound();
   }
@@ -46,7 +48,10 @@ export async function getMDXContent({ locale, slug, contentType }: MDXParams) {
 
   const { content, frontmatter } = await compileMDX({
     source: mdxSource,
-    options: { parseFrontmatter: true },
+    options: {
+      parseFrontmatter: true,
+    },
+    components: mdxComponents,
   });
 
   return { content, frontmatter };
