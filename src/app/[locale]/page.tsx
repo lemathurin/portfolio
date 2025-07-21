@@ -17,6 +17,7 @@ export default function Home() {
 
         <figure className="relative flex h-36 w-full items-end justify-center overflow-hidden bg-[var(--yellow)]">
           <Image
+            priority
             src="/me-100.svg"
             alt="Mathurin Sekine's avatar"
             role="img"
