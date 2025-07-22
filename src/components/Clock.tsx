@@ -17,10 +17,7 @@ export default function Clock() {
   if (!mounted) return null;
 
   return (
-    <span
-      className="text-sm text-[var(--secondary)]"
-      aria-label="Current time in Nantes"
-    >
+    <span className="text-sm" aria-label="Current time in Nantes">
       Nantes -{" "}
       <span className="font-mono">
         {currentTime.toLocaleTimeString("fr-FR", {
