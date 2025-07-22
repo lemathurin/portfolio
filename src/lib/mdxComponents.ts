@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 export const CustomLink = (
   props: React.AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -23,7 +24,16 @@ export const CustomLink = (
   return React.createElement(Link, { href: href || "", ...rest }, children);
 };
 
-const CustomImage = (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
+const CustomImage = (props: {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+}) => {
+  const width = props.width || 512;
+  const height = props.height || 302;
+
   return React.createElement(
     "a",
     {
@@ -31,7 +41,13 @@ const CustomImage = (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
       target: "_blank",
       rel: "noopener noreferrer",
     },
-    React.createElement("img", props),
+    React.createElement(Image, {
+      src: props.src,
+      alt: props.alt,
+      width,
+      height,
+      loading: "eager",
+    }),
   );
 };
 
