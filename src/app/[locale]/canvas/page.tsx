@@ -18,7 +18,7 @@ export default function CanvasPage() {
           href="/canvas/accessible"
           className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
         >
-          {t("canvas.accessibleVersion")}
+          {t("canvasPage.accessibleVersion")}
         </Link>
       </header>
       <Canvas role="main">
@@ -33,7 +33,7 @@ export default function CanvasPage() {
             whiteSpace: "nowrap",
           }}
         >
-          {t("canvas.scrollHint")}
+          {t("canvasPage.scrollHint")}
         </h1>
         <section
           className="relative"
@@ -90,7 +90,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            {t("canvas.profileYears")}
+            {t("canvasPage.profileYears")}
           </p>
         </section>
         <section
@@ -103,7 +103,7 @@ export default function CanvasPage() {
         >
           <Image
             src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwX2zP6Isjab2JnoGdL156AWIvsmt0jQPpKyFz8"
-            alt={t("canvas.skytreeAlt")}
+            alt={t("canvasPage.skytreeAlt")}
             width={500}
             height={500}
             className="shadow-lg"
@@ -116,7 +116,7 @@ export default function CanvasPage() {
           />
           <Image
             src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXHSk6BSAi8sevGcB4FyxCY9AX7lOpHVJzWb6f"
-            alt={t("canvas.boatAlt")}
+            alt={t("canvasPage.boatAlt")}
             width={800}
             height={800}
             className="shadow-lg"
@@ -130,7 +130,7 @@ export default function CanvasPage() {
 
           <Image
             src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXZOH8OaCSLlRducqbNZgY7F3QVhKp02nC4JrI"
-            alt={t("canvas.sunsetAlt")}
+            alt={t("canvasPage.sunsetAlt")}
             width={500}
             height={500}
             className="shadow-lg"
@@ -149,7 +149,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            {t("canvas.nicePictures")}
+            {t("canvasPage.nicePictures")}
           </p>
         </section>
         <section
@@ -161,7 +161,7 @@ export default function CanvasPage() {
         >
           <Image
             src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXXGT3V6tgs8zZdmwB31rtVQfjMYHnJCTbkAFD"
-            alt={t("canvas.portfolioV1Alt")}
+            alt={t("canvasPage.portfolioV1Alt")}
             width={500}
             height={500}
             className="shadow-lg"
@@ -181,7 +181,7 @@ export default function CanvasPage() {
               transform: "rotate(1deg)",
             }}
           >
-            {t("canvas.oldPortfolio")}
+            {t("canvasPage.oldPortfolio")}
           </p>
         </section>
       </Canvas>
@@ -191,7 +191,7 @@ export default function CanvasPage() {
           className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
         >
           <span style={{ fontFamily: "system-ui, Arial, sans-serif" }}>←</span>{" "}
-          {t("canvas.homeLink")}
+          {t("canvasPage.homeLink")}
         </Link>
         <Clock />
       </footer>

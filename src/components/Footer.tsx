@@ -1,19 +1,22 @@
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations();
+
   return (
     <footer className="flex flex-col gap-9 text-sm">
       <hr />
       <div className="grid grid-cols-3">
         <ul className="col-span-1 grid gap-2">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">{t("home")}</Link>
           </li>
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">{t("projects")}</Link>
           </li>
           <li>
-            <Link href="/canvas">Canvas</Link>
+            <Link href="/canvas">{t("canvas")}</Link>
           </li>
         </ul>
 
@@ -46,7 +49,7 @@ export default function Footer() {
               target="_blank"
               href="https://drive.google.com/file/d/1UCXUY5eaDHlGNqP18yvHJ3Bli5_bo5YA/view?usp=sharing"
             >
-              Resume
+              {t("resume")}
             </Link>
           </li>
           <li>
