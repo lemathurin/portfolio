@@ -1,5 +1,9 @@
 {
   "languageToggle": "en français",
+  "home": "Home",
+  "projects": "Projects",
+  "canvas": "Canvas",
+  "resume": "Resume",
   "Metadata": {
     "title": "Mathurin Sekine",
     "description": "Fullstack developer, specializing in React, Next.js, and modern web technologies."
@@ -16,8 +20,13 @@
     "signature": "Mathurin Sekine",
     "more": "If you want to see a little more about me, <canvas>visit this page</canvas>."
   },
-  "projects": {
-    "title": "Past projects",
+  "homeProjects": {
+    "recentProjectTitle": "Recent project",
+    "pastProjectsTitle": "Past projects",
+    "homeInventoryApp": {
+      "title": "Home Inventory App",
+      "description": "A full-stack web app with a modular, domain-driven architecture and RBAC-based access controls."
+    },
     "oldPortfolio": {
       "title": "Old portfolio",
       "description": "V1 of this portfolio. It'll be available to view again soon."
@@ -35,7 +44,7 @@
       "description": "My first coding project."
     }
   },
-  "canvas": {
+  "canvasPage": {
     "accessibleVersion": "accessible version",
     "scrollHint": "scroll around the page :)",
     "profileYears": "my profile throughout the years. (2016, 2022, 2025)",
