@@ -3,24 +3,20 @@
 import Image from "next/image";
 import Canvas from "@/components/Canvas";
 import { Link } from "@/i18n/navigation";
-import LanguageToggle from "@/components/LanguageToggle";
 import Clock from "@/components/Clock";
 import { useTranslations } from "next-intl";
+import Header from "@/components/Header";
 
 export default function CanvasPage() {
   const t = useTranslations();
 
   return (
     <>
-      <header className="bg-primary fixed top-0 right-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">
-        <LanguageToggle />
-        <Link
-          href="/canvas/accessible"
-          className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
-        >
-          {t("canvasPage.accessibleVersion")}
-        </Link>
-      </header>
+      <div className="fixed top-0 right-0 left-0 z-40 border-b-[1px] border-[var(--quaternary)] bg-[var(--bg-primary)] p-2.5 sm:p-5">
+        <div className="mx-auto flex w-full max-w-lg">
+          <Header />
+        </div>
+      </div>
       <Canvas role="main">
         <h1
           style={{
@@ -185,15 +181,16 @@ export default function CanvasPage() {
           </p>
         </section>
       </Canvas>
-      <footer className="bg-primary fixed right-0 bottom-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">
-        <Link
-          href="/"
-          className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
-        >
-          <span style={{ fontFamily: "system-ui, Arial, sans-serif" }}>←</span>{" "}
-          {t("canvasPage.homeLink")}
-        </Link>
-        <Clock />
+      <footer className="fixed right-0 bottom-0 left-0 z-40 border-t-[1px] border-[var(--quaternary)] bg-[var(--bg-primary)] p-2.5 sm:p-5">
+        <div className="mx-auto flex w-full max-w-lg flex-row items-center justify-between">
+          <Clock />
+          <Link
+            href="/canvas/accessible"
+            className="cursor-pointer text-sm text-[var(--primary)]"
+          >
+            {t("canvasPage.accessibleVersion")}
+          </Link>
+        </div>
       </footer>
     </>
   );
