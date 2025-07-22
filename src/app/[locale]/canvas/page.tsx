@@ -160,10 +160,11 @@ export default function CanvasPage() {
           }}
         >
           <Image
-            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXvqgwD1hpJmwX8nIfCriaYKcTs17Wdk5eDNt6"
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXXGT3V6tgs8zZdmwB31rtVQfjMYHnJCTbkAFD"
             alt={t("canvas.portfolioV1Alt")}
             width={500}
             height={500}
+            className="shadow-lg"
             style={{
               position: "absolute",
               left: 0,
