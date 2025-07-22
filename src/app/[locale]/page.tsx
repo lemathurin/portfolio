@@ -128,7 +128,7 @@ export default function Home() {
         <h2 className="font-serif text-3xl" id="past-projects-heading">
           {t("homeProjects.pastProjectsTitle")}
         </h2>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 mask-b-from-0 sm:grid-cols-2 sm:mask-b-from-15%">
           <article className="flex flex-col gap-0.5">
             <Link className="pb-1" href="/projects/portfolio-v1">
               {t("homeProjects.oldPortfolio.title")}
@@ -147,7 +147,7 @@ export default function Home() {
               React, Tailwind CSS, Express.js
             </p>
           </article>
-          {/* <article className="flex flex-col gap-0.5">
+          <article className="flex flex-col gap-0.5">
             <Link className="pb-1" href="/projects/dataviz">
               {t("homeProjects.dataviz.title")}
             </Link>
@@ -156,14 +156,17 @@ export default function Home() {
               JavaScript, HTML, CSS
             </p>
           </article>
-          <article className="flex flex-col gap-0.5">
+          <article className="hidden flex-col gap-0.5 sm:flex">
             <Link className="pb-1" href="/projects/pico8">
               {t("homeProjects.pico8.title")}
             </Link>
             <p>{t("homeProjects.pico8.description")}</p>
             <p className="text-sm text-[var(--secondary)]">Lua</p>
-          </article> */}
+          </article>
         </div>
+        <Link className="text-sm" href="/projects">
+          More projects
+        </Link>
       </section>
       <Footer />
     </main>
