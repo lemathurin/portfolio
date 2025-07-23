@@ -64,6 +64,13 @@ export async function generateMetadata({
       openGraph: {
         title: frontmatter.title,
         description: frontmatter.description,
+        images: [
+          {
+            url: "/og-image.webp",
+            width: 1200,
+            height: 630,
+          },
+        ],
         type: "article",
         publishedTime: frontmatter.date,
       },
