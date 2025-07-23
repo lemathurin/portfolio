@@ -1,84 +1,14 @@
-/* @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400); */
 @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400|instrument-serif:400|instrument-serif:400i);
 @import "tailwindcss";
 
-/* :root {
-  --bg-primary: #fafaf9;
-  --bg-secondary: #e7e5e4;
-
-  --primary: #0c0a09;
-  --secondary: #535251;
-  --tertiary: #bab7b5;
-
-  --yellow: #ffcd34;
-
-  --font-sans: "Inter", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #0c0a09;
-    --bg-secondary: #44403c;
-
-    --primary: #fafaf9;
-    --secondary: #b3b2b1;
-    --tertiary: #78716c;
-
-    --yellow: #d8ab23;
-  }
-} */
-
-/* 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-} */
-
+/* Fonts */
 :root {
-  /* --bg-primary: var(--color-mathurin-50);
-  --bg-secondary: var(--color-mathurin-100);
-
-  --primary: var(--color-mathurin-900);
-  --secondary: var(--color-mathurin-700);
-  --tertiary: var(--color-mathurin-500);
-
-  --yellow: #ffcd34; */
-
   --font-sans: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
   --font-serif: "Instrument Serif", serif;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: var(--color-mathurin-950);
-    --bg-secondary: var(--color-mathurin-900);
-
-    --primary: var(--color-mathurin-50);
-    --secondary: var(--color-mathurin-300);
-    --tertiary: var(--color-mathurin-500);
-
-    --yellow: #d8ab23;
-  }
-} */
-
-@theme {
-  --color-mathurin-50: oklch(99.13% 0.001 287.33);
-  --color-mathurin-100: oklch(94.72% 0.007 247.87);
-  --color-mathurin-200: oklch(87.83% 0.017 250.85);
-  --color-mathurin-300: oklch(80.06% 0.029 248.18);
-  --color-mathurin-400: oklch(73.14% 0.036 245.61);
-  --color-mathurin-500: oklch(65.41% 0.033 245.33);
-  --color-mathurin-600: oklch(57.59% 0.029 248.33);
-  --color-mathurin-700: oklch(50.72% 0.025 246.15);
-  --color-mathurin-800: oklch(43.27% 0.022 245.75);
-  --color-mathurin-900: oklch(28.48% 0.015 244.17);
-  --color-mathurin-950: oklch(21.44% 0.011 242.25);
-}
-
+/* Colors */
 :root {
   --foreground: 37, 43, 49;
   --background: 252, 252, 253;
@@ -112,6 +42,7 @@
   }
 }
 
+/* Global */
 body {
   background: var(--bg-primary);
   color: var(--primary);
@@ -172,6 +103,8 @@ hr {
   border: none;
   border-top: 1px solid var(--quaternary);
 }
+
+/* Prose */
 .prose h1 {
   font-size: 2.5rem;
   font-family: var(--font-serif);
