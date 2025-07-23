@@ -5,20 +5,13 @@ import { notFound } from "next/navigation";
 import { getContentTypes } from "@/lib/mdxLoader";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { getTranslations } from "next-intl/server";
+import { FrontmatterModel } from "@/types/content";
 
 interface PageProps {
   params: Promise<{
     locale: string;
     contentType: string;
   }>;
-}
-
-interface Frontmatter {
-  title: string;
-  slug: string;
-  date: string;
-  description?: string;
-  stack?: string[];
 }
 
 export default async function ContentTypePage({ params }: PageProps) {
@@ -47,7 +40,7 @@ export default async function ContentTypePage({ params }: PageProps) {
         const source = await fs.readFile(fullPath, "utf-8");
 
         try {
-          const { frontmatter } = await compileMDX<Frontmatter>({
+          const { frontmatter } = await compileMDX<FrontmatterModel>({
             source,
             options: { parseFrontmatter: true },
           });
