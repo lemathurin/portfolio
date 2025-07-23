@@ -3,6 +3,8 @@ import path from "node:path";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import { mdxComponents } from "./mdxComponents";
+import { FrontmatterModel } from "@/types/content";
+import { ReactNode } from "react";
 
 export type ContentType = "projects" | "canvas" | "articles";
 
@@ -24,11 +26,18 @@ export interface MDXParams {
   slug: string;
 }
 
-export async function getMDXContent({ locale, slug, contentType }: MDXParams) {
+export async function getMDXContent({
+  locale,
+  slug,
+  contentType,
+}: MDXParams): Promise<{
+  content: ReactNode;
+  frontmatter: FrontmatterModel;
+}> {
   const availableTypes = await getContentTypes();
 
   if (!availableTypes.includes(contentType)) {
-    return notFound();
+    notFound();
   }
 
   const filePath = path.join(
@@ -43,10 +52,10 @@ export async function getMDXContent({ locale, slug, contentType }: MDXParams) {
   try {
     mdxSource = await fs.readFile(filePath, "utf-8");
   } catch {
-    return notFound();
+    notFound();
   }
 
-  const { content, frontmatter } = await compileMDX({
+  const { content, frontmatter } = await compileMDX<FrontmatterModel>({
     source: mdxSource,
     options: {
       parseFrontmatter: true,
