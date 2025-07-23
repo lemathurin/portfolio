@@ -1,4 +1,5 @@
 import { getMDXContent, getContentTypes } from "@/lib/mdxLoader";
+import { Metadata } from "next";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -43,6 +44,36 @@ interface PageProps {
     contentType: string;
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale, contentType, slug } = await params;
+
+  try {
+    const { frontmatter } = await getMDXContent({
+      locale,
+      contentType,
+      slug,
+    });
+
+    return {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      openGraph: {
+        title: frontmatter.title,
+        description: frontmatter.description,
+        type: "article",
+        publishedTime: frontmatter.date,
+      },
+    };
+  } catch {
+    return {
+      title: "Content Not Found",
+      description: "The requested content could not be found.",
+    };
+  }
 }
 
 export default async function ContentPage({ params }: PageProps) {
