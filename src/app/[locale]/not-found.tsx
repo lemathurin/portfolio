@@ -6,7 +6,7 @@ export default function NotFound() {
   const t = useTranslations();
 
   return (
-    <main className="flex w-full max-w-lg flex-col justify-center gap-9 p-5 md:p-0 md:py-9">
+    <main className="mx-auto flex w-full max-w-lg flex-col justify-center gap-9 p-5 md:p-0 md:py-5">
       <Header />
       <article className="prose">
         <h1>{t("404.error")}</h1>

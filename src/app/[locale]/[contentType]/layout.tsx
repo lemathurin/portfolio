@@ -7,7 +7,7 @@ export default function ContentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="mx-auto flex w-full max-w-lg flex-col gap-9 p-5 md:p-0 md:py-9">
+    <main className="mx-auto flex w-full max-w-lg flex-col gap-9 p-5 md:p-0 md:py-5">
       <Header />
       <article className="prose w-full">{children}</article>
       <Footer />
