@@ -59,10 +59,10 @@ export async function generateMetadata({
     });
 
     return {
-      title: frontmatter.title,
+      title: frontmatter.title + " | Mathurin Sekine",
       description: frontmatter.description,
       openGraph: {
-        title: frontmatter.title,
+        title: frontmatter.title + " | Mathurin Sekine",
         description: frontmatter.description,
         images: [
           {
