@@ -9,7 +9,7 @@ export default function ContentLayout({
   return (
     <main className="mx-auto flex w-full max-w-lg flex-col gap-9 p-5 md:p-0 md:py-5">
       <Header />
-      <article className="prose w-full">{children}</article>
+      {children}
       <Footer />
     </main>
   );

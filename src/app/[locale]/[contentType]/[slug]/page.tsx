@@ -54,5 +54,5 @@ export default async function ContentPage({ params }: PageProps) {
     slug,
   });
 
-  return content;
+  return <article className="prose w-full">{content}</article>;
 }
