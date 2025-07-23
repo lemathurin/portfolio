@@ -110,7 +110,9 @@ export default function Home() {
             <Link className="pb-1 font-medium" href="/projects/home-inventory">
               {t("homeProjects.homeInventoryApp.title")}
             </Link>
-            <p>{t("homeProjects.homeInventoryApp.description")}</p>
+            <p className="text-sm">
+              {t("homeProjects.homeInventoryApp.description")}
+            </p>
             <p className="text-sm text-[var(--secondary)]">
               Next.js, Tailwind CSS, shadcn/ui, Axios, Express.js, Prisma ORM,
               PostgreSQL, Docker, Coolify, Figma
@@ -133,7 +135,9 @@ export default function Home() {
             <Link className="pb-1" href="/projects/portfolio-v1">
               {t("homeProjects.oldPortfolio.title")}
             </Link>
-            <p>{t("homeProjects.oldPortfolio.description")}</p>
+            <p className="text-sm">
+              {t("homeProjects.oldPortfolio.description")}
+            </p>
             <p className="text-sm text-[var(--secondary)]">
               Next.js, Tailwind CSS, Motion
             </p>
@@ -142,7 +146,7 @@ export default function Home() {
             <Link className="pb-1" href="/projects/ecommerce">
               {t("homeProjects.ecommerce.title")}
             </Link>
-            <p>{t("homeProjects.ecommerce.description")}</p>
+            <p className="text-sm">{t("homeProjects.ecommerce.description")}</p>
             <p className="text-sm text-[var(--secondary)]">
               React, Tailwind CSS, Express.js
             </p>
@@ -151,7 +155,7 @@ export default function Home() {
             <Link className="pb-1" href="/projects/dataviz">
               {t("homeProjects.dataviz.title")}
             </Link>
-            <p>{t("homeProjects.dataviz.description")}</p>
+            <p className="text-sm">{t("homeProjects.dataviz.description")}</p>
             <p className="text-sm text-[var(--secondary)]">
               JavaScript, HTML, CSS
             </p>
@@ -160,7 +164,7 @@ export default function Home() {
             <Link className="pb-1" href="/projects/pico8">
               {t("homeProjects.pico8.title")}
             </Link>
-            <p>{t("homeProjects.pico8.description")}</p>
+            <p className="text-sm">{t("homeProjects.pico8.description")}</p>
             <p className="text-sm text-[var(--secondary)]">Lua</p>
           </article>
         </div>
