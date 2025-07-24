@@ -131,6 +131,14 @@ hr {
   margin-bottom: 0.5em;
 }
 
+.prose h3 {
+  font-size: 1.75rem;
+  font-family: var(--font-serif);
+  line-height: 1;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
 .prose ul {
   list-style-type: none;
   margin-bottom: 1em;
@@ -163,4 +171,19 @@ hr {
 .prose figcaption {
   font-size: 0.95rem;
   margin-bottom: 2em;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--quaternary);
+  padding: 0.2rem 1.4rem;
+  margin-bottom: 1em;
+  color: var(--secondary);
+}
+
+.prose blockquote *:first-child {
+  margin-top: 0;
+}
+
+.prose blockquote *:last-child {
+  margin-bottom: 0;
 }
