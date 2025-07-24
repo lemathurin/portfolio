@@ -31,14 +31,25 @@
   :root {
     --foreground: 242, 244, 245;
     --background: 27, 27, 27;
-    /* --background: 35, 38, 41; */
-
     --yellow: #d8ab23;
+
     --primary: rgba(var(--foreground), 95%);
     --secondary: rgba(var(--foreground), 75%);
     --tertiary: rgba(var(--foreground), 50%);
     --quaternary: rgba(var(--foreground), 15%);
     --quinary: rgba(var(--foreground), 3%);
+  }
+}
+
+::selection {
+  background-color: var(--yellow);
+  color: var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: var(--yellow);
+    color: var(--bg-primary);
   }
 }
 
