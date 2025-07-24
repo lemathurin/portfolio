@@ -18,7 +18,7 @@
   --secondary: rgba(var(--foreground), 75%);
   --tertiary: rgba(var(--foreground), 50%);
   --quaternary: rgba(var(--foreground), 15%);
-  --quinary: rgba(var(--foreground), 4%);
+  --quinary: rgba(var(--foreground), 8%);
 
   --bg-primary: rgba(var(--background), 100%);
   --bg-secondary: rgba(var(--background), 60%);
@@ -37,7 +37,7 @@
     --secondary: rgba(var(--foreground), 75%);
     --tertiary: rgba(var(--foreground), 50%);
     --quaternary: rgba(var(--foreground), 15%);
-    --quinary: rgba(var(--foreground), 3%);
+    --quinary: rgba(var(--foreground), 10%);
   }
 }
 
@@ -144,6 +144,11 @@ hr {
   margin-bottom: 1em;
 }
 
+.prose ul > li {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
 .prose ul > li::before {
   content: "—";
   margin-right: 0.5em;
@@ -171,10 +176,11 @@ hr {
 .prose figcaption {
   font-size: 0.95rem;
   margin-bottom: 2em;
+  text-align: center;
 }
 
 .prose blockquote {
-  border-left: 2px solid var(--quaternary);
+  border-left: 2px solid var(--tertiary);
   padding: 0.2rem 1.4rem;
   margin-bottom: 1em;
   color: var(--secondary);
@@ -186,4 +192,11 @@ hr {
 
 .prose blockquote *:last-child {
   margin-bottom: 0;
+}
+
+.prose code {
+  background-color: var(--quinary);
+  font-family: var(--font-mono);
+  padding: 0.05rem 0.25rem;
+  border-radius: 0.25rem;
 }
