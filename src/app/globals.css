@@ -197,6 +197,10 @@ hr {
 .prose code {
   background-color: var(--quinary);
   font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--secondary);
   padding: 0.05rem 0.25rem;
   border-radius: 0.25rem;
+  border-width: 1px;
+  border-color: var(--quaternary);
 }
