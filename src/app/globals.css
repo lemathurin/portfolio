@@ -156,6 +156,10 @@ hr {
   color: var(--tertiary);
 }
 
+.prose ul ul {
+  margin-bottom: 0;
+}
+
 .prose p {
   margin-bottom: 1em;
 }
@@ -183,7 +187,6 @@ hr {
   border-left: 2px solid var(--tertiary);
   padding: 0.2rem 1.4rem;
   margin-bottom: 1em;
-  color: var(--secondary);
 }
 
 .prose blockquote *:first-child {
@@ -198,9 +201,25 @@ hr {
   background-color: var(--quinary);
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--secondary);
   padding: 0.05rem 0.25rem;
   border-radius: 0.25rem;
   border-width: 1px;
   border-color: var(--quaternary);
+}
+
+.tldr {
+  background-color: var(--quinary);
+  border-color: var(--quaternary);
+  border-width: 1px;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  margin: 2em 0;
+}
+
+.tldr *:first-child {
+  margin-top: 0;
+}
+
+.tldr *:last-child {
+  margin-bottom: 0;
 }
