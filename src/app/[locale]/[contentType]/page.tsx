@@ -67,27 +67,49 @@ export default async function ContentTypePage({ params }: PageProps) {
       stack?: string[];
     }[]
   ).sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime(); // descending
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 
   if (validEntries.length === 0) {
     return notFound();
   }
 
+  const entriesByYear: Record<string, typeof validEntries> = {};
+  validEntries.forEach((entry) => {
+    const year = new Date(entry.date).getFullYear().toString();
+    if (!entriesByYear[year]) {
+      entriesByYear[year] = [];
+    }
+    entriesByYear[year].push(entry);
+  });
+
+  const sortedYears = Object.keys(entriesByYear).sort(
+    (a, b) => parseInt(b) - parseInt(a),
+  );
+
   return (
     <main>
       <h1 className="mb-[0.5em] font-serif text-[2.5rem]">{t("projects")}</h1>
-      <section className="flex flex-col gap-5">
-        {validEntries.map(({ title, slug, description, stack = [] }) => (
-          <article key={slug}>
-            <h2>
-              <Link href={`/${locale}/${contentType}/${slug}`}>{title}</Link>
-            </h2>
-            <p className="mt-1 text-sm">{description}</p>
-            <p className="text-sm text-[var(--secondary)]">
-              {stack.join(", ")}
-            </p>
-          </article>
+      <section className="flex flex-col">
+        {sortedYears.map((year) => (
+          <div className="flex flex-col" key={year}>
+            <h2 className="font-serif text-[2rem]">{year}</h2>
+            {entriesByYear[year].map(
+              ({ title, slug, description, stack = [] }) => (
+                <article key={slug}>
+                  <h2>
+                    <Link href={`/${locale}/${contentType}/${slug}`}>
+                      {title}
+                    </Link>
+                  </h2>
+                  <p className="mt-1 text-sm">{description}</p>
+                  <p className="mb-5 text-sm text-[var(--secondary)]">
+                    {stack.join(", ")}
+                  </p>
+                </article>
+              ),
+            )}
+          </div>
         ))}
       </section>
     </main>
