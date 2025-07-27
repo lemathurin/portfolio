@@ -51,7 +51,19 @@ const CustomImage = (props: {
   );
 };
 
+const TLDR = ({ children }: { children: React.ReactNode }) => {
+  return React.createElement(
+    "aside",
+    {
+      "aria-labelledby": "tldr-heading",
+      className: "tldr",
+    },
+    [children],
+  );
+};
+
 export const mdxComponents = {
   a: CustomLink,
   Image: CustomImage,
+  TLDR,
 };
