@@ -166,19 +166,19 @@ export default function CanvasPage() {
               left: 0,
               top: 0,
               transform: "rotate(-2deg)",
-              pointerEvents: "none",
             }}
           />
-          <p
+          <Link
+            href="/projects/portfolio-v1"
             style={{
               position: "absolute",
               left: 200,
-              top: 350,
+              top: 330,
               transform: "rotate(1deg)",
             }}
           >
             {t("canvasPage.oldPortfolio")}
-          </p>
+          </Link>
         </section>
       </Canvas>
       <footer className="fixed right-0 bottom-0 left-0 z-40 border-t-[1px] border-[var(--quaternary)] bg-[var(--bg-primary)] p-2.5 sm:p-5">
