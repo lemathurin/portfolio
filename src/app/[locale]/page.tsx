@@ -4,6 +4,7 @@ import Clock from "@/components/Clock";
 import LanguageToggle from "@/components/LanguageToggle";
 import { Link } from "@/i18n/navigation";
 import Footer from "@/components/Footer";
+import MDXContent from "@/components/MDXContent";
 
 export default function Home() {
   const t = useTranslations();
@@ -27,73 +28,8 @@ export default function Home() {
         />
       </figure>
 
-      <section aria-label={t("intro.title")}>
-        <h1 className="font-serif text-4xl">{t("intro.wave")}</h1>
-        <br />
-        <p>{t("intro.greeting")}</p>
-        <br />
-        <p>
-          {t.rich("intro.experience", {
-            juisci: (chunks) => (
-              <Link target="_blank" href="https://juisci.com">
-                {chunks}
-              </Link>
-            ),
-            ada: (chunks) => (
-              <Link target="_blank" href="https://adatechschool.fr/">
-                {chunks}
-              </Link>
-            ),
-          })}
-        </p>
-        <br />
-        <p>{t("intro.skills")}</p>
-        <br />
-        <p>
-          {t.rich("intro.contact", {
-            linkedin: (chunks) => (
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/in/mathurinsekine/"
-              >
-                {chunks}
-              </Link>
-            ),
-            twitter: (chunks) => (
-              <Link target="_blank" href="https://x.com/mathurin_sekine">
-                {chunks}
-              </Link>
-            ),
-            mailto: (chunks) => (
-              <Link target="_blank" href="mailto:mathurinsekine@gmail.com">
-                {chunks}
-              </Link>
-            ),
-            cv: (chunks) => (
-              <Link
-                target="_blank"
-                href="https://drive.google.com/file/d/1UCXUY5eaDHlGNqP18yvHJ3Bli5_bo5YA/view?usp=sharing"
-              >
-                {chunks}
-              </Link>
-            ),
-            github: (chunks) => (
-              <Link target="_blank" href="https://github.com/lemathurin">
-                {chunks}
-              </Link>
-            ),
-          })}
-        </p>
-        <br />
-        <p>{t("intro.closing")}</p>
-        <p>{t("intro.signature")}</p>
-        <br />
-        <br />
-        <p>
-          {t.rich("intro.more", {
-            canvas: (chunks) => <Link href="/canvas">{chunks}</Link>,
-          })}
-        </p>
+      <section className="prose">
+        <MDXContent src="home.mdx" />
       </section>
 
       <hr />

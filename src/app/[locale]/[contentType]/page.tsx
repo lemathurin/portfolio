@@ -18,6 +18,10 @@ export default async function ContentTypePage({ params }: PageProps) {
   const { locale, contentType } = await params;
   const t = await getTranslations();
 
+  if (contentType === "other") {
+    return notFound();
+  }
+
   const availableTypes = await getContentTypes();
   if (!availableTypes.includes(contentType)) {
     return notFound();

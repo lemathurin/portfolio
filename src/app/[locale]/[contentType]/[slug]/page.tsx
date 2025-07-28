@@ -2,6 +2,7 @@ import { getMDXContent, getContentTypes } from "@/lib/mdxLoader";
 import { Metadata } from "next";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   const contentTypes = await getContentTypes();
@@ -9,6 +10,8 @@ export async function generateStaticParams() {
   const params = [];
 
   for (const contentType of contentTypes) {
+    if (contentType === "other") continue;
+
     for (const locale of locales) {
       try {
         const contentDir = path.join(
@@ -51,6 +54,13 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { locale, contentType, slug } = await params;
 
+  if (contentType === "other") {
+    return {
+      title: "Content Not Found",
+      description: "The requested content could not be found.",
+    };
+  }
+
   try {
     const { frontmatter } = await getMDXContent({
       locale,
@@ -85,6 +95,10 @@ export async function generateMetadata({
 
 export default async function ContentPage({ params }: PageProps) {
   const { locale, contentType, slug } = await params;
+
+  if (contentType === "other") {
+    notFound();
+  }
 
   const { content } = await getMDXContent({
     locale,
