@@ -21,9 +21,14 @@ export default function ProjectCard({
       </Link>
       {description && <p className="line-clamp-3 text-sm">{description}</p>}
       {stack.length > 0 && (
-        <p className="line-clamp-2 text-sm text-[var(--secondary)]">
-          {stack.join(", ")}
-        </p>
+        <div className="line-clamp-2 text-sm text-[var(--secondary)]">
+          {stack.map((item, index) => (
+            <span key={index}>
+              {index > 0 && <span className="mr-1.5">,</span>}
+              <span>{item}</span>
+            </span>
+          ))}
+        </div>
       )}
     </article>
   );
