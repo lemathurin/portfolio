@@ -44,7 +44,7 @@ export default async function Home() {
         aria-labelledby="past-projects-heading"
       >
         <h2 className="font-serif text-3xl" id="past-projects-heading">
-          {t("homeProjects.pastProjectsTitle")}
+          {t("projects")}
         </h2>
         <div className="mt-[1em] grid gap-4 mask-b-from-0 sm:grid-cols-2 sm:mask-b-from-15%">
           {pastProjects.slice(0).map((project) => (

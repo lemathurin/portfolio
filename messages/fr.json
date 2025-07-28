@@ -9,42 +9,6 @@
     "title": "Mathurin Sekine",
     "description": "Développeur fullstack spécialisé dans React, Next.js et les technologies web modernes."
   },
-  "intro": {
-    "title": "A propos de moi",
-    "wave": "Salut !",
-    "greeting": "Je suis Mathurin Sekine, un développeur fullstack actuellement ouvert à de nouvelles opportunités.",
-    "experience": "J’ai précédemment travaillé chez <juisci>Juisci</juisci> en tant que développeur frontend, où j’ai contribué au développement et à l’amélioration de leur application web. Je suis récemment diplômé de <ada>Ada Tech School</ada> avec un titre de Concepteur Développeur d’Applications (niveau bac +3).",
-    "project": "En attendant de trouver mon prochain poste, je travaille activement sur un projet personnel nommé [nom du projet].",
-    "skills": "Je maîtrise des technologies frontend comme React, Next.js et Tailwind CSS, ainsi que des frameworks backend tels qu’Express.js et Nest.js. Je suis également à l’aise avec des outils de design comme Figma, et je suis capable de m’impliquer dans toutes les étapes d’un projet — de la conception à l’architecture backend, en passant par le design d’interface.",
-    "contact": "Si vous pensez que je pourrais être un bon ajout à votre équipe, n’hésitez pas à me contacter via <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> ou par <mailto>email</mailto>. Vous pouvez également consulter mon <cv>CV</cv> et mon <github>GitHub</github> pour en savoir plus sur mon parcours et mes projets.",
-    "closing": "Bonne journée,",
-    "signature": "Mathurin Sekine",
-    "more": "Si vous voulez en voir un peu plus sur moi, <canvas>allez voir cette page</canvas>."
-  },
-  "homeProjects": {
-    "recentProjectTitle": "Projet récent",
-    "pastProjectsTitle": "Projets passés",
-    "homeInventoryApp": {
-      "title": "Home Inventory App",
-      "description": "Une application web complète avec une architecture modulaire, orientée domaine et des contrôles d'accès (RBAC)."
-    },
-    "oldPortfolio": {
-      "title": "Ancien portfolio",
-      "description": "Version 1 de ce portfolio. Il sera bientôt de nouveau disponible."
-    },
-    "ecommerce": {
-      "title": "Site e-commerce",
-      "description": "Projet scolaire. Mon premier gros projet en équipe."
-    },
-    "dataviz": {
-      "title": "Dataviz SNCF",
-      "description": "Projet scolaire. Ma première utilisation d'une API."
-    },
-    "pico8": {
-      "title": "Pico-8",
-      "description": "Mon tout premier projet de code."
-    }
-  },
   "canvasPage": {
     "accessibleVersion": "version accessible",
     "scrollHint": "faites défiler la page :)",
@@ -58,9 +22,5 @@
     "boatAlt": "Une photo d'un bateau au large d'une île avec des montagnes.",
     "sunsetAlt": "Une photo d'un homme marchant sur une plage avec le coucher de soleil derrière lui.",
     "portfolioV1Alt": "Une capture d'écran de mon premier portfolio."
-  },
-  "404": {
-    "error": "erreur 404",
-    "message": "Cette page n'existe pas. Il y avait peut-être quelque chose ici avant, mais ça a été supprimé ou déplacé. J'espère que vous trouverez ce que vous cherchez."
   }
 }
