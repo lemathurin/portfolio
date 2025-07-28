@@ -108,7 +108,7 @@ export default async function ContentTypePage({ params }: PageProps) {
                     {title}
                   </Link>
                 </h3>
-                <p className="mt-1">{description}</p>
+                <p className="mt-1 line-clamp-3">{description}</p>
                 <p className="mb-5 text-sm text-[var(--secondary)]">
                   {stack.join(", ")}
                 </p>
