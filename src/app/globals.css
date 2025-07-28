@@ -15,7 +15,7 @@
   --yellow: #ffcd34;
 
   --primary: rgba(var(--foreground), 100%);
-  --secondary: rgba(var(--foreground), 75%);
+  --secondary: rgba(var(--foreground), 79%);
   --tertiary: rgba(var(--foreground), 50%);
   --quaternary: rgba(var(--foreground), 15%);
   --quinary: rgba(var(--foreground), 8%);
