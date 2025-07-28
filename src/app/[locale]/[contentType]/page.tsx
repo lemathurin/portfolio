@@ -92,30 +92,33 @@ export default async function ContentTypePage({ params }: PageProps) {
   );
 
   return (
-    <main>
+    <>
       <h1 className="mb-[0.5em] font-serif text-[2.5rem]">{t("projects")}</h1>
       <section className="flex flex-col">
         {sortedYears.map((year) => (
-          <div className="flex flex-col" key={year}>
-            <h2 className="font-serif text-[2rem]">{year}</h2>
+          <section className="flex flex-col" key={year}>
+            <div className="mb-1 flex items-center gap-5">
+              <h2 className="font-mono text-[var(--secondary)]">{year}</h2>
+              <hr />
+            </div>
             {entriesByYear[year].map(
               ({ title, slug, description, stack = [] }) => (
                 <article key={slug}>
-                  <h2>
+                  <h3 className="font-serif text-[1.8rem]">
                     <Link href={`/${locale}/${contentType}/${slug}`}>
                       {title}
                     </Link>
-                  </h2>
-                  <p className="mt-1 text-sm">{description}</p>
+                  </h3>
+                  <p className="mt-1">{description}</p>
                   <p className="mb-5 text-sm text-[var(--secondary)]">
                     {stack.join(", ")}
                   </p>
                 </article>
               ),
             )}
-          </div>
+          </section>
         ))}
       </section>
-    </main>
+    </>
   );
 }
