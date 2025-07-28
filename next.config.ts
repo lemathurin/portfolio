@@ -2,6 +2,16 @@ import { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "5q44w9bzpv.ufs.sh",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
   async redirects() {
     return [
       {
@@ -11,12 +21,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/projects/portfolio",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/projects/ecommerce",
-        destination: "/",
+        destination: "/projects/portfolio-v1",
         permanent: true,
       },
       {

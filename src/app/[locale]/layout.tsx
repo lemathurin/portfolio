@@ -6,6 +6,11 @@ import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export async function generateMetadata({
   params,
@@ -24,7 +29,7 @@ export async function generateMetadata({
       description: t("description"),
       images: [
         {
-          url: "/og-image.png",
+          url: "/og-image.webp",
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -36,7 +41,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/og-image.png"],
+      images: ["/og-image.webp"],
     },
   };
 }
@@ -55,7 +60,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.className}>
       <body className="antialiased">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <Analytics />

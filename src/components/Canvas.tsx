@@ -168,11 +168,14 @@ export default function Canvas({
             height: DIV_HEIGHT,
             x,
             y,
-            backgroundImage: `
-            linear-gradient(to right, var(--secondary) 1px, transparent 1px),
-            linear-gradient(to bottom, var(--secondary) 1px, transparent 1px)
-          `,
+            background: `
+              linear-gradient(to right, var(--quaternary) 1px, transparent 1px),
+              linear-gradient(to bottom, var(--quaternary) 1px, transparent 1px),
+              var(--bg-primary)
+            `,
             backgroundSize: "25px 25px",
+            backgroundPosition: "0 0",
+            backgroundRepeat: "repeat",
             zIndex: -1,
           }}
         >

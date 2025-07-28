@@ -1,50 +1,225 @@
-@import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400|inter:400);
+@import url(https://fonts.bunny.net/css?family=ibm-plex-mono:400|instrument-serif:400|instrument-serif:400i);
 @import "tailwindcss";
 
+/* Fonts */
 :root {
-  --background: #fafaf9;
-  --secondary: #e7e5e4;
-  --foreground: #0c0a09;
   --font-sans: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
-  --yellow: #ffcd34;
+  --font-serif: "Instrument Serif", serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
+/* Colors */
+:root {
+  --foreground: 37, 43, 49;
+  --background: 252, 252, 253;
+  --yellow: #ffcd34;
+
+  --primary: rgba(var(--foreground), 100%);
+  --secondary: rgba(var(--foreground), 79%);
+  --tertiary: rgba(var(--foreground), 50%);
+  --quaternary: rgba(var(--foreground), 15%);
+  --quinary: rgba(var(--foreground), 8%);
+
+  --bg-primary: rgba(var(--background), 100%);
+  --bg-secondary: rgba(var(--background), 60%);
+  --bg-tertiary: rgba(var(--background), 45%);
+  --bg-quaternary: rgba(var(--background), 15%);
+  --bg-quinary: rgba(var(--background), 4%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0c0a09;
-    --secondary: #44403c;
-    --foreground: #fafaf9;
+    --foreground: 242, 244, 245;
+    --background: 27, 27, 27;
     --yellow: #d8ab23;
+
+    --primary: rgba(var(--foreground), 95%);
+    --secondary: rgba(var(--foreground), 75%);
+    --tertiary: rgba(var(--foreground), 50%);
+    --quaternary: rgba(var(--foreground), 15%);
+    --quinary: rgba(var(--foreground), 10%);
   }
 }
 
+::selection {
+  background-color: var(--yellow);
+  color: var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: var(--yellow);
+    color: var(--bg-primary);
+  }
+}
+
+/* Global */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-primary);
+  color: var(--primary);
   font-family: var(--font-sans);
 }
 
-/* Style all Next.js Link components */
 a {
-  @apply text-current underline decoration-auto opacity-70;
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--tertiary);
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
 }
 
 a:hover {
-  @apply no-underline opacity-100;
+  text-decoration-color: var(--primary);
+  color: var(--primary);
 }
 
-/* Figure out */
-a[target="_blank"]::after {
+.home-navigation::before {
+  content: "← ";
+  font-family: system-ui, Arial, sans-serif;
+  color: var(--tertiary);
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.home-navigation:hover::before {
+  color: var(--primary);
+}
+
+a[target="_blank"]:not(:has(img))::after {
   content: " ↗";
   font-family: system-ui, Arial, sans-serif;
-  /* @apply text-xs align-[0.3em]; */
-  /* @apply ml-1; */
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--tertiary);
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+a:hover[target="_blank"]:not(:has(img))::after {
+  color: var(--primary);
+}
+
+img,
+video {
+  border-color: var(--quaternary);
+  border-width: 1px;
+  border-radius: 0.5rem;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--quaternary);
+}
+
+/* Prose */
+.prose h1 {
+  font-size: 2.5rem;
+  font-family: var(--font-serif);
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+.prose h2 {
+  font-size: 2rem;
+  font-family: var(--font-serif);
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose h3 {
+  font-size: 1.75rem;
+  font-family: var(--font-serif);
+  line-height: 1;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose ul {
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+.prose ul > li {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.prose ul > li::before {
+  content: "—";
+  margin-right: 0.5em;
+  font-weight: 500;
+  color: var(--tertiary);
+}
+
+.prose ul ul {
+  margin-bottom: 0;
+}
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose img,
+.prose video {
+  width: 100%;
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.prose figure img,
+.prose figure video {
+  margin-bottom: 0.5em;
+}
+
+.prose figcaption {
+  font-size: 0.95rem;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--tertiary);
+  padding: 0.2rem 1.4rem;
+  margin-bottom: 1em;
+}
+
+.prose blockquote *:first-child {
+  margin-top: 0;
+}
+
+.prose blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+.prose code {
+  background-color: var(--quinary);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 0.05rem 0.25rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-color: var(--quaternary);
+}
+
+.tldr {
+  background-color: var(--quinary);
+  border-color: var(--quaternary);
+  border-width: 1px;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  margin: 2em 0;
+}
+
+.tldr *:first-child {
+  margin-top: 0;
+}
+
+.tldr *:last-child {
+  margin-bottom: 0;
 }

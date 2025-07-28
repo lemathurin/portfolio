@@ -2,25 +2,21 @@
 
 import Image from "next/image";
 import Canvas from "@/components/Canvas";
-import Link from "next/link";
-import LanguageToggle from "@/components/LanguageToggle";
+import { Link } from "@/i18n/navigation";
 import Clock from "@/components/Clock";
 import { useTranslations } from "next-intl";
+import Header from "@/components/Header";
 
 export default function CanvasPage() {
   const t = useTranslations();
 
   return (
     <>
-      <header className="bg-primary fixed top-0 right-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">
-        <LanguageToggle />
-        <Link
-          href="/canvas/accessible"
-          className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
-        >
-          {t("canvas.accessibleVersion")}
-        </Link>
-      </header>
+      <div className="fixed top-0 right-0 left-0 z-40 border-b-[1px] border-[var(--quaternary)] bg-[var(--bg-primary)] p-2.5 sm:p-5">
+        <div className="mx-auto flex w-full max-w-lg">
+          <Header />
+        </div>
+      </div>
       <Canvas role="main">
         <h1
           style={{
@@ -33,7 +29,7 @@ export default function CanvasPage() {
             whiteSpace: "nowrap",
           }}
         >
-          {t("canvas.scrollHint")}
+          {t("canvasPage.scrollHint")}
         </h1>
         <section
           className="relative"
@@ -44,7 +40,7 @@ export default function CanvasPage() {
           }}
         >
           <Image
-            src="/me-2016.png"
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXliqVsBCbbFRm7wShzYQZJ4WeOX8q02spPHKE"
             alt="Avatar 2016"
             width={250}
             height={250}
@@ -57,7 +53,7 @@ export default function CanvasPage() {
             }}
           />
           <Image
-            src="/me-2022.png"
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwX1wRGlfIRHdtW9MuSenZ7CN360Bwy8IpQijUb"
             alt="Avatar 2022"
             width={250}
             height={250}
@@ -70,7 +66,7 @@ export default function CanvasPage() {
             }}
           />
           <Image
-            src="/me-2025.png"
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXcbArxXFWPh3xNZjmzVMS5t9QDGin0YqvX2lw"
             alt="Avatar 2025"
             width={250}
             height={250}
@@ -90,7 +86,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            {t("canvas.profileYears")}
+            {t("canvasPage.profileYears")}
           </p>
         </section>
         <section
@@ -102,8 +98,8 @@ export default function CanvasPage() {
           }}
         >
           <Image
-            src="/skytree.jpeg"
-            alt={t("canvas.skytreeAlt")}
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwX2zP6Isjab2JnoGdL156AWIvsmt0jQPpKyFz8"
+            alt={t("canvasPage.skytreeAlt")}
             width={500}
             height={500}
             className="shadow-lg"
@@ -115,8 +111,8 @@ export default function CanvasPage() {
             }}
           />
           <Image
-            src="/boat.jpeg"
-            alt={t("canvas.boatAlt")}
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXHSk6BSAi8sevGcB4FyxCY9AX7lOpHVJzWb6f"
+            alt={t("canvasPage.boatAlt")}
             width={800}
             height={800}
             className="shadow-lg"
@@ -129,8 +125,8 @@ export default function CanvasPage() {
           />
 
           <Image
-            src="/sunset.jpeg"
-            alt={t("canvas.sunsetAlt")}
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXZOH8OaCSLlRducqbNZgY7F3QVhKp02nC4JrI"
+            alt={t("canvasPage.sunsetAlt")}
             width={500}
             height={500}
             className="shadow-lg"
@@ -149,7 +145,7 @@ export default function CanvasPage() {
               transform: "rotate(2deg)",
             }}
           >
-            {t("canvas.nicePictures")}
+            {t("canvasPage.nicePictures")}
           </p>
         </section>
         <section
@@ -160,39 +156,41 @@ export default function CanvasPage() {
           }}
         >
           <Image
-            src="/portfolio-v1.png"
-            alt={t("canvas.portfolioV1Alt")}
+            src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXXGT3V6tgs8zZdmwB31rtVQfjMYHnJCTbkAFD"
+            alt={t("canvasPage.portfolioV1Alt")}
             width={500}
             height={500}
+            className="shadow-lg"
             style={{
               position: "absolute",
               left: 0,
               top: 0,
               transform: "rotate(-2deg)",
-              pointerEvents: "none",
             }}
           />
-          <p
+          <Link
+            href="/projects/portfolio-v1"
             style={{
               position: "absolute",
               left: 200,
-              top: 350,
+              top: 330,
               transform: "rotate(1deg)",
             }}
           >
-            {t("canvas.oldPortfolio")}
-          </p>
+            {t("canvasPage.oldPortfolio")}
+          </Link>
         </section>
       </Canvas>
-      <footer className="bg-primary fixed right-0 bottom-0 left-0 z-40 flex w-full items-center justify-between gap-4 p-2 dark:mix-blend-difference">
-        <Link
-          href="/"
-          className="cursor-pointer font-mono text-sm underline opacity-70 hover:no-underline hover:opacity-100"
-        >
-          <span style={{ fontFamily: "system-ui, Arial, sans-serif" }}>←</span>{" "}
-          {t("canvas.homeLink")}
-        </Link>
-        <Clock />
+      <footer className="fixed right-0 bottom-0 left-0 z-40 border-t-[1px] border-[var(--quaternary)] bg-[var(--bg-primary)] p-2.5 sm:p-5">
+        <div className="mx-auto flex w-full max-w-lg flex-row items-center justify-between">
+          <Clock />
+          <Link
+            href="/canvas/accessible"
+            className="cursor-pointer text-sm text-[var(--primary)]"
+          >
+            {t("canvasPage.accessibleVersion")}
+          </Link>
+        </div>
       </footer>
     </>
   );

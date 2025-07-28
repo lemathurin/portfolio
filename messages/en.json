@@ -1,22 +1,15 @@
 {
   "languageToggle": "en français",
+  "home": "Home",
+  "projects": "Projects",
+  "canvas": "Canvas",
+  "resume": "Resume",
+  "seeAllProjects": "See all projects",
   "Metadata": {
     "title": "Mathurin Sekine",
     "description": "Fullstack developer, specializing in React, Next.js, and modern web technologies."
   },
-  "intro": {
-    "title": "About me",
-    "wave": "👋 Hey !",
-    "greeting": "I’m Mathurin Sekine, a fullstack developer currently open to new opportunities.",
-    "experience": "Previously, I worked as a frontend developer at <juisci>Juisci</juisci>, where I contributed to building and improving their web app. I recently earned my diploma in Application Design and Development (Bachelor’s level) from <ada>Ada Tech School</ada>.",
-    "project": "While I search for my next role, I’m actively working on a personal project called [project name].",
-    "skills": "My skill set includes frontend technologies like React, Next.js, and Tailwind CSS, as well as backend frameworks such as Express.js and Nest.js. I'm also comfortable using design tools like Figma, and I am capable of contributing to every stage of a project — from concept and UI design to backend architecture and implementation.",
-    "contact": "If you think I’d be a great fit for your team, feel free to reach out via <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter>, or <mailto>email</mailto>. You can also check out my <cv>CV</cv> and <github>GitHub</github> for more about my experience and work.",
-    "closing": "Cheers,",
-    "signature": "Mathurin Sekine",
-    "more": "If you want to see a little more about me, <canvas>visit this page</canvas>."
-  },
-  "canvas": {
+  "canvasPage": {
     "accessibleVersion": "accessible version",
     "scrollHint": "scroll around the page :)",
     "profileYears": "my profile throughout the years. (2016, 2022, 2025)",
@@ -29,9 +22,5 @@
     "boatAlt": "A photo of a boat off the coast of an island with mountains.",
     "sunsetAlt": "A photo of a man walking on a beach with the sunset behind him.",
     "portfolioV1Alt": "A screenshot of my first portfolio."
-  },
-  "404": {
-    "error": "error 404",
-    "message": "This page doesn't exist. Maybe there used to be something here, but it's either gone or has been moved. I hope you'll find what you're looking for."
   }
 }
