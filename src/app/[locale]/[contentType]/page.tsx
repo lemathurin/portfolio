@@ -14,26 +14,38 @@ interface PageProps {
   }>;
 }
 
-export default async function ContentTypePage({ params }: PageProps) {
-  const { locale, contentType } = await params;
-  const t = await getTranslations();
-
-  if (contentType === "other") {
-    return notFound();
-  }
-
+export async function generateStaticParams() {
   const availableTypes = await getContentTypes();
-  if (!availableTypes.includes(contentType)) {
-    return notFound();
+  const locales = ["en", "fr"];
+
+  const params = [];
+
+  for (const contentType of availableTypes) {
+    if (contentType === "other") continue;
+
+    for (const locale of locales) {
+      const dirPath = path.join(process.cwd(), "content", contentType, locale);
+
+      try {
+        await fs.access(dirPath);
+        params.push({ locale, contentType });
+      } catch {
+        console.error("Directory doesn't exist");
+      }
+    }
   }
 
+  return params;
+}
+
+async function loadContentEntries(contentType: string, locale: string) {
   const dirPath = path.join(process.cwd(), "content", contentType, locale);
 
   let files: string[];
   try {
     files = await fs.readdir(dirPath);
   } catch {
-    return notFound();
+    return null;
   }
 
   const entries = await Promise.all(
@@ -74,7 +86,25 @@ export default async function ContentTypePage({ params }: PageProps) {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 
-  if (validEntries.length === 0) {
+  return validEntries;
+}
+
+export default async function ContentTypePage({ params }: PageProps) {
+  const { locale, contentType } = await params;
+  const t = await getTranslations();
+
+  if (contentType === "other") {
+    return notFound();
+  }
+
+  const availableTypes = await getContentTypes();
+  if (!availableTypes.includes(contentType)) {
+    return notFound();
+  }
+
+  const validEntries = await loadContentEntries(contentType, locale);
+
+  if (!validEntries || validEntries.length === 0) {
     return notFound();
   }
 
