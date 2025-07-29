@@ -14,11 +14,13 @@ interface PageProps {
   }>;
 }
 
+const redirectToNotFound = new Set(["experiences", "other"]);
+
 export default async function ContentTypePage({ params }: PageProps) {
   const { locale, contentType } = await params;
   const t = await getTranslations();
 
-  if (contentType === "other") {
+  if (redirectToNotFound.has(contentType)) {
     return notFound();
   }
 

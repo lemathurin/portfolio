@@ -26,10 +26,12 @@ export default function Header({ isNotFoundPage = false }: HeaderProps) {
 
   const pathSegments = pathname.split("/").filter(Boolean);
   const contentType = pathSegments[1]; // Second segment after locale
-
   const isDetailPage = pathSegments.length > 2;
 
   function getLinkDestination() {
+    if (contentType === "experiences") {
+      return "/";
+    }
     if (contentType && contentType !== "home" && isDetailPage) {
       return `/${contentType}`;
     }
@@ -37,6 +39,9 @@ export default function Header({ isNotFoundPage = false }: HeaderProps) {
   }
 
   function getLinkText() {
+    if (contentType === "experiences") {
+      return t("home");
+    }
     if (contentType && contentType !== "home" && isDetailPage) {
       return t(`${contentType}`) || contentType;
     }
