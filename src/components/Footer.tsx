@@ -47,7 +47,7 @@ export default function Footer() {
           <li>
             <Link
               target="_blank"
-              href="https://drive.google.com/file/d/1UCXUY5eaDHlGNqP18yvHJ3Bli5_bo5YA/view?usp=sharing"
+              href="https://drive.google.com/drive/folders/14lc7oAt43DVOJXmW-ZMd9ZqO2eX93dSq?usp=sharing"
             >
               {t("resume")}
             </Link>
