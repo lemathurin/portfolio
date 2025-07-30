@@ -41,7 +41,7 @@ export default function Footer() {
           </li>
           <li>
             <Link target="_blank" href="mailto:mathurinsekine@gmail.com">
-              Email
+              {t("email")}
             </Link>
           </li>
           <li>
