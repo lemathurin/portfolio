@@ -2,6 +2,7 @@ import EleventyPluginOgImage from "eleventy-plugin-og-image";
 import markdownIt from "markdown-it";
 import markdownItLinkAttributes from "markdown-it-link-attributes";
 import fs from "fs";
+import i18n from "eleventy-plugin-i18n/i18n.js";
 
 /** @param { import('@11ty/eleventy/src/UserConfig').default } eleventyConfig */
 export default async function (eleventyConfig) {
@@ -24,6 +25,15 @@ export default async function (eleventyConfig) {
           style: "normal",
         },
       ],
+    },
+  });
+
+  eleventyConfig.addPlugin(i18n, {
+    locales: ["en", "fr"],
+    defaultLocale: "en",
+    directory: "src",
+    fallbackLocales: {
+      "*": "en",
     },
   });
 
@@ -51,20 +61,20 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addCollection("projects_en", (collectionApi) =>
     collectionApi
-      .getFilteredByGlob("src/content/projects/en/*.md")
+      .getFilteredByGlob("src/en/projects/*.md")
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date)),
   );
   eleventyConfig.addCollection("projects_fr", (collectionApi) =>
     collectionApi
-      .getFilteredByGlob("src/content/projects/fr/*.md")
+      .getFilteredByGlob("src/fr/projects/*.md")
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date)),
   );
 
   eleventyConfig.addCollection("experiences_en", (collectionApi) =>
-    collectionApi.getFilteredByGlob("src/content/experiences/en/*.md"),
+    collectionApi.getFilteredByGlob("src/en/experiences/*.md"),
   );
   eleventyConfig.addCollection("experiences_fr", (collectionApi) =>
-    collectionApi.getFilteredByGlob("src/content/experiences/fr/*.md"),
+    collectionApi.getFilteredByGlob("src/fr/experiences/*.md"),
   );
 
   return {
