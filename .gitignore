@@ -1,10 +1,8 @@
 # Build results
 /_site/
 /.cache/
-/.lighthouseci/
 
 # IDEs
-/.idea/
 /.vscode/
 
 # Package managers
