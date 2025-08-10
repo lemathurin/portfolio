@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% if title %}{{ title }} | {% endif %}Mathurin Sekine</title>
-    <meta name="description" content="{{ description or '' }}" />
+    {% set t = collections.all[0].data[locale or 'en'] %}
+    <title>{% if title and title != t.metadata.title %}{{ title }} | {{ t.metadata.title }}{% else %}{{ t.metadata.title }}{% endif %}</title>
+    <meta name="description" content="{{ description or t.metadata.description }}" />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/favicon.ico" />
     {% if og_image %}
       {% ogImage "./_includes/og-image.og.njk", {
-        title: title or "",
-        description: description or "",
+        title: title or t.metadata.title,
+        description: description or t.metadata.description,
         type: type or ""
       } %}
     {% else %}
