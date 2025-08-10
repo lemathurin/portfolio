@@ -48,8 +48,7 @@ export default async function (eleventyConfig) {
     linkify: true,
   }).use(markdownItLinkAttributes, {
     matcher(href) {
-      // Only add attrs if href starts with "http" and is NOT your own domain
-      return href.startsWith("http") && !href.includes("yourdomain.com");
+      return href.startsWith("http");
     },
     attrs: {
       target: "_blank",
