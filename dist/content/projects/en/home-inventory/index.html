@@ -1,0 +1,136 @@
+<h1>Home Inventory App</h1>
+<ul>
+<li>School project</li>
+<li>09/2024 → 07/2025 (1 day per week)</li>
+<li><a href="https://github.com/lemathurin/inventory-frontend">Frontend source code</a></li>
+<li><a href="https://github.com/lemathurin/inventory-backend">Backend source code</a></li>
+</ul>
+<div class="tldr">
+<h2>TL;DR</h2>
+<p>
+For my RNCP certification project, I designed and developed a full-stack web application. It allows users to list, organize, and manage their personal belongings within shared homes, with a role-based access control system (RBAC). The app runs on an Express + PostgreSQL backend and a modular layered Next.js frontend.
+</p>
+<p>
+The design was created with accessibility, multi-user collaboration, and good UX in mind. The project is self-hosted on a Hetzner VPS via Coolify, with automated deployment, Jest and Cypress tests, and a strong focus on security.
+</p>
+</div>
+<h2>Project Overview</h2>
+<p>This project was completed as part of the RNCP certification <em>Application Developer Designer</em>, in collaboration with <a href="https://github.com/PierrePedrono">Pierre Pedrono</a>.</p>
+<p>It consists of building a web application called Home Inventory App, aimed at helping users list, organize, and categorize their personal items in a structured way. The app also aims to simplify sharing and collaborative management within a household or between multiple users.</p>
+<p>The main goal was to create an intuitive, functional application tailored to real user needs for managing personal belongings.</p>
+<h2>Tech Stack and Tools</h2>
+<ul>
+<li>Figma</li>
+<li>Next.js</li>
+<li>shadcn/ui</li>
+<li>Tailwind CSS</li>
+<li>Axios</li>
+<li>Prisma ORM</li>
+<li>PostgreSQL</li>
+<li>Express.js</li>
+<li>Cypress</li>
+<li>Jest</li>
+<li>Coolify</li>
+</ul>
+<h2>Design</h2>
+<p>We first defined the key features through personas, then moved on to database architecture and wireframes.</p>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXE387FvsG6gOnMlAdUt9PS0o4YsupbXwEmJa5" alt="Entity-relationship diagram showing users linked to homes, rooms, and items, with permission tables." />
+  <figcaption>Logical Data Model (LDM).</figcaption>
+  </figure>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXPwfISslwEzpJ68oQB5uCRd9GjhgDNyL0AeaO" alt="Wireframes created in Figma, showing pages such as item detail, item creation, home settings, and related modals." />
+  <figcaption>Some project wireframes in Figma.</figcaption>
+  </figure>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXhNS9BIRZgUTZi1IXl89BAyExJo46K3DYk0pV" alt="High-fidelity mockup of the dashboard, showing recently added items, recently modified rooms, and items with expiring warranties." />
+  <figcaption>One high-fidelity mockup in Figma.</figcaption>
+  </figure>
+<h2>Layered Architecture</h2>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXZLjEBNCSLlRducqbNZgY7F3QVhKp02nC4JrI" alt="A diagram of the overall project architecture, showing frontend/backend communication and used technologies." />
+  <figcaption>Global architecture diagram.</figcaption>
+</figure>
+<p>The application follows a modular layered architecture, with a clear separation between the frontend and backend. The project is split across two Git repositories. This makes it easier to test or replace each part independently in the future.</p>
+<h3>Backend Structure</h3>
+<p>The backend is structured into distinct layers:</p>
+<ul>
+<li>Routes: define HTTP entry points (e.g., <code>/api/items/:itemId</code>)</li>
+<li>Middlewares: handle authentication, permissions (RBAC), validation, or data sanitization</li>
+<li>Controllers: contain business logic</li>
+<li>Models (via Prisma): handle database access</li>
+<li>Utils: reusable utility functions</li>
+</ul>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXS2yPpA8Wfbl01CeIMUcRpEmhQG4jYasznHtF" alt="Screenshot of 'item' routes with middlewares." />
+  <figcaption>Routes with middleware.</figcaption>
+</figure>
+<h3>Frontend Structure</h3>
+<p>The frontend adopts a hybrid approach, combining two methods. First, the Next.js app router system, which structures the organization of pages according to the application's folders. And secondly, a Domain-Driven Design (DDD)-inspired modular organization for everything else.</p>
+<p>Each domain includes a standardized internal structure:</p>
+<ul>
+<li>hooks: Custom hooks related to the domain</li>
+<li>types: TypeScript interfaces</li>
+<li>endpoints: Contains API calls and exports them for use in hooks</li>
+<li>context: Provides a React context for shared state/functions across components</li>
+</ul>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXWOZl3YecTO3iMto6emnEgLb4HW1Ns8plvYJ0" alt="Screenshot of the 'home' domain structure showing hooks, types, endpoints, and context." />
+  <figcaption>Example domain structure.</figcaption>
+</figure>
+<h2>Implementation</h2>
+<blockquote>
+<p>We chose not to implement media/file upload due to time constraints (1 day per week).</p>
+</blockquote>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwX8CYx1J9JDTfWgAlhuPovV1HpMsKxLraBSFC5" alt="Dashboard screenshot showing 9 most recently added items." />
+  <figcaption>A home's dashboard.</figcaption>
+</figure>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXNA541FPV9aX7GKwfgvtTzMLsJeBUjynFP40u" alt="Screenshot of the item creation page, showing fields: name, description, price, purchase date, followed by room and visibility selectors, and a warranty toggle." />
+  <figcaption>Item creation page.</figcaption>
+</figure>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXPRfJcDlwEzpJ68oQB5uCRd9GjhgDNyL0AeaO" alt="Screenshot of the home settings page with panels for managing rooms and users." />
+  <figcaption>Home settings page.</figcaption>
+</figure>
+<p>Home administrators can create invite codes to let users join the home.</p>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXhN8fKEKZgUTZi1IXl89BAyExJo46K3DYk0pV" alt="Screenshot of the account settings page with fields to update name, email, and password." />
+  <figcaption>Account settings page.</figcaption>
+</figure>
+<p>Users can, of course, delete their account, along with everything linked to it.</p>
+<figure>
+  <img src="https://5q44w9bzpv.ufs.sh/f/vqzvWuhpJmwXdiNEhJzA4DlvUCmBMNKuXES8br2QGyHYWjhk" alt="Dashboard screenshot with dark mode enabled." />
+  <figcaption>Dark mode was also implemented, as it's always nice to have the choice.</figcaption>
+</figure>
+<h2>Security</h2>
+<p>User data security was integrated from the early stages of development. Authentication relies on a JWT-based system stored in secure, HTTP-only cookies to prevent XSS or CSRF attacks. On the backend, every sensitive route is protected by middlewares that check both the user's identity and permissions.</p>
+<p>User input is sanitized automatically before being saved to the database via a sanitization middleware. Finally, all sensitive actions are double-checked — first in the frontend, then on the server — ensuring security against URL/API tampering.</p>
+<h2>Testing</h2>
+<p>The app includes unit tests on the backend and end-to-end (E2E) tests on the frontend. Backend tests (written in Jest) validate critical API functions like item retrieval or updates with permission checks. On the frontend, Cypress E2E scenarios cover full user flows like account creation, joining a shared home, or editing restrictions for items owned by others.</p>
+<h2>Deployment</h2>
+<p>The app is fully self-hosted on a VPS provided by Hetzner. Deployment is managed via Coolify, which simplifies container orchestration. The frontend, backend, and PostgreSQL database each run in separate containers. Improving service isolation and making maintenance easier.</p>
+<p>A CI/CD pipeline is set up using GitHub Actions. On each push to <code>main</code> or <code>dev</code>, tests are run, code is auto-formatted, a build is generated, and if successful, a webhook triggers a redeploy on Coolify.</p>
+<h2>Improvements</h2>
+<ul>
+<li>Media management
+<ul>
+<li>Secure upload system</li>
+</ul>
+</li>
+<li>Warranty tracking
+<ul>
+<li>Backend cron job to detect upcoming warranty expirations</li>
+</ul>
+</li>
+<li>Test coverage expansion</li>
+<li>Tech stack migration
+<ul>
+<li>Next.js → more suitable React framework (no SSR or SEO needed)</li>
+<li>Custom auth system → Better-Auth</li>
+<li>Prisma ORM → Drizzle ORM? (for better performance)</li>
+<li>Add React Query for caching</li>
+</ul>
+</li>
+</ul>

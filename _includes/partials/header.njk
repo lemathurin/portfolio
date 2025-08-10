@@ -1,0 +1,58 @@
+<header
+  class="header"
+  style="
+    font-size: var(--text-sm);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  "
+>
+  {% set currentLocale = locale or 'en' %}
+  {# Extract locale from URL as fallback #}
+  {% if page.url.startsWith('/fr/') %}
+    {% set currentLocale = 'fr' %}
+  {% elif page.url.startsWith('/en/') %}
+    {% set currentLocale = 'en' %}
+  {% endif %}
+  
+  {% set isHomepage = page.url == '/' + currentLocale + '/' %}
+  {% if currentLocale == 'en' %}
+    {% set translations = en %}
+    {% set switchLocale = 'fr' %}
+    {% set switchTranslations = fr %}
+  {% else %}
+    {% set translations = fr %}
+    {% set switchLocale = 'en' %}
+    {% set switchTranslations = en %}
+  {% endif %}
+  
+  {% if isHomepage %}
+    {# Show clock on homepage #}
+    {% include "partials/clock.njk" %}
+  {% else %}
+    {# Show back navigation on other pages #}
+    {% set cleanPath = page.url | replace('/' + currentLocale + '/', '') %}
+    
+    {# Default: go back to homepage in current locale #}
+    {% set backUrl = '/' + currentLocale + '/' %}
+    {% set backText = translations.home %}
+    
+    {# Check if we're in a project detail page (has projects/ and something after it) #}
+    {% if cleanPath.startsWith('projects/') and cleanPath != 'projects/' %}
+      {% set backUrl = '/' + currentLocale + '/projects/' %}
+      {% set backText = translations.projects %}
+    {% endif %}
+    
+    <a href="{{ backUrl }}" class="home-navigation">{{ backText }}</a>
+  {% endif %}
+
+  {# Language toggle - always on the right #}
+  {% set cleanUrlPath = page.url | replace('/' + currentLocale + '/', '/') %}
+  <a
+    href="/{{ switchLocale }}{{ cleanUrlPath }}"
+    aria-label="{{ switchTranslations.languageToggle }}"
+    >{{ translations.languageToggle }}</a
+  >
+</header>

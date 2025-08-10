@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mathurin Sekine | Mathurin Sekine</title>
+    <meta name="description" content="Fullstack developer, specializing in React, Next.js, and modern web technologies." />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:image" content="/og-image.webp" />
+  </head>
+  <body>
+    <main class="container">
+      
+ <header
+  class="header"
+  style="
+    font-size: var(--text-sm);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  "
+>
+  
+  
+  
+    
+  
+  
+  
+  
+    
+    
+    
+  
+  
+  
+    
+    <span
+  id="clock"
+  aria-label="Current time in Nantes"
+  style="display: none; font-size: var(--text-sm)"
+>
+  Nantes - <span id="clock-time"></span>
+</span>
+
+<script>
+  (function () {
+    let mounted = false;
+    let clockElement = document.getElementById("clock");
+    let timeElement = document.getElementById("clock-time");
+
+    function updateTime() {
+      if (!mounted) return;
+
+      const currentTime = new Date();
+      const timeString = currentTime.toLocaleTimeString("fr-FR", {
+        timeZone: "Europe/Paris",
+      });
+
+      if (timeElement) {
+        timeElement.textContent = timeString;
+      }
+    }
+
+    function initClock() {
+      mounted = true;
+      if (clockElement) {
+        clockElement.style.display = "inline";
+      }
+
+      // Initial time update
+      updateTime();
+
+      // Set up interval to update every second
+      const timer = setInterval(updateTime, 1000);
+
+      // Cleanup function (similar to React's useEffect cleanup)
+      window.addEventListener("beforeunload", function () {
+        clearInterval(timer);
+      });
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initClock);
+    } else {
+      initClock();
+    }
+  })();
+</script>
+
+  
+
+  
+  
+  <a
+    href="/fr/"
+    aria-label="in English"
+    >en français</a
+  >
+</header>
+
+<figure
+  style="
+    display: flex;
+    height: 9rem;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: var(--yellow);
+    margin: 0;
+  "
+>
+  <img
+    src="/me-100.svg"
+    alt="Mathurin Sekine&#39;s avatar"
+    width="150"
+    height="150"
+    style="object-fit: contain; border: none"
+  />
+</figure>
+
+<section class="prose"><h1>Hey!</h1>
+<p>I'm Mathurin Sekine, a fullstack developer currently open to new opportunities.</p>
+<p>Previously, I worked as a frontend developer at <a href="https://juisci.com" target="_blank" rel="noopener noreferrer">Juisci</a>, where I contributed to building and improving their web app. You can <a href="/en/experiences/juisci">learn more about my work there</a>.</p>
+<p>I recently earned my diploma in Application Design and Development (Bachelor's level) from <a href="https://adatechschool.fr/" target="_blank" rel="noopener noreferrer">Ada Tech School</a>.</p>
+<p>My skill set includes frontend technologies like React, Next.js, and Tailwind CSS, as well as backend frameworks such as Express.js and Nest.js. I'm also comfortable using design tools like Figma, and I am capable of contributing to every stage of a project — from concept and UI design to backend architecture and implementation.</p>
+<p>If you think I'd be a great fit for your team, feel free to reach out via <a href="https://www.linkedin.com/in/mathurinsekine/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://x.com/mathurin_sekine" target="_blank" rel="noopener noreferrer">Twitter</a>, or <a href="mailto:mathurinsekine@gmail.com">email</a>. You can also check out my <a href="https://drive.google.com/drive/folders/14lc7oAt43DVOJXmW-ZMd9ZqO2eX93dSq?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a> and <a href="https://github.com/lemathurin" target="_blank" rel="noopener noreferrer">GitHub</a> for more about my experience and work.</p>
+<p>Cheers,<br />
+Mathurin Sekine</p>
+</section>
+
+<hr />
+
+<section aria-labelledby="past-projects-heading">
+  <h2
+    id="past-projects-heading"
+    style="
+      font-family: var(--font-serif);
+      font-size: var(--text-3xl);
+      line-height: 1.2;
+      font-weight: 400;
+    "
+  >
+    Projects
+  </h2>
+  
+  <div
+    class="mask-b-from-responsive"
+    style="
+      margin-top: 1em;
+      display: grid;
+      grid-template-columns: (2, 1fr);
+      gap: 1rem;
+    "
+  >
+     
+    <article style="display: flex; flex-direction: column; gap: 0.125rem">
+      <a
+        style="padding-bottom: 0.25rem"
+        href="/en/projects/portfolio-v2/"
+        >Portfolio V2</a
+      >
+      
+      <p
+        style="
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+        "
+      >
+        A refined version of my portfolio, built with improved technical skills post-apprenticeship. Features MDX for content and enhanced accessibility.
+      </p>
+       
+      <p
+        style="
+          color: var(--secondary);
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        "
+      >
+        Next.js, TypeScript, next-intl, Tailwind CSS, Motion, Vercel
+      </p>
+      
+    </article>
+      
+    <article style="display: flex; flex-direction: column; gap: 0.125rem">
+      <a
+        style="padding-bottom: 0.25rem"
+        href="/en/projects/home-inventory/"
+        >Home Inventory App</a
+      >
+      
+      <p
+        style="
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+        "
+      >
+        A full-stack web app to organize and manage personal belongings in shared homes, with user roles, accessibility-first design, automated deployment, and robust security.
+      </p>
+       
+      <p
+        style="
+          color: var(--secondary);
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        "
+      >
+        Figma, Next.js, shadcn/ui, Tailwind CSS, Axios, Prisma ORM, PostgreSQL, Express.js, Cypress, Jest, Coolify
+      </p>
+      
+    </article>
+      
+    <article style="display: flex; flex-direction: column; gap: 0.125rem">
+      <a
+        style="padding-bottom: 0.25rem"
+        href="/en/projects/portfolio-v1/"
+        >Portfolio V1</a
+      >
+      
+      <p
+        style="
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+        "
+      >
+        The first iteration of my personal portfolio, designed to showcase my projects and bilingual content. Focused on clean aesthetics inspired by minimalist websites.
+      </p>
+       
+      <p
+        style="
+          color: var(--secondary);
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        "
+      >
+        Next.js, next-intl, Tailwind CSS, Framer Motion, Vercel
+      </p>
+      
+    </article>
+      
+    <article style="display: flex; flex-direction: column; gap: 0.125rem">
+      <a
+        style="padding-bottom: 0.25rem"
+        href="/en/projects/ecommerce/"
+        >E-commerce store project</a
+      >
+      
+      <p
+        style="
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+        "
+      >
+        A collaborative school project where teams built a fullstack e-commerce site. I first worked on the frontend design, then transitioned to the backend.
+      </p>
+       
+      <p
+        style="
+          color: var(--secondary);
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        "
+      >
+        Figma, React Vite, shadcn/ui, Tailwind CSS, Supabase, Express.js
+      </p>
+      
+    </article>
+         
+  </div>
+  <p style="margin-top: 0.5rem; font-size: var(--text-sm)">
+    <a href="/en/projects">See all projects</a>
+  </p>
+</section>
+
+<footer
+  style="
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    font-size: var(--text-sm);
+  "
+>
+  <hr />
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))">
+    
+    <ul style="display: flex; flex-direction: column; grid-column: span 1 / span 1; gap: 0.5rem; list-style: none; padding: 0; margin: 0;">
+      <li><a href="/en/">Home</a></li>
+      <li><a href="/en/projects">Projects</a></li>
+    </ul>
+    <ul
+      style="
+        display: grid;
+        grid-column: span 2 / span 2;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      "
+    >
+      <li>
+        <a target="_blank" href="https://github.com/lemathurin">Github</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://x.com/mathurin_sekine">Twitter</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.linkedin.com/in/mathurinsekine/"
+          >Linkedin</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="mailto:mathurinsekine@gmail.com">Email</a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://drive.google.com/drive/folders/14lc7oAt43DVOJXmW-ZMd9ZqO2eX93dSq?usp=sharing"
+          >Resume</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="https://bsky.app/profile/mathurin.bsky.social"
+          >Bluesky</a
+        >
+      </li>
+    </ul>
+  </div>
+  <span style="color: var(--secondary)">© 2025 Mathurin Sekine</span>
+</footer>
+
+
+    </main>
+  </body>
+</html>

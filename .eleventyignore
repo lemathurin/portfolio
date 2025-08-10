@@ -1,0 +1,10 @@
+src/
+.next/
+.eslint*
+tailwind.config.*
+postcss.config.*
+tsconfig.json
+messages/
+content/canvas/
+README.md
+

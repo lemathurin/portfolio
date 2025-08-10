@@ -1,0 +1,53 @@
+<span
+  id="clock"
+  aria-label="Current time in Nantes"
+  style="display: none; font-size: var(--text-sm)"
+>
+  Nantes - <span id="clock-time"></span>
+</span>
+
+<script>
+  (function () {
+    let mounted = false;
+    let clockElement = document.getElementById("clock");
+    let timeElement = document.getElementById("clock-time");
+
+    function updateTime() {
+      if (!mounted) return;
+
+      const currentTime = new Date();
+      const timeString = currentTime.toLocaleTimeString("fr-FR", {
+        timeZone: "Europe/Paris",
+      });
+
+      if (timeElement) {
+        timeElement.textContent = timeString;
+      }
+    }
+
+    function initClock() {
+      mounted = true;
+      if (clockElement) {
+        clockElement.style.display = "inline";
+      }
+
+      // Initial time update
+      updateTime();
+
+      // Set up interval to update every second
+      const timer = setInterval(updateTime, 1000);
+
+      // Cleanup function (similar to React's useEffect cleanup)
+      window.addEventListener("beforeunload", function () {
+        clearInterval(timer);
+      });
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initClock);
+    } else {
+      initClock();
+    }
+  })();
+</script>

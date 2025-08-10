@@ -1,0 +1,6 @@
+{
+  "locale": "fr",
+  "layout": "content.njk",
+  "permalink": "/fr/experiences/{{ slug | url }}/"
+}
+
