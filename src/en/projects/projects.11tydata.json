@@ -1,6 +1,6 @@
 {
   "locale": "en",
   "layout": "content.njk",
-  "permalink": "/en/projects/{{ slug | url }}/"
+  "permalink": "/en/projects/{{ slug | url }}/",
+  "type": "Project"
 }
-

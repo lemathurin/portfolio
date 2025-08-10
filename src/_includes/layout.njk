@@ -7,7 +7,15 @@
     <meta name="description" content="{{ description or '' }}" />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/favicon.ico" />
-    <meta property="og:image" content="/og-image.webp" />
+    {% if og_image %}
+      {% ogImage "./_includes/og-image.og.njk", {
+        title: title or "",
+        description: description or "",
+        type: type or "Page"
+      } %}
+    {% else %}
+      <meta property="og:image" content="/og-image.webp" />
+    {% endif %}
   </head>
   <body>
     <main class="container">

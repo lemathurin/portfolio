@@ -1,6 +1,6 @@
 {
   "locale": "en",
   "layout": "content.njk",
-  "permalink": "/en/experiences/{{ slug | url }}/"
+  "permalink": "/en/experiences/{{ slug | url }}/",
+  "type": "Experience"
 }
-

@@ -8,18 +8,19 @@ import i18n from "eleventy-plugin-i18n/i18n.js";
 export default async function (eleventyConfig) {
   // Add the OG Image plugin
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    // previewMode: false,
     satoriOptions: {
       fonts: [
         {
           name: "Inter",
-          data: fs.readFileSync("src/assets/fonts/Inter-Regular.woff2"),
+          data: fs.readFileSync("src/assets/fonts/Inter/Inter-Regular.ttf"),
           weight: 400,
           style: "normal",
         },
         {
           name: "Instrument",
           data: fs.readFileSync(
-            "src/assets/fonts/InstrumentSerif-Regular.woff2",
+            "src/assets/fonts/Instrument/InstrumentSerif-Regular.ttf",
           ),
           weight: 400,
           style: "normal",
@@ -57,6 +58,14 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.setLibrary("md", markdownLib);
+
+  // Truncate helper for OG image text
+  eleventyConfig.addFilter("ogTruncate", (value, max = 104) => {
+    if (!value) return "";
+    const s = String(value).replace(/\s+/g, " ").trim();
+    if (s.length <= max) return s;
+    return s.slice(0, max).replace(/\s+\S*$/, "") + "…";
+  });
 
   eleventyConfig.addCollection("projects_en", (collectionApi) =>
     collectionApi
