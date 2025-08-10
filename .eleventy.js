@@ -29,10 +29,8 @@ export default async function (eleventyConfig) {
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy({ public: "/" });
-  eleventyConfig.addPassthroughCopy("styles.css");
-
-  // Copy fonts folder
-  eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("src/styles.css");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
 
   // Enable HTML inside Markdown with link attributes
   let markdownLib = markdownIt({
