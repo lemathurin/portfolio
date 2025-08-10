@@ -1,0 +1,101 @@
+---
+layout: layout.njk
+---
+
+{% set t = collections.all[0].data[locale] %}
+
+{% include "partials/header.njk" %}
+
+<figure
+  style="
+    display: flex;
+    height: 9rem;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: var(--yellow);
+    margin: 0;
+  "
+>
+  <img
+    src="/me-100.svg"
+    alt="{{ t.avatarAlt }}"
+    width="150"
+    height="150"
+    style="object-fit: contain; border: none"
+  />
+</figure>
+
+<section class="prose">{{ content | safe }}</section>
+
+<hr />
+
+<section aria-labelledby="past-projects-heading">
+  <h2
+    id="past-projects-heading"
+    style="
+      font-family: var(--font-serif);
+      font-size: var(--text-3xl);
+      line-height: 1.2;
+      font-weight: 400;
+    "
+  >
+    {{ t.projects }}
+  </h2>
+  {% set preview = collections.projects_fr if locale == 'fr' else
+  collections.projects_en %}
+  <div
+    class="mask-b-from-responsive"
+    style="
+      margin-top: 1em;
+      display: grid;
+      grid-template-columns: (2, 1fr);
+      gap: 1rem;
+    "
+  >
+    {% for p in preview %} {% if loop.index <= 4 %}
+    <article style="display: flex; flex-direction: column; gap: 0.125rem">
+      <a
+        style="padding-bottom: 0.25rem"
+        href="/{{ locale }}/projects/{{ p.data.slug }}/"
+        >{{ p.data.title }}</a
+      >
+      {% if p.data.description %}
+      <p
+        style="
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+        "
+      >
+        {{ p.data.description }}
+      </p>
+      {% endif %} {% if p.data.stack %}
+      <p
+        style="
+          color: var(--secondary);
+          font-size: var(--text-sm);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        "
+      >
+        {{ p.data.stack | join(', ') }}
+      </p>
+      {% endif %}
+    </article>
+    {% endif %} {% endfor %}
+  </div>
+  <p style="margin-top: 0.5rem; font-size: var(--text-sm)">
+    <a href="/{{ locale }}/projects">{{ t.seeAllProjects }}</a>
+  </p>
+</section>
+
+{% include "partials/footer.njk" %}
