@@ -6,6 +6,9 @@ import i18n from "eleventy-plugin-i18n/i18n.js";
 
 /** @param { import('@11ty/eleventy/src/UserConfig').default } eleventyConfig */
 export default async function (eleventyConfig) {
+  // Add environment variable as global data
+  eleventyConfig.addGlobalData("isProduction", process.env.NODE_ENV === 'production');
+  
   // Add the OG Image plugin
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
     previewMode: false,
