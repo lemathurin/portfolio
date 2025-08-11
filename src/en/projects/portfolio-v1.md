@@ -42,8 +42,7 @@ Portfolio version 1.0 was the first personal development project I completed sin
     alt="Screenshot of the Cognac Godet website showing big serif text with images in between some words."
   />
   <figcaption>
-    I liked the large serif text with images between the words from [Cognac
-    Godet](https://cognacgodet.com).
+    I liked the large serif text with images between the words from <a href="https://cognacgodet.com" target="_blank" rel="noopener noreferrer">Cognac Godet</a>.
   </figcaption>
 </figure>
 
@@ -53,7 +52,7 @@ Portfolio version 1.0 was the first personal development project I completed sin
     alt="Amie's website, with a semi-transparent navbar."
   />
   <figcaption>
-    When [Amie's new website](https://amie.so/art) was released, I was instantly
+    When <a href="https://amie.so/art" target="_blank" rel="noopener noreferrer">Amie's new website</a> was released, I was instantly
     drawn to their navbar. I experimented with a couple of designs but kept
     returning to one that looked similar.
   </figcaption>
@@ -65,8 +64,7 @@ Portfolio version 1.0 was the first personal development project I completed sin
     alt="Pedro Duarte's website in dark mode, very simple and minimalistic."
   />
   <figcaption>
-    I liked the clean and simple appearance of [Pedro Duarte's
-    website](https://ped.ro/). As a result, my case study pages ended up
+    I liked the clean and simple appearance of <a href="https://ped.ro/" target="_blank" rel="noopener noreferrer">Pedro Duarte's website</a>. As a result, my case study pages ended up
     resembling his blog posts. Great website, Pedro!
   </figcaption>
 </figure>
@@ -77,9 +75,7 @@ Portfolio version 1.0 was the first personal development project I completed sin
     alt="A diagram of button with all its shadows and colors explained."
   />
   <figcaption>
-    I used [Farrel Putra's guide to
-    buttons](https://twitter.com/farrelput/status/1768952348976558161/photo/2)
-    to create the labels on my website. A very minimalistic technique that
+    I used <a href="https://twitter.com/farrelput/status/1768952348976558161/photo/2" target="_blank" rel="noopener noreferrer">Farrel Putra's guide to buttons</a> to create the labels on my website. A very minimalistic technique that
     yields great results.
   </figcaption>
 </figure>

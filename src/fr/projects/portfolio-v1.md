@@ -40,8 +40,7 @@ La version 1.0 du portfolio est le premier projet de développement personnel qu
     alt="Capture d'écran du site web de Cognac Godet montrant du gros texte avec des images entre certains mots."
   />
   <figcaption>
-    J'ai aimé le texte serif avec des images entre les mots de [Cognac
-    Godet](https://cognacgodet.com).
+    J'ai aimé le texte serif avec des images entre les mots de <a href="https://cognacgodet.com" target="_blank" rel="noopener noreferrer">Cognac Godet</a>.
   </figcaption>
 </figure>
 
@@ -51,7 +50,7 @@ La version 1.0 du portfolio est le premier projet de développement personnel qu
     alt="Le site web d'Amie, avec une barre de navigation semi-transparente."
   />
   <figcaption>
-    Quand le nouveau [site web d'Amie](https://amie.so/art) a été publié, j'ai
+    Quand le nouveau <a href="https://amie.so/art" target="_blank" rel="noopener noreferrer">site web d'Amie</a> a été publié, j'ai
     tout de suite été attiré par sa barre de navigation. J'ai expérimenté
     plusieurs designs, mais je revenais toujours à un design similaire.
   </figcaption>
@@ -63,8 +62,7 @@ La version 1.0 du portfolio est le premier projet de développement personnel qu
     alt="Le site de Pedro Duarte en mode sombre, très simple et minimaliste."
   />
   <figcaption>
-    J'ai apprécié l'aspect simple et propre du [site web de Pedro
-    Duarte](https://ped.ro). Par conséquent, mes pages consacrées aux analyses
+    J'ai apprécié l'aspect simple et propre du <a href="https://ped.ro" target="_blank" rel="noopener noreferrer">site web de Pedro Duarte</a>. Par conséquent, mes pages consacrées aux analyses
     de projet ont fini par ressembler à ses articles de blog. Excellent site
     web, Pedro !
   </figcaption>
@@ -76,9 +74,7 @@ La version 1.0 du portfolio est le premier projet de développement personnel qu
     alt="Un diagramme de bouton avec toutes ses ombres et couleurs expliquées."
   />
   <figcaption>
-    J'ai utilisé le [guide des boutons de Farrel
-    Putra](https://twitter.com/farrelput/status/1768952348976558161/photo/2)
-    pour créer les étiquettes de mon portfolio. Une technique très minimaliste
+    J'ai utilisé le <a href="https://twitter.com/farrelput/status/1768952348976558161/photo/2" target="_blank" rel="noopener noreferrer">guide des boutons de Farrel Putra</a> pour créer les étiquettes de mon portfolio. Une technique très minimaliste
     qui donne de très bons résultats.
   </figcaption>
 </figure>
