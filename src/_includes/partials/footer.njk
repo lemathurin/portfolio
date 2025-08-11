@@ -1,0 +1,56 @@
+<footer
+  style="
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    font-size: var(--text-sm);
+  "
+>
+  <hr />
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))">
+    {% set t = collections.all[0].data[locale] %}
+    <ul style="display: flex; flex-direction: column; grid-column: span 1 / span 1; gap: 0.5rem; list-style: none; padding: 0; margin: 0;">
+      <li><a href="/{{ locale }}/">{{ t.home }}</a></li>
+      <li><a href="/{{ locale }}/projects">{{ t.projects }}</a></li>
+    </ul>
+    <ul
+      style="
+        display: grid;
+        grid-column: span 2 / span 2;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      "
+    >
+      <li>
+        <a target="_blank" href="https://github.com/lemathurin">Github</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://x.com/mathurin_sekine">Twitter</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.linkedin.com/in/mathurinsekine/"
+          >Linkedin</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="mailto:mathurinsekine@gmail.com">{{ t.email }}</a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          href="https://drive.google.com/drive/folders/14lc7oAt43DVOJXmW-ZMd9ZqO2eX93dSq?usp=sharing"
+          >{{ t.resume }}</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="https://bsky.app/profile/mathurin.bsky.social"
+          >Bluesky</a
+        >
+      </li>
+    </ul>
+  </div>
+  <span style="color: var(--secondary)">© 2025 Mathurin Sekine</span>
+</footer>

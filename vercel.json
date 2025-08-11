@@ -1,0 +1,80 @@
+{
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/projects/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "fr.*"
+        }
+      ],
+      "status": 301,
+      "dest": "/fr/projects/$1"
+    },
+    {
+      "src": "/projects/(.*)",
+      "status": 301,
+      "dest": "/en/projects/$1"
+    },
+    {
+      "src": "/projects",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "fr.*"
+        }
+      ],
+      "status": 301,
+      "dest": "/fr/projects/"
+    },
+    {
+      "src": "/projects",
+      "status": 301,
+      "dest": "/en/projects/"
+    },
+    {
+      "src": "/experiences/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "fr.*"
+        }
+      ],
+      "status": 301,
+      "dest": "/fr/experiences/$1"
+    },
+    {
+      "src": "/experiences/(.*)",
+      "status": 301,
+      "dest": "/en/experiences/$1"
+    },
+    {
+      "src": "/experiences",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "fr.*"
+        }
+      ],
+      "status": 301,
+      "dest": "/fr/experiences/"
+    },
+    {
+      "src": "/experiences",
+      "status": 301,
+      "dest": "/en/experiences/"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404"
+    }
+  ]
+}

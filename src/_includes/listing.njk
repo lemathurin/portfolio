@@ -1,0 +1,78 @@
+---
+layout: base.njk
+---
+
+{% set t = collections.all[0].data[locale] %}
+{% set collectionName = contentType + '_' + locale %}
+{% set collection = collections[collectionName] %}
+
+<header style="margin-bottom: -2.25rem">
+  <h1 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: .5em;">
+    {{ pageTitle or t[contentType] }}
+  </h1>
+</header>
+
+{% if collection %}
+  {% set currentYear = null %}
+  {% for item in collection %}
+    {% set year = (item.data.date or item.date) | string | truncate(4, false, '') %}
+
+    {% if year != currentYear %}
+      {% if not loop.first %}
+          </ul>
+        </section>
+      {% endif %}
+
+      <section aria-labelledby="{{ year }}" style="margin-bottom: -2.25rem">
+        <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:.25rem">
+          <h2 id="{{ year }}" style="font-size: var(--text-sm); color: var(--secondary);">
+            <time datetime="{{ year }}">{{ year }}</time>
+          </h2>
+          <hr />
+        </div>
+        <ul style="list-style:none; padding:0; margin:0;">
+      {% set currentYear = year %}
+    {% endif %}
+
+    <li>
+      <article>
+        <h3 style="font-family: var(--font-serif); font-size: var(--text-3xl);">
+          <a href="/{{ locale }}/{{ contentType }}/{{ item.data.slug }}/">{{ item.data.title }}</a>
+        </h3>
+
+        {% if item.data.description %}
+          <p style="
+            margin-top:.25rem; 
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;">
+            {{ item.data.description }}
+          </p>
+        {% endif %}
+
+        {% if item.data.stack %}
+          <p style="
+            margin-bottom:1.25rem; 
+            font-size: var(--text-sm); 
+            color: var(--secondary); 
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;">
+            {{ item.data.stack | join(', ') }}
+          </p>
+        {% endif %}
+      </article>
+    </li>
+
+    {% if loop.last %}
+        </ul>
+      </section>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {# send to 404 #}
+{% endif %}

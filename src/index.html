@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathurin Sekine</title>
+    <meta
+      name="description"
+      content="Fullstack JavaScript developer skilled in all stages of web development, from design to deployment. Currently seeking new opportunities."
+    />
+    <meta property="og:image" content="/og-image.webp" />
+    <link rel="icon" href="/favicon.ico" />
+    <script>
+      const browserLang = navigator.language || navigator.userLanguage;
+
+      if (browserLang.toLowerCase().startsWith("fr")) {
+        window.location.replace("/fr/");
+      } else {
+        // Default to English for all other languages
+        window.location.replace("/en/");
+      }
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/en/" />
+    </noscript>
+  </head>
+  <body>
+    <p>Redirecting based on your language preference...</p>
+    <p>If you are not redirected automatically, please choose:</p>
+    <ul>
+      <li><a href="/en/">English</a></li>
+      <li><a href="/fr/">Français</a></li>
+    </ul>
+  </body>
+</html>
