@@ -1,18 +1,15 @@
 ---
-title: "Portfolio V2"
-slug: "portfolio-v2"
+title: "Portfolio V2.1"
+slug: "portfolio-v2.1"
 date: "2025-07-28"
-description: "A refined version of my portfolio, built with improved technical skills post-apprenticeship. Features MDX for content and enhanced accessibility."
+description: "A refined and simplified version of my portfolio, built with Eleventy and enhanced accessibility."
 stack:
-  - Next.js
-  - TypeScript
-  - next-intl
-  - Tailwind CSS
-  - Motion
+  - Eleventy
+  - Nunjucks
   - Vercel
 ---
 
-# Portfolio V2 (current version)
+# Portfolio V2.1 (current version)
 
 - Personal project
 - 07/2025
@@ -20,37 +17,24 @@ stack:
 
 ## Project overview
 
-After working on a real codebase during my apprenticeship at [Juisci](/experiences/juisci), I gained a much stronger understanding of programming compared to when I made the [first version of this portfolio](/projects/porfolio-v1). This updated version was a great opportunity to put my newfound knowledge and skills as a web developer into practice.
+After working on a real codebase during my apprenticeship at [Juisci](/en/experiences/juisci), I gained a much stronger understanding of programming compared to when I made the [first version of this portfolio](/en/projects/portfolio-v1).
 
-## Tech stack
-
-- Next.js
-- TypeScript
-- next-intl
-- Tailwind CSS
-- Motion
-- Vercel
-
-## A little more info
-
-In the first version of this portfolio, I used i18n strings for all the text, even for project case studies. It wasn't fun to write anything, who likes to write in JSON files?
-
-For this version, I decided to move everything to MDX files. I can't tell you how much easier and enjoyable it is to add or modify text now 😅.
-
-For the rendered MDX content, I initially used Tailwind's prose styles. I ended up not loving the final result, so I removed `@tailwindcss/typography` and just made my own styles. I haven’t covered every possible element yet, as this website is a continuous work in progress. (There's still so much to do.)
-
-I also tried to make the website as accessible as possible, a big step up from the previous version, with better semantic HTML, improved color contrast, and fewer animations.
+[I originally made V2 with Next.js](https://github.com/lemathurin/mathurinsekine.fr/tree/v2), but quickly realized that it was not the correct tool for my needs. Most of my content is static and written in markdown, so I decided to move to Eleventy. This has greatly increased the website's speed and decreased its size.
 
 Images are hosted on [UploadThing](https://uploadthing.com/), and the website is deployed with [Vercel](https://vercel.com).
 
-For the next iteration, I might not use Next.js and just use HTML and CSS 🤷‍♂️. This framework is a little bit overkill for my needs, and is quite heavy to send.
+> "It is tempting, if the only tool you have is a ~~hammer~~ React framework, to treat everything as if it were a ~~nail~~ VC-funded fullstack B2B SaaS application."
 
-Performance can definitely be improved. That's something I'll work on soon.
+## Tech stack
 
-> After some reflecting, I would have been better off using a static site generator like Eleventy or Hugo 😑.
+- [Eleventy](https://www.11ty.dev/)
+- Nunjucks
+- Vercel
 
 ## Inspiration
 
-A lot (maybe a little too much?) of inspiration came from [Alexander Sandberg's website](https://alexandersandberg.com/). It's simple and classy, simply lovely.
+A lot (maybe a little too much?) of design inspiration came from [Alexander Sandberg's website](https://alexandersandberg.com/). It's simple and classy, simply lovely.
 
 [Paul Wong's website](https://www.paulwong.work) and [Glenn Hitchcock's website](https://glenn.me/) were also great sources of inspiration.
+
+As I had never used Eleventy before, I used [Kilian Finger's website](https://www.kilianfinger.com/) as a reference for the project structure.
