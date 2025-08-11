@@ -8,7 +8,7 @@ import i18n from "eleventy-plugin-i18n/i18n.js";
 export default async function (eleventyConfig) {
   // Add the OG Image plugin
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    // previewMode: false,
+    previewMode: false,
     satoriOptions: {
       fonts: [
         {
