@@ -6,8 +6,20 @@
     {% set t = collections.all[0].data[locale or 'en'] %}
     <title>{% if title and title != t.metadata.title %}{{ title }} | {{ t.metadata.title }}{% else %}{{ t.metadata.title }}{% endif %}</title>
     <meta name="description" content="{{ description or t.metadata.description }}" />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="icon" href="/favicon.ico" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mathurinsekine.fr{{ page.url }}" />
+    <meta property="og:title" content="{% if title and title != t.metadata.title %}{{ title }} | {{ t.metadata.title }}{% else %}{{ t.metadata.title }}{% endif %}" />
+    <meta property="og:description" content="{{ description or t.metadata.description }}" />
+    <meta property="og:site_name" content="{{ t.metadata.title }}" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mathurinsekine.fr{{ page.url }}" />
+    <meta name="twitter:title" content="{% if title and title != t.metadata.title %}{{ title }} | {{ t.metadata.title }}{% else %}{{ t.metadata.title }}{% endif %}" />
+    <meta name="twitter:description" content="{{ description or t.metadata.description }}" />
+    
     {% if og_image %}
       {% ogImage "./_includes/og-image.og.njk", {
         title: title or t.metadata.title,
@@ -15,8 +27,12 @@
         type: type or ""
       } %}
     {% else %}
-      <meta property="og:image" content="/og-image.webp" />
+      <meta property="og:image" content="https://mathurinsekine.fr/og-image.webp" />
+      <meta name="twitter:image" content="https://mathurinsekine.fr/og-image.webp" />
     {% endif %}
+    
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/favicon.ico" />
     {% if isProduction %}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="32ce4860-c0eb-4a51-ad5d-907e3e893423"></script>
     {% endif %}
